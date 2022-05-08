@@ -1,9 +1,5 @@
-<script setup lang="ts">
-import TheWelcome from "@/components/TheWelcome.vue";
+<script lang="ts">
+export default {};
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<template>See you later suckers 🖕</template>
