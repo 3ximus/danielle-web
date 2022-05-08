@@ -1,11 +1,11 @@
 
 @font-face {
   font-family: LemonMilk;
-  src: url("@/assets/LemonMilkLight.otf");
+  src: url("@/assets/fonts/LemonMilkLight.otf");
 }
 
 :root {
-  --background-color: #E2F4E7;
+  --background-color: #E3DFD2;
   --accent-color: #8EC07C;
   --text-color: black;
 }

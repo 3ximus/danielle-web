@@ -3,15 +3,15 @@ export default {};
 </script>
 
 <template>
-  <div class="navbar">
+  <header class="navbar">
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink>
-      <RouterLink to="/works">Works</RouterLink>
+      <RouterLink to="about">About</RouterLink>
+      <RouterLink to="contact">Contact</RouterLink>
+      <RouterLink to="works">Works</RouterLink>
     </nav>
     <h1>Danielle Romaine</h1>
-  </div>
+  </header>
 </template>
 
 <style scope lang="scss">
@@ -32,7 +32,7 @@ export default {};
       opacity: 0.5;
       transition: all 0.4s;
       &:hover {
-        color: var(--accent-color);
+        opacity: 1;
       }
       &::before {
         content: "";
@@ -53,9 +53,6 @@ export default {};
         visibility: visible;
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
-        &:hover {
-          background-color: var(--accent-color);
-        }
       }
     }
   }
