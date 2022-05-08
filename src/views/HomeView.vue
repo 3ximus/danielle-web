@@ -2,4 +2,4 @@
 export default {};
 </script>
 
-<template>See you later suckers 🖕</template>
+<template>See you at HOME suckers 🖕</template>
