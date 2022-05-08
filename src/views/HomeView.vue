@@ -1,3 +1,11 @@
+<template>
+  <section class="slider">
+    <div class="slider-item" v-for="(slide, index) in homeSlides" :key="index">
+      <img :src="slide" alt="" />
+    </div>
+  </section>
+</template>
+
 <script lang="ts">
 export default {
   data() {
@@ -12,14 +20,6 @@ export default {
   },
 };
 </script>
-
-<template>
-  <section class="slider">
-    <div class="slider-item" v-for="slide in homeSlides">
-      <img :src="slide" alt="" />
-    </div>
-  </section>
-</template>
 
 <style scope lang="scss">
 .slider {

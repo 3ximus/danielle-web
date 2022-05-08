@@ -2,43 +2,124 @@
   <div class="contact">
     <h2>GET IN TOUCH</h2>
 
-    <p>gingsnaps1398@gmail.com</p>
+    <p>
+      For inquiries on exhibiting pieces, buying, or general questions, please
+      feel free to contact.
+    </p>
 
-    <div>
-      <input type="text" placeholder="Name" />
-      <input type="text" placeholder="Email" />
-    </div>
-    <textarea rows="5" placeholder="Message" />
+    <p>
+      <a href="mailto:gingsnaps1399@gmail.com" target="_blank"
+        >gingsnaps1399@gmail.com</a
+      >
+    </p>
+    <form @submit.prevent="sendEmail">
+      <div>
+        <input
+          class="input"
+          v-model="name"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
+        <input
+          class="input"
+          v-model="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+      <textarea
+        class="input"
+        v-model="message"
+        rows="7"
+        name="message"
+        placeholder="Message"
+        required
+      />
+      <input type="submit" value="Send" />
+    </form>
   </div>
+  <img class="cover-img" src="/artwork/58.webp" alt="" />
 </template>
+
+<script lang="ts">
+//import emailjs from 'emailjs-com';
+
+export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    sendEmail(event: Event) {
+      //     try {
+      //       emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target, 'YOUR_USER_ID', {
+      //         name: this.name,
+      //         email: this.email,
+      //         message: this.meessage
+      //       })
+      //     } catch (error) {
+      //         console.log({error})
+      //     }
+      // Reset form field
+      //this.name = "";
+      //this.email = "";
+      //this.message = "";
+      console.log(this.name, this.email, this.message);
+    },
+  },
+};
+</script>
 
 <style scope lang="scss">
 .contact {
-  width: 50%;
+  max-width: 400px;
   text-align: center;
+  line-height: 2em;
+  a {
+    color: var(--text-color);
+  }
+  .input {
+    outline: none;
+    resize: vertical;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.4s;
+
+    &::placeholder {
+      color: black;
+      text-transform: uppercase;
+    }
+
+    &:focus {
+      border-bottom-color: black;
+    }
+  }
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 }
-input,
-textarea {
-  outline: none;
-  resize: vertical;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #aaa;
-  padding: 10px 0;
-  margin: 10px 0;
-  background: none;
-  color: var(--text-color);
-  font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.4s;
 
-  &::placeholder {
-    color: black;
-    text-transform: uppercase;
-  }
-
-  &:focus {
-    border-bottom-color: black;
-  }
+.cover-img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 80%;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  z-index: -1;
 }
 </style>
