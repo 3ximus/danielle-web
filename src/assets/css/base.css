@@ -1,0 +1,16 @@
+
+@font-face {
+  font-family: LemonMilk;
+  src: url("@/assets/LemonMilkLight.otf");
+}
+
+:root {
+  --background-color: #E2F4E7;
+  --accent-color: #8EC07C;
+  --text-color: black;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+}
