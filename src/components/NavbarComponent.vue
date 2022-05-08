@@ -24,18 +24,39 @@ export default {};
   nav {
     display: inherit;
     a {
+      position: relative;
       color: black;
       text-decoration: none;
       margin: 10px;
       color: var(--text-color);
       opacity: 0.5;
-      transition: opacity 0.4s, color 0.4s;
+      transition: all 0.4s;
+      &:hover {
+        color: var(--accent-color);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--text-color);
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        transition: all 0.2s;
+      }
     }
     a.router-link-exact-active {
       opacity: 1;
-    }
-    a:hover {
-      color: green;
+      &::before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        &:hover {
+          background-color: var(--accent-color);
+        }
+      }
     }
   }
   h1 {
