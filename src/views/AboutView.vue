@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import ButtonComponent from "@/components/ButtonComponent.vue";
+</script>
+
 <template>
   <div class="about">
-    <h2>ABOUT</h2>
+    <h2>ABOUT ME</h2>
 
     <p>Hello, my name is Danielle</p>
 
@@ -15,11 +19,15 @@
     <br />
 
     <RouterLink to="contact">
-      <button class="dr-button" type="button">Get In touch</button>
+      <ButtonComponent>Get in touch</ButtonComponent>
     </RouterLink>
   </div>
 
-  <img class="back-img" src="/artwork/58.webp" onload="this.style.opacity=1" />
+  <img
+    class="back-img"
+    src="/artwork/feminine_studies/58.webp"
+    onload="this.style.opacity=1"
+  />
 </template>
 
 <style scoped lang="scss">

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import ButtonComponent from "@/components/ButtonComponent.vue";
+</script>
+
 <template>
   <div class="contact">
     <h2>GET IN TOUCH</h2>
@@ -40,10 +44,14 @@
         required
       />
       <br />
-      <input class="dr-button" type="submit" value="Send" />
+      <ButtonComponent type="submit">Send</ButtonComponent>
     </form>
   </div>
-  <img class="back-img" src="/artwork/58.webp" onload="this.style.opacity=1" />
+  <img
+    class="back-img"
+    src="/artwork/feminine_studies/58.webp"
+    onload="this.style.opacity=1"
+  />
 </template>
 
 <script lang="ts">

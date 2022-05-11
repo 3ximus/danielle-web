@@ -17,16 +17,16 @@ export default {
   data() {
     return {
       homeSlides: this.shuffleArray([
-        "/artwork/72.webp",
-        "/artwork/53.webp",
-        "/artwork/57.webp",
-        "/artwork/85.webp",
-        "/artwork/35.webp",
-        "/artwork/83.webp",
-        "/artwork/11.webp",
-        "/artwork/19.webp",
-        "/artwork/39.webp",
-        "/artwork/80.webp",
+        "/artwork/media_and_sexuality/72.webp",
+        "/artwork/bavarian_lion_shield/53.webp",
+        "/artwork/male_study/57.webp",
+        "/artwork/pomegranates_botticelli/85.webp",
+        "/artwork/litter_ahed_lilith/35.webp",
+        "/artwork/stop_no_hare/83.webp",
+        "/artwork/stop_horny/11.webp",
+        "/artwork/finding_self/19.webp",
+        "/artwork/duo_wen_tian_wang/39.webp",
+        "/artwork/fallen_angel/80.webp",
       ]),
     };
   },
