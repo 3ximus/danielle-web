@@ -10,7 +10,7 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
 </template>
 
 <style lang="scss">
-@import "@/assets/css/base.css";
+@import "@/assets/css/base.scss";
 
 .container {
   display: flex;
@@ -18,6 +18,6 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 </style>
