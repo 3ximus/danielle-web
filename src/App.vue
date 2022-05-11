@@ -18,11 +18,5 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  h1,
-  h2,
-  h3 {
-    font-family: LemonMilk;
-  }
 }
 </style>

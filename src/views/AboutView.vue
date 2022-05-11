@@ -11,18 +11,33 @@
     Personal undertones are a large part of my artworks, however, many carry
     other meanings if one can't identify themselves with my experiences. If
     you'd like to get in touch with questions, don't hesitate to reach out!
-    <hr />
+    <br>
+    <br>
 
     <RouterLink to="contact">
-      <button type="button">Get In touch</button>
+      <button class="dr-button" type="button">Get In touch</button>
     </RouterLink>
   </div>
+
+  <img class="back-img" src="/artwork/58.webp" onload="this.style.opacity=1" />
 </template>
 
-<style scope lang="scss">
+<style scoped lang="scss">
 .about {
-  width: 50%;
+  max-width: 800px;
   text-align: center;
   line-height: 2em;
+}
+
+.back-img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 80%;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  opacity: 0;
+  transition: opacity 1s;
 }
 </style>
