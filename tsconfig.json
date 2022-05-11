@@ -8,6 +8,9 @@
     }
   },
 
+  "vueCompilerOptions": {
+    "experimentalShamefullySupportOptionsApi": true
+  },
   "references": [
     {
       "path": "./tsconfig.vite-config.json"

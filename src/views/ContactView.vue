@@ -39,10 +39,10 @@
         placeholder="Message"
         required
       />
-      <input type="submit" value="Send" />
+      <input class="dr-button" type="submit" value="Send" />
     </form>
   </div>
-  <img class="cover-img" src="/artwork/58.webp" alt="" />
+  <img class="back-img" src="/artwork/58.webp" onload="this.style.opacity=1" />
 </template>
 
 <script lang="ts">
@@ -57,7 +57,7 @@ export default {
     };
   },
   methods: {
-    sendEmail(event: Event) {
+    sendEmail(event: Event): void {
       //     try {
       //       emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target, 'YOUR_USER_ID', {
       //         name: this.name,
@@ -77,7 +77,7 @@ export default {
 };
 </script>
 
-<style scope lang="scss">
+<style scoped lang="scss">
 .contact {
   max-width: 400px;
   text-align: center;
@@ -113,13 +113,15 @@ export default {
   }
 }
 
-.cover-img {
+.back-img {
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: -1;
   height: 80%;
   -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s;
 }
 </style>
