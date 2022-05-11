@@ -58,6 +58,19 @@ export default {};
   }
   h1 {
     margin: 10px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    nav {
+      display: none;
+    }
+    h1 {
+      /* font-size: 1.8em; */
+      margin: auto;
+    }
   }
 }
 </style>
