@@ -97,10 +97,11 @@ export default {
   .input {
     outline: none;
     resize: vertical;
+    box-sizing: border-box;
     width: 100%;
     border: none;
     border-bottom: 2px solid #aaa;
-    padding: 10px 0;
+    padding: 10px 10px;
     margin: 10px 0;
     background-color: var(--background-color);
     color: var(--text-color);
