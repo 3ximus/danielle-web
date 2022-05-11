@@ -18,5 +18,6 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 </style>

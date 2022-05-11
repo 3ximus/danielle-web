@@ -11,8 +11,8 @@
     Personal undertones are a large part of my artworks, however, many carry
     other meanings if one can't identify themselves with my experiences. If
     you'd like to get in touch with questions, don't hesitate to reach out!
-    <br>
-    <br>
+    <br />
+    <br />
 
     <RouterLink to="contact">
       <button class="dr-button" type="button">Get In touch</button>

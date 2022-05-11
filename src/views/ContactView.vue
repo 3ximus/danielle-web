@@ -39,6 +39,7 @@
         placeholder="Message"
         required
       />
+      <br />
       <input class="dr-button" type="submit" value="Send" />
     </form>
   </div>
