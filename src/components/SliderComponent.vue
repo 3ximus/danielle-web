@@ -1,35 +1,34 @@
 <script setup lang="ts">
 import SlideComponent from "@/components/SlideComponent.vue";
+import type { Slide } from "@/components/SlideComponent.vue";
 </script>
 
 <template>
   <section class="slider">
     <div class="slider-slide-element">
-      <SlideComponent v-for="(slide, index) in slides" :key="index" :slide-src="slide"></SlideComponent>
+      <SlideComponent
+        v-for="(slide, index) in slides"
+        :key="index"
+        :slide="slide"
+      ></SlideComponent>
     </div>
   </section>
 </template>
 
 <script lang="ts">
 export default {
-  data() {
-    return {
-      slides: this.shuffleArray([
-        "/artwork/media_and_sexuality/72.webp",
-        "/artwork/bavarian_lion_shield/53.webp",
-        "/artwork/male_study/57.webp",
-        "/artwork/pomegranates_botticelli/85.webp",
-        "/artwork/litter_ahed_lilith/35.webp",
-        "/artwork/stop_no_hare/83.webp",
-        "/artwork/stop_horny/11.webp",
-        "/artwork/finding_self/19.webp",
-        "/artwork/duo_wen_tian_wang/39.webp",
-        "/artwork/fallen_angel/80.webp",
-      ]),
-    };
+  props: {
+    slides: {
+      type: Array as () => Array<Slide>,
+      required: true,
+    },
+  },
+  created() {
+    this.shuffleArray(this.slides);
+    console.log(this.slides);
   },
   methods: {
-    shuffleArray(array: string[]) {
+    shuffleArray(array: any[]) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
