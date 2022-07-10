@@ -5,8 +5,19 @@
 
 :root {
   --background-color: #e3dfd2;
+  --background-color-lighter: #e3dfd288;
   --accent-color: #8ec07c;
   --text-color: black;
+
+  --fs-title: 5rem;
+  --fs-text: 1rem;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --fs-title: 2rem;
+    --fs-text: 1rem;
+  }
 }
 
 body {

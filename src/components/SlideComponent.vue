@@ -1,30 +1,28 @@
+<script setup lang="ts">
+export declare interface Slide {
+  cover: string;
+  title: string;
+  description?: string;
+}
+
+defineProps({
+  slide: {
+    type: Object as () => Slide,
+    required: true,
+  },
+});
+
+function poop() {
+  console.log("poop");
+}
+</script>
+
 <template>
   <div class="slider-item" @click="poop">
     <img :src="slide.cover" onload="this.style.opacity=1" />
     <h1>{{ slide.title }}</h1>
   </div>
 </template>
-
-<script lang="ts">
-export declare interface Slide {
-  cover: string;
-  title: string;
-  description?: string;
-}
-export default {
-  props: {
-    slide: {
-      type: Object as () => Slide,
-      required: true,
-    },
-  },
-  methods: {
-    poop() {
-      console.log("poop");
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .slider-item {
@@ -40,7 +38,7 @@ export default {
   &::after {
     content: "";
     position: absolute;
-    background-color: #00000033;
+    background-color: var(--background-color-lighter);
     left: 0;
     top: 0;
     width: 100%;
