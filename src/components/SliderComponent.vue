@@ -1,6 +1,27 @@
 <script setup lang="ts">
 import SlideComponent from "@/components/SlideComponent.vue";
 import type { Slide } from "@/components/SlideComponent.vue";
+import { onBeforeMount } from "vue";
+
+function shuffleArray(array: any[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+const props = defineProps({
+  slides: {
+    type: Array as () => Array<Slide>,
+    required: true,
+  },
+});
+
+onBeforeMount(() => {
+  shuffleArray(props.slides);
+  console.log(props.slides);
+});
 </script>
 
 <template>
@@ -14,30 +35,6 @@ import type { Slide } from "@/components/SlideComponent.vue";
     </div>
   </section>
 </template>
-
-<script lang="ts">
-export default {
-  props: {
-    slides: {
-      type: Array as () => Array<Slide>,
-      required: true,
-    },
-  },
-  created() {
-    this.shuffleArray(this.slides);
-    console.log(this.slides);
-  },
-  methods: {
-    shuffleArray(array: any[]) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .slider {

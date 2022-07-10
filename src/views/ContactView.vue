@@ -1,5 +1,33 @@
 <script setup lang="ts">
 import ButtonComponent from "@/components/ButtonComponent.vue";
+import { ref } from "vue";
+//import emailjs from 'emailjs-com';
+
+const name = ref("");
+const email = ref("");
+const message = ref("");
+function sendEmail(event: Event): void {
+  // try {
+  //   emailjs.sendForm(
+  //     "YOUR_SERVICE_ID",
+  //     "YOUR_TEMPLATE_ID",
+  //     event.target,
+  //     "YOUR_USER_ID",
+  //     {
+  //       name: name.value,
+  //       email: email.value,
+  //       message: message.value,
+  //     }
+  //   );
+  // } catch (error) {
+  //   console.log({ error });
+  // }
+  // // Reset form field
+  // name.value = "";
+  // email.value = "";
+  // message.value = "";
+  console.log(name.value, email.value, message.value);
+}
 </script>
 
 <template>
@@ -53,38 +81,6 @@ import ButtonComponent from "@/components/ButtonComponent.vue";
     onload="this.style.opacity=1"
   />
 </template>
-
-<script lang="ts">
-//import emailjs from 'emailjs-com';
-
-export default {
-  data() {
-    return {
-      name: "",
-      email: "",
-      message: "",
-    };
-  },
-  methods: {
-    sendEmail(event: Event): void {
-      //     try {
-      //       emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target, 'YOUR_USER_ID', {
-      //         name: this.name,
-      //         email: this.email,
-      //         message: this.meessage
-      //       })
-      //     } catch (error) {
-      //         console.log({error})
-      //     }
-      // Reset form field
-      //this.name = "";
-      //this.email = "";
-      //this.message = "";
-      console.log(this.name, this.email, this.message);
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .contact {

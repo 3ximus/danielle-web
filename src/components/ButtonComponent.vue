@@ -1,3 +1,12 @@
+<script setup lang="ts">
+defineProps({
+  type: {
+    type: null, // ignore type checking
+    default: "button",
+  },
+});
+</script>
+
 <template>
   <button class="dr-button" :type="type">
     <span class="dr-button-label">
@@ -5,17 +14,6 @@
     </span>
   </button>
 </template>
-
-<script lang="ts">
-export default {
-  props: {
-    type: {
-      type: null, // ignore type checking
-      default: "button",
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .dr-button {
