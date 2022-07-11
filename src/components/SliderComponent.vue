@@ -3,7 +3,7 @@ import SlideComponent from "@/components/SlideComponent.vue";
 import type { Slide } from "@/components/SlideComponent.vue";
 import { onBeforeMount } from "vue";
 
-function shuffleArray(array: any[]) {
+function shuffleArray(array: unknown[]) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
