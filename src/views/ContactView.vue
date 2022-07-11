@@ -6,6 +6,7 @@ import { ref } from "vue";
 const name = ref("");
 const email = ref("");
 const message = ref("");
+
 function sendEmail(event: Event): void {
   // try {
   //   emailjs.sendForm(
@@ -31,21 +32,21 @@ function sendEmail(event: Event): void {
 </script>
 
 <template>
-  <div class="contact">
-    <h2>GET IN TOUCH</h2>
+  <div>
+    <div class="contact">
+      <h2>GET IN TOUCH</h2>
 
-    <p>
-      For inquiries on exhibiting pieces, buying, or general questions, please
-      feel free to contact.
-    </p>
+      <p>
+        For inquiries on exhibiting pieces, buying, or general questions, please
+        feel free to contact.
+      </p>
 
-    <p>
-      <a href="mailto:gingsnaps1399@gmail.com" target="_blank"
-        >gingsnaps1399@gmail.com</a
-      >
-    </p>
-    <form @submit.prevent="sendEmail">
-      <div>
+      <p>
+        <a href="mailto:gingsnaps1399@gmail.com" target="_blank"
+          >gingsnaps1399@gmail.com</a
+        >
+      </p>
+      <form @submit.prevent="sendEmail">
         <input
           class="input"
           v-model="name"
@@ -62,24 +63,24 @@ function sendEmail(event: Event): void {
           placeholder="Email"
           required
         />
-      </div>
-      <textarea
-        class="input"
-        v-model="message"
-        rows="7"
-        name="message"
-        placeholder="Message"
-        required
-      />
-      <br />
-      <ButtonComponent type="submit">Send</ButtonComponent>
-    </form>
+        <textarea
+          class="input"
+          v-model="message"
+          rows="7"
+          name="message"
+          placeholder="Message"
+          required
+        />
+        <br />
+        <ButtonComponent type="submit">Send</ButtonComponent>
+      </form>
+    </div>
+    <img
+      class="back-img"
+      src="/artwork/feminine_studies/58.webp"
+      onload="this.style.opacity=1"
+    />
   </div>
-  <img
-    class="back-img"
-    src="/artwork/feminine_studies/58.webp"
-    onload="this.style.opacity=1"
-  />
 </template>
 
 <style scoped lang="scss">

@@ -5,7 +5,11 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
 <template>
   <NavbarComponent />
   <section class="container">
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <Transition name="fade" mode="out-in">
+        <Component :is="Component" />
+      </Transition>
+    </RouterView>
   </section>
 </template>
 
@@ -19,5 +23,14 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
