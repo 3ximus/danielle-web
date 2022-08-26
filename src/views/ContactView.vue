@@ -8,25 +8,6 @@ const email = ref("");
 const message = ref("");
 
 function sendEmail(event: Event): void {
-  // try {
-  //   emailjs.sendForm(
-  //     "YOUR_SERVICE_ID",
-  //     "YOUR_TEMPLATE_ID",
-  //     event.target,
-  //     "YOUR_USER_ID",
-  //     {
-  //       name: name.value,
-  //       email: email.value,
-  //       message: message.value,
-  //     }
-  //   );
-  // } catch (error) {
-  //   console.log({ error });
-  // }
-  // // Reset form field
-  // name.value = "";
-  // email.value = "";
-  // message.value = "";
   console.log(name.value, email.value, message.value);
 }
 </script>
@@ -75,11 +56,6 @@ function sendEmail(event: Event): void {
         <ButtonComponent type="submit">Send</ButtonComponent>
       </form>
     </div>
-    <img
-      class="back-img"
-      src="/artwork/feminine_studies/58.webp"
-      onload="this.style.opacity=1"
-    />
   </div>
 </template>
 
@@ -118,17 +94,5 @@ function sendEmail(event: Event): void {
   @media (max-width: 1024px) {
     width: 90%;
   }
-}
-
-.back-img {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  height: 80%;
-  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  opacity: 0;
-  transition: opacity 1s;
 }
 </style>

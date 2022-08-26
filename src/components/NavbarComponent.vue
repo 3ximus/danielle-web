@@ -1,12 +1,12 @@
 <template>
   <header class="navbar">
+    <h1>Danielle Romaine</h1>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="about">About</RouterLink>
       <RouterLink to="contact">Contact</RouterLink>
       <RouterLink to="works">Works</RouterLink>
     </nav>
-    <h1>Danielle Romaine</h1>
   </header>
 </template>
 
