@@ -20,9 +20,9 @@ const router = createRouter({
       component: () => import("../views/ContactView.vue"),
     },
     {
-      path: "/works",
-      name: "works",
-      component: () => import("../views/WorksView.vue"),
+      path: "/gallery",
+      name: "gallery",
+      component: () => import("../views/GalleryView.vue"),
     },
   ],
 });
