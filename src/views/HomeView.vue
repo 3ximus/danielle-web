@@ -4,12 +4,16 @@ import type { PopSign } from "@/components/PopSignComponent.vue";
 
 const grid: PopSign[][] = [
   [
-    { image: "/artwork/litter_ahead_lilith/Lilith.png" },
-    { image: "/artwork/pomegranates_botticelli/caution_bump.png" },
-    { image: "/artwork/fallen_angel/as_above_so_below.png" },
+    { image: "/artwork/si_tian_wang/si_tian_wang.png" },
   ],
   [
     { image: "/artwork/litter_ahead_lilith/Lilith.png" },
+    { image: "/artwork/helios_selene/helios.png" },
+    { image: "/artwork/helios_selene/selene.png" },
+
+
+  ],
+  [
     { image: "/artwork/pomegranates_botticelli/caution_bump.png" },
     { image: "/artwork/fallen_angel/as_above_so_below.png" },
   ],
@@ -26,7 +30,7 @@ const grid: PopSign[][] = [
 
 <style scoped lang="scss">
 .container {
-  rotate: 45deg;
+rotate: 45deg;
 }
 
 .row {

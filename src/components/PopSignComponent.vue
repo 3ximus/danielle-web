@@ -18,8 +18,8 @@ defineProps({
 
 <style scoped lang="scss">
 .pop {
-  width: 450px;
-  height: 450px;
+  //width: 300px;
+  height: 300px;
   cursor: pointer;
   padding: 20px;
   transition: 0.3s cubic-bezier(1, 0, 0.2, 1);
