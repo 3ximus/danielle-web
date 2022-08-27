@@ -33,7 +33,7 @@ const grid: PopSign[][] = [
 .valign {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 40px;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -43,7 +43,7 @@ const grid: PopSign[][] = [
   overflow: hidden;
   z-index: 1;
   .container {
-    rotate: 45deg;
+   // rotate: 45deg;
   }
 }
 .row {

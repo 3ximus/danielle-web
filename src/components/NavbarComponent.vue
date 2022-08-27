@@ -14,9 +14,6 @@
 .navbar {
   position: relative;
   z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-family: LemonMilk;
   padding: 20px 20px 0 20px;
   nav {
@@ -25,7 +22,8 @@
       position: relative;
       color: black;
       text-decoration: none;
-      margin: 10px;
+      margin-right: 10px;
+      margin-left: 2px;
       color: var(--text-color);
       opacity: 0.5;
       transition: all 0.4s;
@@ -55,7 +53,8 @@
     }
   }
   h1 {
-    margin: 10px;
+    margin: 0;
+    margin-bottom: 10px;
     white-space: nowrap;
   }
 }
