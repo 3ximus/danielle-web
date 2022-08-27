@@ -3,7 +3,10 @@ import PopSignComponent from "@/components/PopSignComponent.vue";
 import type { PopSign } from "@/components/PopSignComponent.vue";
 
 const grid: PopSign[][] = [
-  [{ image: "/artwork/si_tian_wang/si_tian_wang.png" }],
+  [
+    { image: "/artwork/si_tian_wang/si_tian_wang.png" },
+    { image: "/artwork/stop_horny/7.png" },
+  ],
   [
     { image: "/artwork/litter_ahead_lilith/Lilith.png" },
     { image: "/artwork/helios_selene/helios.png" },
