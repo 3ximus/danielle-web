@@ -12,7 +12,6 @@ import ButtonComponent from "@/components/ButtonComponent.vue";
         <ButtonComponent>Get in touch</ButtonComponent>
       </RouterLink>
     </div>
-
   </div>
 </template>
 
