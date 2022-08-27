@@ -12,11 +12,13 @@
 
 <style scope lang="scss">
 .navbar {
+  position: relative;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: LemonMilk;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   nav {
     display: inherit;
     a {

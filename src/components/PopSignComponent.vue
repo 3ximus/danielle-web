@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <div class="pop">
-    <img :src="sign.image" :alt="sign.image"/>
+    <img :src="sign.image" :alt="sign.image" />
   </div>
 </template>
 
