@@ -25,6 +25,10 @@ const grid: PopSign[][] = [
       flash: "/si_tian_wang/si_tian_wang.png",
     },
     { image: "/stop_horny/7.png", flash: "/stop_horny/7.png" },
+    {
+      image: "/twilight_zone/Twilight Zone.png",
+      flash: "/twilight_zone/Twilight Zone.png",
+    },
   ],
   [
     // 3rd row
@@ -55,12 +59,17 @@ const grid: PopSign[][] = [
       image: "/fallen_angel/2.png",
       flash: "/fallen_angel/1.png",
     },
+    { image: "/stop_horny/7.png", flash: "/stop_horny/7.png" },
   ],
   [
     // 5th row
     {
       image: "/pomegranates_botticelli/caution_bump.png",
       flash: "/pomegranates_botticelli/caution_bump.png",
+    },
+    {
+      image: "/si_tian_wang/si_tian_wang.png",
+      flash: "/si_tian_wang/si_tian_wang.png",
     },
   ],
 ];
