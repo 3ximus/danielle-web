@@ -65,7 +65,6 @@
       display: none;
     }
     h1 {
-      /* font-size: 1.8em; */
       margin: auto;
     }
   }

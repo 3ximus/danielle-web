@@ -1,6 +1,7 @@
 <script setup lang="ts">
 export declare interface PopSign {
   image: string;
+  flash: string;
 }
 defineProps({
   sign: {
@@ -19,7 +20,7 @@ defineProps({
 <style scoped lang="scss">
 .pop {
   //width: 300px;
-  height: 300px;
+  height: 40vh;
   cursor: pointer;
   padding: 20px;
   transition: 0.3s cubic-bezier(1, 0, 0.2, 1);
