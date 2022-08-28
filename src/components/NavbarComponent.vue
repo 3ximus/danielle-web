@@ -58,15 +58,4 @@
     white-space: nowrap;
   }
 }
-
-@media (max-width: 900px) {
-  .navbar {
-    nav {
-      display: none;
-    }
-    h1 {
-      margin: auto;
-    }
-  }
-}
 </style>

@@ -5,8 +5,8 @@ import type { PopSign } from "@/components/PopSignComponent.vue";
 const grid: PopSign[][] = [
   [
     {
-      image: "/artwork/pomegranates_botticelli/caution_bump.png",
-      flash: "/artwork/pomegranates_botticelli/caution_bump.png",
+      image: "/artwork/si_tian_wang/si_tian_wang.png",
+      flash: "/artwork/si_tian_wang/si_tian_wang.png",
     },
     { image: "/artwork/stop_horny/7.png", flash: "/artwork/stop_horny/7.png" },
   ],
@@ -26,12 +26,12 @@ const grid: PopSign[][] = [
   ],
   [
     {
-      image: "/artwork/si_tian_wang/si_tian_wang.png",
-      flash: "/artwork/si_tian_wang/si_tian_wang.png",
+      image: "/artwork/pomegranates_botticelli/caution_bump.png",
+      flash: "/artwork/pomegranates_botticelli/caution_bump.png",
     },
     {
-      image: "/artwork/fallen_angel/as_above_so_below.png",
-      flash: "/artwork/fallen_angel/as_above_so_below.png",
+      image: "/artwork/fallen_angel/as_above_so_below.webp",
+      flash: "/artwork/fallen_angel/as_above_so_below.webp",
     },
   ],
 ];
@@ -52,24 +52,28 @@ const grid: PopSign[][] = [
 </template>
 
 <style scoped lang="scss">
+$skew-effect: 10vw;
+$left-offset: 40px;
+
 .valign {
   position: absolute;
   top: 0;
   left: 0;
   // subtract padding
-  width: calc(100vw - 40px);
+  width: calc(100vw - $left-offset);
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding-left: 40px;
+  padding-left: $left-offset;
   z-index: 1;
   .container {
     rotate: 45deg;
   }
 }
+
 .row {
   position: relative;
   display: flex;
@@ -77,11 +81,12 @@ const grid: PopSign[][] = [
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  --skew--effect: 15vw;
   &-1 {
-    left: 10vw;
+    left: $skew-effect;
   }
   &1 {
-    left: -10vw;
+    left: -$skew-effect;
   }
 }
 </style>
