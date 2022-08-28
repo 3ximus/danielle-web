@@ -23,11 +23,17 @@ const grid: PopSign[][] = [
       image: "/artwork/helios_selene/selene.png",
       flash: "/artwork/helios_selene/selene.png",
     },
-  ],
-  [
     {
       image: "/artwork/pomegranates_botticelli/caution_bump.png",
       flash: "/artwork/pomegranates_botticelli/caution_bump.png",
+    },
+    
+  ],
+  [
+  
+    {
+      image: "/artwork/twilight_zone/Twilight Zone.png",
+      flash: "/artwork/twilight_zone/Twilight Zone.png",
     },
     {
       image: "/artwork/fallen_angel/as_above_so_below.png",
@@ -70,7 +76,7 @@ $left-offset: 40px;
   padding-left: $left-offset;
   z-index: 1;
   .container {
-    rotate: 45deg;
+    transform: rotate(45deg);
   }
 }
 
