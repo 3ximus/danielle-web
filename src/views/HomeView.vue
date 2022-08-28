@@ -8,40 +8,59 @@ import { store } from "@/store";
 // convert original.png -resize 2000000@> -quality 80 compressed.webp
 const grid: PopSign[][] = [
   [
+    // 1st row
     {
-      image: "/artwork/si_tian_wang/si_tian_wang.png",
-      flash: "/artwork/si_tian_wang/si_tian_wang.png",
+      image: "/pomegranates_botticelli/caution_bump.png",
+      flash: "/pomegranates_botticelli/caution_bump.png",
     },
-    { image: "/artwork/stop_horny/7.png", flash: "/artwork/stop_horny/7.png" },
+    {
+      image: "/fallen_angel/2.png",
+      flash: "/fallen_angel/1.png",
+    },
   ],
   [
+    // 2nd row
     {
-      image: "/artwork/litter_ahead_lilith/Lilith.png",
-      flash: "/artwork/litter_ahead_lilith/Lilith.png",
+      image: "/si_tian_wang/si_tian_wang.png",
+      flash: "/si_tian_wang/si_tian_wang.png",
     },
-    {
-      image: "/artwork/helios_selene/helios.png",
-      flash: "/artwork/helios_selene/helios.png",
-    },
-    {
-      image: "/artwork/helios_selene/selene.png",
-      flash: "/artwork/helios_selene/selene.png",
-    },
-    {
-      image: "/artwork/pomegranates_botticelli/caution_bump.png",
-      flash: "/artwork/pomegranates_botticelli/caution_bump.png",
-    },
-    
+    { image: "/stop_horny/7.png", flash: "/stop_horny/7.png" },
   ],
   [
-  
+    // 3rd row
     {
-      image: "/artwork/twilight_zone/Twilight Zone.png",
-      flash: "/artwork/twilight_zone/Twilight Zone.png",
+      image: "/litter_ahead_lilith/Lilith.png",
+      flash: "/litter_ahead_lilith/Lilith.png",
     },
     {
-      image: "/artwork/fallen_angel/2.png",
-      flash: "/artwork/fallen_angel/1.png",
+      image: "/helios_selene/helios.png",
+      flash: "/helios_selene/helios.png",
+    },
+    {
+      image: "/helios_selene/selene.png",
+      flash: "/helios_selene/selene.png",
+    },
+    {
+      image: "/pomegranates_botticelli/caution_bump.png",
+      flash: "/pomegranates_botticelli/caution_bump.png",
+    },
+  ],
+  [
+    // 4th row
+    {
+      image: "/twilight_zone/Twilight Zone.png",
+      flash: "/twilight_zone/Twilight Zone.png",
+    },
+    {
+      image: "/fallen_angel/2.png",
+      flash: "/fallen_angel/1.png",
+    },
+  ],
+  [
+    // 5th row
+    {
+      image: "/pomegranates_botticelli/caution_bump.png",
+      flash: "/pomegranates_botticelli/caution_bump.png",
     },
   ],
 ];
@@ -62,8 +81,9 @@ const grid: PopSign[][] = [
 </template>
 
 <style scoped lang="scss">
-$skew-effect: 10vw;
+$skew-effect: 5vw;
 $left-offset: 40px;
+$switch-position: 50px;
 
 .valign {
   position: absolute;
@@ -79,14 +99,30 @@ $left-offset: 40px;
   overflow: hidden;
   padding-left: $left-offset;
   background-color: var(--background-color);
-  transition: background-color 1s ease-out;
-  clip-path: circle(80px at 50% 50%);
-  &[flash-on="true"] {
-    --background-color: var(--background-dark-color);
+  transition: background-color 0.4s ease-out;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-dark-color);
+    transition: clip-path .5s ease-out;
+    clip-path: circle(0% at calc(100% - 80px) calc(100% - 60px));
   }
-  z-index: 1;
+  &[flash-on="true"] {
+    // dark background animation
+    &:before {
+      clip-path: circle(
+        150% at calc(100% - $switch-position) calc(100% - $switch-position)
+      );
+    }
+  }
   .container {
     transform: rotate(45deg);
+    backface-visibility: hidden;
+    width: 50vw;
   }
 }
 
@@ -95,21 +131,26 @@ $left-offset: 40px;
   display: flex;
   max-width: 100%;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  --skew--effect: 15vw;
   &:nth-child(1) {
+    left: calc($skew-effect * 2);
+  }
+  &:nth-child(2) {
     left: $skew-effect;
   }
-  &:nth-child(3) {
+  &:nth-child(4) {
     left: -$skew-effect;
+  }
+  &:nth-child(5) {
+    left: calc($skew-effect * -2);
   }
 }
 
 .switch {
   position: absolute;
-  bottom: 50px;
-  right: 50px;
+  bottom: $switch-position;
+  right: $switch-position;
   z-index: 100;
 }
 </style>
