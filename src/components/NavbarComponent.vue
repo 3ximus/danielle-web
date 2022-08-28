@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import { store } from "@/store";
+</script>
+
 <template>
-  <header class="navbar">
+  <header class="navbar" :flash-on="store.isFlashOn">
     <h1>Danielle Romaine</h1>
     <nav>
       <RouterLink to="/">Home</RouterLink>
@@ -16,15 +20,18 @@
   z-index: 100;
   font-family: LemonMilk;
   padding: 20px 20px 0 20px;
+  color: var(--text-color);
+  &[flash-on="true"] {
+    --text-color: var(--text-dark-theme);
+  }
   nav {
     display: inherit;
     a {
       position: relative;
-      color: black;
       text-decoration: none;
+      color: var(--text-color);
       margin-right: 10px;
       margin-left: 2px;
-      color: var(--text-color);
       opacity: 0.5;
       transition: all 0.4s;
       &:hover {
@@ -56,6 +63,7 @@
     margin: 0;
     margin-bottom: 10px;
     white-space: nowrap;
+    transition: color 0.4s;
   }
 }
 </style>

@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import PopSignComponent from "@/components/PopSignComponent.vue";
+import LightSwitchComponent from "@/components/LightSwitchComponent.vue";
 import type { PopSign } from "@/components/PopSignComponent.vue";
+import PopSignComponent from "@/components/PopSignComponent.vue";
+import { store } from "@/store";
 
+// TODO for compressing pictures:
+// convert original.png -resize 2000000@> -quality 80 compressed.webp
 const grid: PopSign[][] = [
   [
     {
@@ -30,24 +34,24 @@ const grid: PopSign[][] = [
       flash: "/artwork/pomegranates_botticelli/caution_bump.png",
     },
     {
-      image: "/artwork/fallen_angel/as_above_so_below.png",
-      flash: "/artwork/fallen_angel/as_above_so_below.png",
+      image: "/artwork/fallen_angel/2.png",
+      flash: "/artwork/fallen_angel/1.png",
     },
   ],
 ];
 </script>
 
 <template>
-  <div class="valign">
-    <div class="container">
-      <div
-        class="row"
-        v-for="(row, index) in grid"
-        :class="'row' + (index - Math.floor(grid.length / 2))"
-      >
-        <PopSignComponent v-for="sign in row" :sign="sign" />
+  <div>
+    <div class="valign" :flash-on="store.isFlashOn">
+      <div class="container">
+        <div class="row" v-for="row in grid">
+          <PopSignComponent v-for="sign in row" :sign="sign" />
+        </div>
       </div>
     </div>
+
+    <LightSwitchComponent />
   </div>
 </template>
 
@@ -68,6 +72,12 @@ $left-offset: 40px;
   align-items: center;
   overflow: hidden;
   padding-left: $left-offset;
+  background-color: var(--background-color);
+  transition: background-color 1s ease-out;
+  clip-path: circle(80px at 50% 50%);
+  &[flash-on="true"] {
+    --background-color: var(--background-dark-color);
+  }
   z-index: 1;
   .container {
     rotate: 45deg;
@@ -82,11 +92,18 @@ $left-offset: 40px;
   justify-content: center;
   align-items: center;
   --skew--effect: 15vw;
-  &-1 {
+  &:nth-child(1) {
     left: $skew-effect;
   }
-  &1 {
+  &:nth-child(3) {
     left: -$skew-effect;
   }
+}
+
+.switch {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
 }
 </style>
