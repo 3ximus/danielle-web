@@ -30,8 +30,8 @@ const grid: PopSign[][] = [
       flash: "/artwork/pomegranates_botticelli/caution_bump.png",
     },
     {
-      image: "/artwork/fallen_angel/as_above_so_below.webp",
-      flash: "/artwork/fallen_angel/as_above_so_below.webp",
+      image: "/artwork/fallen_angel/as_above_so_below.png",
+      flash: "/artwork/fallen_angel/as_above_so_below.png",
     },
   ],
 ];
