@@ -43,7 +43,7 @@ const grid: PopSign[][] = [
   overflow: hidden;
   z-index: 1;
   .container {
-   // rotate: 45deg;
+    rotate: 45deg;
   }
 }
 .row {
