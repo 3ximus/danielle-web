@@ -17,6 +17,10 @@ const grid: PopSign[][] = [
       image: "/fallen_angel/2.png",
       flash: "/fallen_angel/1.png",
     },
+    {
+      image: "/helios_selene/selene.png",
+      flash: "/helios_selene/selene.png",
+    },
   ],
   [
     // 2nd row
