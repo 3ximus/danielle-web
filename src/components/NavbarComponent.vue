@@ -1,6 +1,7 @@
 <template>
   <header class="navbar">
     <h1>Danielle Romaine</h1>
+    <h2>Fine Artist</h2>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="gallery">Gallery</RouterLink>
