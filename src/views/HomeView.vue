@@ -1,65 +1,98 @@
 <script setup lang="ts">
-import PopSignComponent from "@/components/PopSignComponent.vue";
+import LightSwitchComponent from "@/components/LightSwitchComponent.vue";
 import type { PopSign } from "@/components/PopSignComponent.vue";
+import PopSignComponent from "@/components/PopSignComponent.vue";
+import { store } from "@/store";
 
+// TODO for compressing pictures:
+// convert original.png -resize 2000000@> -quality 80 compressed.webp
 const grid: PopSign[][] = [
   [
+    // 1st row
     {
-      image: "/artwork/si_tian_wang/si_tian_wang.png",
-      flash: "/artwork/si_tian_wang/si_tian_wang.png",
+      image: "/pomegranates_botticelli/caution_bump.png",
+      flash: "/pomegranates_botticelli/caution_bump.png",
     },
-    { image: "/artwork/stop_horny/7.png", flash: "/artwork/stop_horny/7.png" },
+    {
+      image: "/fallen_angel/2.png",
+      flash: "/fallen_angel/1.png",
+    },
   ],
   [
+    // 2nd row
     {
-      image: "/artwork/litter_ahead_lilith/Lilith.png",
-      flash: "/artwork/litter_ahead_lilith/Lilith.png",
+      image: "/si_tian_wang/si_tian_wang.png",
+      flash: "/si_tian_wang/si_tian_wang.png",
     },
+    { image: "/stop_horny/7.png", flash: "/stop_horny/7.png" },
     {
-      image: "/artwork/helios_selene/helios.png",
-      flash: "/artwork/helios_selene/helios.png",
+      image: "/twilight_zone/Twilight Zone.png",
+      flash: "/twilight_zone/Twilight Zone.png",
     },
-    {
-      image: "/artwork/helios_selene/selene.png",
-      flash: "/artwork/helios_selene/selene.png",
-    },
-    {
-      image: "/artwork/pomegranates_botticelli/caution_bump.png",
-      flash: "/artwork/pomegranates_botticelli/caution_bump.png",
-    },
-    
   ],
   [
-  
+    // 3rd row
     {
-      image: "/artwork/twilight_zone/Twilight Zone.png",
-      flash: "/artwork/twilight_zone/Twilight Zone.png",
+      image: "/litter_ahead_lilith/Lilith.png",
+      flash: "/litter_ahead_lilith/Lilith.png",
     },
     {
-      image: "/artwork/fallen_angel/as_above_so_below.png",
-      flash: "/artwork/fallen_angel/as_above_so_below.png",
+      image: "/helios_selene/helios.png",
+      flash: "/helios_selene/helios.png",
+    },
+    {
+      image: "/helios_selene/selene.png",
+      flash: "/helios_selene/selene.png",
+    },
+    {
+      image: "/pomegranates_botticelli/caution_bump.png",
+      flash: "/pomegranates_botticelli/caution_bump.png",
+    },
+  ],
+  [
+    // 4th row
+    {
+      image: "/twilight_zone/Twilight Zone.png",
+      flash: "/twilight_zone/Twilight Zone.png",
+    },
+    {
+      image: "/fallen_angel/2.png",
+      flash: "/fallen_angel/1.png",
+    },
+    { image: "/stop_horny/7.png", flash: "/stop_horny/7.png" },
+  ],
+  [
+    // 5th row
+    {
+      image: "/pomegranates_botticelli/caution_bump.png",
+      flash: "/pomegranates_botticelli/caution_bump.png",
+    },
+    {
+      image: "/si_tian_wang/si_tian_wang.png",
+      flash: "/si_tian_wang/si_tian_wang.png",
     },
   ],
 ];
 </script>
 
 <template>
-  <div class="valign">
-    <div class="container">
-      <div
-        class="row"
-        v-for="(row, index) in grid"
-        :class="'row' + (index - Math.floor(grid.length / 2))"
-      >
-        <PopSignComponent v-for="sign in row" :sign="sign" />
+  <div>
+    <div class="valign" :flash-on="store.isFlashOn">
+      <div class="container">
+        <div class="row" v-for="row in grid">
+          <PopSignComponent v-for="sign in row" :sign="sign" />
+        </div>
       </div>
     </div>
+
+    <LightSwitchComponent />
   </div>
 </template>
 
 <style scoped lang="scss">
-$skew-effect: 10vw;
+$skew-effect: 5vw;
 $left-offset: 40px;
+$switch-position: 50px;
 
 .valign {
   position: absolute;
@@ -74,9 +107,31 @@ $left-offset: 40px;
   align-items: center;
   overflow: hidden;
   padding-left: $left-offset;
-  z-index: 1;
+  background-color: var(--background-color);
+  transition: background-color 0.4s ease-out;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-dark-color);
+    transition: clip-path .5s ease-out;
+    clip-path: circle(0% at calc(100% - 80px) calc(100% - 60px));
+  }
+  &[flash-on="true"] {
+    // dark background animation
+    &:before {
+      clip-path: circle(
+        150% at calc(100% - $switch-position) calc(100% - $switch-position)
+      );
+    }
+  }
   .container {
     transform: rotate(45deg);
+    backface-visibility: hidden;
+    width: 50vw;
   }
 }
 
@@ -85,14 +140,26 @@ $left-offset: 40px;
   display: flex;
   max-width: 100%;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  --skew--effect: 15vw;
-  &-1 {
+  &:nth-child(1) {
+    left: calc($skew-effect * 2);
+  }
+  &:nth-child(2) {
     left: $skew-effect;
   }
-  &1 {
+  &:nth-child(4) {
     left: -$skew-effect;
   }
+  &:nth-child(5) {
+    left: calc($skew-effect * -2);
+  }
+}
+
+.switch {
+  position: absolute;
+  bottom: $switch-position;
+  right: $switch-position;
+  z-index: 100;
 }
 </style>
