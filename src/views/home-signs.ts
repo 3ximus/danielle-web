@@ -39,7 +39,7 @@ export const grid: PopSign[][] = [
     },
     {
       image: "/helios_selene/helios.png",
-      flash: "/helios_selene/helios.png",
+      flash: "/helios_selene/hflash.png",
     },
     {
       image: "/helios_selene/selene.png",
