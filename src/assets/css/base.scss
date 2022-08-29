@@ -2,6 +2,10 @@
   font-family: LemonMilk;
   src: url("@/assets/fonts/LemonMilkLight.otf");
 }
+@font-face {
+  font-family: HighwayGothic;
+  src: url("@/assets/fonts/HWYGNRRW.TTF");
+}
 
 :root {
   --background-dark-color: #222;
@@ -33,9 +37,4 @@ body {
   background-color: var(--background-color);
 }
 
-h1,
-h2,
-h3 {
-  font-family: LemonMilk;
-}
 

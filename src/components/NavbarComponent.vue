@@ -4,7 +4,7 @@ import { store } from "@/store";
 
 <template>
   <header class="navbar" :flash-on="store.isFlashOn">
-    <h1>Danielle Romaine</h1>
+    <h1>DANIELLE ROMAINE</h1>
     <h2>Fine Artist</h2>
     <nav>
       <RouterLink to="/">Home</RouterLink>
@@ -62,9 +62,19 @@ import { store } from "@/store";
   }
   h1 {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     white-space: nowrap;
     transition: color 0.4s;
+    font-family: HighwayGothic;
+    font-size: 3rem;
+  }
+  h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    opacity: .5;
+    transition: color 0.4s;
+
   }
 }
 </style>
