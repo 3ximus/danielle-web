@@ -66,15 +66,15 @@ import { store } from "@/store";
     white-space: nowrap;
     transition: color 0.4s;
     font-family: HighwayGothic;
-    font-size: 3rem;
+    font-size: var(--fs-title);
+    letter-spacing: 2px;
   }
   h2 {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 1.2rem;
-    opacity: .5;
+    font-size: var(--fs-text);
+    opacity: 0.5;
     transition: color 0.4s;
-
   }
 }
 </style>

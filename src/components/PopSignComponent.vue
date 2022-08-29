@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { store } from "@/store";
 export declare interface PopSign {
   image: string;
   flash: string;
@@ -9,14 +8,14 @@ defineProps({
     type: Object as () => PopSign,
     required: true,
   },
+  flash: Boolean,
 });
 </script>
 
 <template>
   <div class="pop">
     <div class="pop-container">
-      <img :src="store.isFlashOn ? sign.flash : sign.image" :alt="sign.image" />
-      <img :src="store.isFlashOn ? sign.flash : sign.image" :alt="sign.image" />
+      <img :src="flash ? sign.flash : sign.image" :alt="sign.image" />
     </div>
   </div>
 </template>

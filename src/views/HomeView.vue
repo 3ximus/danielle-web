@@ -1,90 +1,26 @@
 <script setup lang="ts">
 import LightSwitchComponent from "@/components/LightSwitchComponent.vue";
-import type { PopSign } from "@/components/PopSignComponent.vue";
 import PopSignComponent from "@/components/PopSignComponent.vue";
 import { store } from "@/store";
+import { onUnmounted } from "vue";
+import { grid } from "./home-signs";
 
-// TODO for compressing pictures:
-// convert original.png -resize 2000000@> -quality 80 compressed.webp
-const grid: PopSign[][] = [
-  [
-    // 1st row
-    {
-      image: "/pomegranates_botticelli/caution_bump.png",
-      flash: "/pomegranates_botticelli/caution_bump.png",
-    },
-    {
-      image: "/fallen_angel/2.png",
-      flash: "/fallen_angel/1.png",
-    },
-    {
-      image: "/helios_selene/selene.png",
-      flash: "/helios_selene/selene.png",
-    },
-  ],
-  [
-    // 2nd row
-    {
-      image: "/si_tian_wang/si_tian_wang.png",
-      flash: "/si_tian_wang/si_tian_wang.png",
-    },
-    { image: "/stop_horny/7.png", flash: "/stop_horny/7.png" },
-    {
-      image: "/twilight_zone/Twilight Zone.png",
-      flash: "/twilight_zone/Twilight Zone.png",
-    },
-  ],
-  [
-    // 3rd row
-    {
-      image: "/litter_ahead_lilith/Lilith.png",
-      flash: "/litter_ahead_lilith/Lilith.png",
-    },
-    {
-      image: "/helios_selene/helios.png",
-      flash: "/helios_selene/helios.png",
-    },
-    {
-      image: "/helios_selene/selene.png",
-      flash: "/helios_selene/selene.png",
-    },
-    {
-      image: "/pomegranates_botticelli/caution_bump.png",
-      flash: "/pomegranates_botticelli/caution_bump.png",
-    },
-  ],
-  [
-    // 4th row
-    {
-      image: "/twilight_zone/Twilight Zone.png",
-      flash: "/twilight_zone/Twilight Zone.png",
-    },
-    {
-      image: "/fallen_angel/2.png",
-      flash: "/fallen_angel/1.png",
-    },
-    { image: "/stop_horny/7.png", flash: "/stop_horny/7.png" },
-  ],
-  [
-    // 5th row
-    {
-      image: "/pomegranates_botticelli/caution_bump.png",
-      flash: "/pomegranates_botticelli/caution_bump.png",
-    },
-    {
-      image: "/si_tian_wang/si_tian_wang.png",
-      flash: "/si_tian_wang/si_tian_wang.png",
-    },
-  ],
-];
+onUnmounted(() => store.flashOff());
 </script>
 
 <template>
   <div>
-    <div class="valign" :flash-on="store.isFlashOn">
+    <div class="valign">
       <div class="container">
         <div class="row" v-for="row in grid">
           <PopSignComponent v-for="sign in row" :sign="sign" />
+        </div>
+      </div>
+    </div>
+    <div class="valign valign-dark" :flash-on="store.isFlashOn">
+      <div class="container">
+        <div class="row" v-for="row in grid">
+          <PopSignComponent v-for="sign in row" :sign="sign" :flash="true" />
         </div>
       </div>
     </div>
@@ -113,20 +49,13 @@ $switch-position: 50px;
   padding-left: $left-offset;
   background-color: var(--background-color);
   transition: background-color 0.4s ease-out;
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  &-dark {
     background-color: var(--background-dark-color);
-    transition: clip-path .5s ease-out;
+    transition: clip-path 0.5s ease-out;
+    z-index: 2;
     clip-path: circle(0% at calc(100% - 80px) calc(100% - 60px));
-  }
-  &[flash-on="true"] {
-    // dark background animation
-    &:before {
+    &[flash-on="true"] {
+      // dark background animation
       clip-path: circle(
         150% at calc(100% - $switch-position) calc(100% - $switch-position)
       );
