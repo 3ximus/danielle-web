@@ -16,14 +16,14 @@ export const grid: PopSign[][] = [
     },
     {
       image: "/helios_selene/selene.png",
-      flash: "/helios_selene/selene.png",
+      flash: "/helios_selene/sflash.png",
     },
   ],
   [
     // 2nd row
     {
-      image: "/si_tian_wang/si_tian_wang.png",
-      flash: "/si_tian_wang/si_tian_wang.png",
+      image: "/si_tian_wang/cover.png",
+      flash: "/si_tian_wang/flash.png",
     },
     { image: "/stop_horny/cover.png", flash: "/stop_horny/flash.png" },
     {
@@ -34,8 +34,8 @@ export const grid: PopSign[][] = [
   [
     // 3rd row
     {
-      image: "/litter_ahead_lilith/Lilith.png",
-      flash: "/litter_ahead_lilith/Lilith.png",
+      image: "/litter_ahead_lilith/cover.png",
+      flash: "/litter_ahead_lilith/flash.png",
     },
     {
       image: "/helios_selene/helios.png",
@@ -43,7 +43,7 @@ export const grid: PopSign[][] = [
     },
     {
       image: "/helios_selene/selene.png",
-      flash: "/helios_selene/selene.png",
+      flash: "/helios_selene/sflash.png",
     },
     {
       image: "/pomegranates_botticelli/cover.png",
@@ -69,8 +69,8 @@ export const grid: PopSign[][] = [
       flash: "/pomegranates_botticelli/flash.png",
     },
     {
-      image: "/si_tian_wang/si_tian_wang.png",
-      flash: "/si_tian_wang/si_tian_wang.png",
+      image: "/si_tian_wang/cover.png",
+      flash: "/si_tian_wang/flash.png",
     },
   ],
 ];
