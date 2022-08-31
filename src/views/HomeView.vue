@@ -6,42 +6,39 @@ import throttle from "lodash.throttle";
 import { onBeforeMount, onUnmounted } from "vue";
 import { grid } from "./home-signs";
 
+const xOffset = (val: number) =>
+  document.body.style.setProperty("--x-offset", `${val.toFixed(0)}px`);
+const yOffset = (val: number) =>
+  document.body.style.setProperty("--y-offset", `${val.toFixed(0)}px`);
+
 onUnmounted(() => store.flashOff());
-onBeforeMount(() => window); // TODO set offsets here
+onBeforeMount(() => {
+  xOffset(0);
+  yOffset(0);
+});
 
 const fullWidth = window.innerWidth;
 const fullHeight = window.innerHeight;
-document.body.style.setProperty("--x-offset", "0px");
-document.body.style.setProperty("--y-offset", "0px");
 
-const onMouseMove = throttle((event: MouseEvent) => {
-  document.body.style.setProperty(
-    "--x-offset",
-    `${-event.clientX + fullWidth / 2}px`
-  );
-  document.body.style.setProperty(
-    "--y-offset",
-    `${-event.clientY + fullHeight / 2}px`
-  );
+document.body.onmousemove = throttle((event: MouseEvent) => {
+  xOffset(-event.clientX + fullWidth / 2);
+  xOffset(-event.clientY + fullHeight / 2);
 }, 100);
-
-document.body.onmousemove = onMouseMove;
 
 window.ondevicemotion = throttle(function (
   this: { x: number; y: number },
   event: DeviceMotionEvent
 ) {
-  const x = event.accelerationIncludingGravity?.x! * 150;
-  const y = event.accelerationIncludingGravity?.y! * 150;
-  document.getElementsByTagName("h1")[0].textContent = `${this.x.toFixed(
-    0
-  )}||${this.y.toFixed(0)}`;
+  document.body.onmousemove = null; // disable mouse move
+  const x = event.accelerationIncludingGravity?.x! * 240;
+  const y = event.accelerationIncludingGravity?.y! * 240;
 
-  if (Math.abs(x - this.x) > 100) this.x = x;
-  if (Math.abs(y - this.y) > 100) this.y = y;
+  // don't allow every call to update values
+  if (Math.abs(x - (this.x || 0)) > 80) this.x = -x;
+  if (Math.abs(y - (this.y || 0)) > 80) this.y = y;
 
-  document.body.style.setProperty("--x-offset", `${this.x.toFixed(0)}px`);
-  document.body.style.setProperty("--y-offset", `${this.y.toFixed(0)}px`);
+  xOffset(this.x);
+  yOffset(this.y);
 },
 100);
 </script>
@@ -151,7 +148,7 @@ section {
 
 @media (max-width: 800px) {
   .valign .container {
-    width: 60vw;
+    width: 100vw;
     transform: translate(
         calc(var(--x-offset) * $mouse-move-attenuation),
         calc(var(--y-offset) * $mouse-move-attenuation)
