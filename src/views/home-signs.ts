@@ -4,70 +4,70 @@ export const grid: PopSign[][] = [
   [
     // 1st row
     {
-      image: "/pomegranates_botticelli/cover.webp",
-      flash: "/pomegranates_botticelli/flash.webp",
+      image: "/pomegranates_botticelli/low/cover.webp",
+      flash: "/pomegranates_botticelli/low/flash.webp",
     },
     {
-      image: "/fallen_angel/cover.webp",
-      flash: "/fallen_angel/flash.webp",
+      image: "/fallen_angel/low/cover.webp",
+      flash: "/fallen_angel/low/flash.webp",
     },
     {
-      image: "/helios_selene/selene.webp",
-      flash: "/helios_selene/sflash.webp",
+      image: "/helios_selene/low/selene.webp",
+      flash: "/helios_selene/low/sflash.webp",
     },
   ],
   [
     // 2nd row
     {
-      image: "/si_tian_wang/cover.webp",
-      flash: "/si_tian_wang/flash.webp",
+      image: "/si_tian_wang/low/cover.webp",
+      flash: "/si_tian_wang/low/flash.webp",
     },
-    { image: "/stop_horny/cover.webp", flash: "/stop_horny/flash.webp" },
+    { image: "/stop_horny/low/cover.webp", flash: "/stop_horny/low/flash.webp" },
     {
-      image: "/twilight_zone/Twilight Zone.webp",
-      flash: "/twilight_zone/Twilight Zone.webp",
+      image: "/twilight_zone/low/cover.webp",
+      flash: "/twilight_zone/low/cover.webp",
     },
   ],
   [
     // 3rd row
     {
-      image: "/litter_ahead_lilith/cover.webp",
-      flash: "/litter_ahead_lilith/flash.webp",
+      image: "/litter_ahead_lilith/low/cover.webp",
+      flash: "/litter_ahead_lilith/low/flash.webp",
     },
     {
-      image: "/helios_selene/helios.webp",
-      flash: "/helios_selene/hflash.webp",
+      image: "/helios_selene/low/helios.webp",
+      flash: "/helios_selene/low/hflash.webp",
     },
     {
-      image: "/helios_selene/selene.webp",
-      flash: "/helios_selene/sflash.webp",
+      image: "/helios_selene/low/selene.webp",
+      flash: "/helios_selene/low/sflash.webp",
     },
     {
-      image: "/pomegranates_botticelli/cover.webp",
-      flash: "/pomegranates_botticelli/flash.webp",
+      image: "/pomegranates_botticelli/low/cover.webp",
+      flash: "/pomegranates_botticelli/low/flash.webp",
     },
   ],
   [
     // 4th row
     {
-      image: "/twilight_zone/Twilight Zone.webp",
-      flash: "/twilight_zone/Twilight Zone.webp",
+      image: "/twilight_zone/low/cover.webp",
+      flash: "/twilight_zone/low/cover.webp",
     },
     {
-      image: "/fallen_angel/cover.webp",
-      flash: "/fallen_angel/flash.webp",
+      image: "/fallen_angel/low/cover.webp",
+      flash: "/fallen_angel/low/flash.webp",
     },
-    { image: "/stop_horny/cover.webp", flash: "/stop_horny/flash.webp" },
+    { image: "/stop_horny/low/cover.webp", flash: "/stop_horny/low/flash.webp" },
   ],
   [
     // 5th row
     {
-      image: "/pomegranates_botticelli/cover.webp",
-      flash: "/pomegranates_botticelli/flash.webp",
+      image: "/pomegranates_botticelli/low/cover.webp",
+      flash: "/pomegranates_botticelli/low/flash.webp",
     },
     {
-      image: "/si_tian_wang/cover.webp",
-      flash: "/si_tian_wang/flash.webp",
+      image: "/si_tian_wang/low/cover.webp",
+      flash: "/si_tian_wang/low/flash.webp",
     },
   ],
 ];
