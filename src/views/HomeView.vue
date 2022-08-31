@@ -25,7 +25,25 @@ const onMouseMove = throttle((event: MouseEvent) => {
   );
 }, 100);
 
-document.body.addEventListener("mousemove", onMouseMove);
+document.body.onmousemove = onMouseMove;
+
+window.ondevicemotion = throttle(function (
+  this: { x: number; y: number },
+  event: DeviceMotionEvent
+) {
+  const x = event.accelerationIncludingGravity?.x! * 150;
+  const y = event.accelerationIncludingGravity?.y! * 150;
+  document.getElementsByTagName("h1")[0].textContent = `${this.x.toFixed(
+    0
+  )}||${this.y.toFixed(0)}`;
+
+  if (Math.abs(x - this.x) > 100) this.x = x;
+  if (Math.abs(y - this.y) > 100) this.y = y;
+
+  document.body.style.setProperty("--x-offset", `${this.x.toFixed(0)}px`);
+  document.body.style.setProperty("--y-offset", `${this.y.toFixed(0)}px`);
+},
+100);
 </script>
 
 <template>
@@ -53,7 +71,7 @@ document.body.addEventListener("mousemove", onMouseMove);
 $skew-effect: 5vw;
 $left-offset: 40px;
 $switch-position: 50px;
-$mouse-move-attenuation: 0.1;
+$mouse-move-attenuation: 0.04;
 
 section {
   position: absolute;
@@ -77,7 +95,7 @@ section {
   overflow: hidden;
   padding-left: $left-offset;
   background-color: var(--background-color);
-  transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-in-out;
   &-dark {
     background-color: var(--background-dark-color);
     transition: clip-path 0.5s ease-out;
@@ -129,5 +147,16 @@ section {
   bottom: $switch-position;
   right: $switch-position;
   z-index: 100;
+}
+
+@media (max-width: 800px) {
+  .valign .container {
+    width: 60vw;
+    transform: translate(
+        calc(var(--x-offset) * $mouse-move-attenuation),
+        calc(var(--y-offset) * $mouse-move-attenuation)
+      )
+      rotate(45deg) scale(0.8);
+  }
 }
 </style>

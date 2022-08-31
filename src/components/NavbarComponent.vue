@@ -19,8 +19,9 @@ import { store } from "@/store";
 .navbar {
   position: relative;
   z-index: 100;
+  width: fit-content;
   font-family: LemonMilk;
-  padding: 20px 20px 0 20px;
+  padding: 20px 0 0 20px;
   color: var(--text-color);
   &[flash-on="true"] {
     --text-color: var(--text-dark-theme);
@@ -77,4 +78,12 @@ import { store } from "@/store";
     transition: color 0.4s;
   }
 }
+
+@media (max-width: 800px) {
+  .navbar {
+  padding: 10px 0 0 10px;
+  }
+
+}
+
 </style>
