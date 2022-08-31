@@ -11,36 +11,39 @@ const xOffset = (val: number) =>
 const yOffset = (val: number) =>
   document.body.style.setProperty("--y-offset", `${val.toFixed(0)}px`);
 
-onUnmounted(() => store.flashOff());
-onBeforeMount(() => {
-  xOffset(0);
-  yOffset(0);
-});
-
 const fullWidth = window.innerWidth;
 const fullHeight = window.innerHeight;
 
 document.body.onmousemove = throttle((event: MouseEvent) => {
   xOffset(-event.clientX + fullWidth / 2);
-  xOffset(-event.clientY + fullHeight / 2);
+  yOffset(-event.clientY + fullHeight / 2);
 }, 100);
 
-window.ondevicemotion = throttle(function (
+window.ondeviceorientation = throttle(function (
   this: { x: number; y: number },
-  event: DeviceMotionEvent
+  event: DeviceOrientationEvent
 ) {
   document.body.onmousemove = null; // disable mouse move
-  const x = event.accelerationIncludingGravity?.x! * 240;
-  const y = event.accelerationIncludingGravity?.y! * 240;
+  if (!event.gamma || !event.beta) return;
+
+  const x = event.gamma! * 30;
+  const y = event.beta! * 30;
 
   // don't allow every call to update values
-  if (Math.abs(x - (this.x || 0)) > 80) this.x = -x;
-  if (Math.abs(y - (this.y || 0)) > 80) this.y = y;
+  if (Math.abs(x - (this.x || 0)) > 50) this.x = x;
+  if (Math.abs(y - (this.y || 0)) > 50) this.y = y;
 
   xOffset(this.x);
   yOffset(this.y);
 },
 100);
+
+// Lifecycle Events
+onUnmounted(() => store.flashOff());
+onBeforeMount(() => {
+  xOffset(0);
+  yOffset(0);
+});
 </script>
 
 <template>
@@ -82,7 +85,6 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  // subtract padding
   width: calc(100% - $left-offset);
   height: 100%;
   display: flex;
@@ -92,14 +94,13 @@ section {
   overflow: hidden;
   padding-left: $left-offset;
   background-color: var(--background-color);
-  transition: background-color 0.4s ease-in-out;
   &-dark {
     background-color: var(--background-dark-color);
-    transition: clip-path 0.5s ease-out;
+    transition: clip-path 0.8s cubic-bezier(1, 0, 0.2, 1);
     z-index: 2;
     clip-path: circle(0% at calc(100% - 80px) calc(100% - 60px));
     &[flash-on="true"] {
-      // dark background animation
+      /* dark background animation */
       clip-path: circle(
         150% at calc(100% - $switch-position) calc(100% - $switch-position)
       );
@@ -154,6 +155,14 @@ section {
         calc(var(--y-offset) * $mouse-move-attenuation)
       )
       rotate(45deg) scale(0.8);
+  }
+  .row {
+    &:nth-child(1) {
+      display: none;
+    }
+    &:nth-child(5) {
+      display: none;
+    }
   }
 }
 </style>
