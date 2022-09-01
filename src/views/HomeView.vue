@@ -20,7 +20,7 @@ document.body.onmousemove = throttle((event: MouseEvent) => {
 }, 100);
 
 window.ondeviceorientation = throttle(function (
-  this: { x: number; y: number },
+  this: any,
   event: DeviceOrientationEvent
 ) {
   document.body.onmousemove = null; // disable mouse move
@@ -36,7 +36,7 @@ window.ondeviceorientation = throttle(function (
   xOffset(this.x);
   yOffset(this.y);
 },
-100);
+50);
 
 // Lifecycle Events
 onUnmounted(() => store.flashOff());
@@ -48,7 +48,7 @@ onBeforeMount(() => {
 
 <template>
   <section>
-    <div class="valign">
+    <div class="valign valign-light" :flash-on="store.isFlashOn">
       <div class="container">
         <div class="row" v-for="row in grid">
           <PopSignComponent v-for="sign in row" :sign="sign" />
@@ -72,6 +72,7 @@ $skew-effect: 5vw;
 $left-offset: 40px;
 $switch-position: 50px;
 $mouse-move-attenuation: 0.04;
+$animation-time: 0.8s;
 
 section {
   position: absolute;
@@ -94,16 +95,28 @@ section {
   overflow: hidden;
   padding-left: $left-offset;
   background-color: var(--background-color);
+  &-light {
+    opacity: 1;
+    transition: opacity 0s;
+    &[flash-on="true"] {
+      opacity: 0;
+      transition: opacity 0s $animation-time;
+    }
+  }
   &-dark {
     background-color: var(--background-dark-color);
-    transition: clip-path 0.8s cubic-bezier(1, 0, 0.2, 1);
+    transition: clip-path $animation-time ease-in-out,
+      opacity 0s $animation-time;
     z-index: 2;
     clip-path: circle(0% at calc(100% - 80px) calc(100% - 60px));
+    opacity: 0;
     &[flash-on="true"] {
       /* dark background animation */
       clip-path: circle(
         150% at calc(100% - $switch-position) calc(100% - $switch-position)
       );
+      opacity: 1;
+      transition: clip-path $animation-time ease-in-out, opacity 0s;
     }
   }
   .container {
