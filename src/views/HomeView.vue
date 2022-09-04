@@ -6,23 +6,32 @@ import throttle from "lodash.throttle";
 import { onBeforeMount, onUnmounted } from "vue";
 import { grid } from "./home-signs";
 
+const MOVEMENT_ATTENUATION = 0.04;
+
 const xOffset = (val: number) =>
-  document.body.style.setProperty("--x-offset", `${val.toFixed(0)}px`);
+  document.body.style.setProperty(
+    "--x-offset",
+    `${(val * MOVEMENT_ATTENUATION).toFixed(0)}px`
+  );
 const yOffset = (val: number) =>
-  document.body.style.setProperty("--y-offset", `${val.toFixed(0)}px`);
+  document.body.style.setProperty(
+    "--y-offset",
+    `${(val * MOVEMENT_ATTENUATION).toFixed(0)}px`
+  );
 
 const fullWidth = window.innerWidth;
 const fullHeight = window.innerHeight;
 
-document.body.onmousemove = throttle((event: MouseEvent) => {
+const OnMouseMove = throttle((event: MouseEvent) => {
   xOffset(-event.clientX + fullWidth / 2);
   yOffset(-event.clientY + fullHeight / 2);
 }, 100);
 
-window.ondeviceorientation = throttle(function (
+const OnDeviceOrientation = throttle(function (
   this: any,
   event: DeviceOrientationEvent
 ) {
+  // document.body.removeEventListener('mousermove', OnMouseMove);
   document.body.onmousemove = null; // disable mouse move
   if (!event.gamma || !event.beta) return;
 
@@ -30,13 +39,20 @@ window.ondeviceorientation = throttle(function (
   const y = event.beta! * 30;
 
   // don't allow every call to update values
-  if (Math.abs(x - (this.x || 0)) > 50) this.x = x;
-  if (Math.abs(y - (this.y || 0)) > 50) this.y = y;
-
-  xOffset(this.x);
-  yOffset(this.y);
+  if (Math.abs(x - (this.x || 0)) > 50) {
+    this.x = x;
+    xOffset(this.x);
+  }
+  if (Math.abs(y - (this.y || 0)) > 50) {
+    this.y = y;
+    yOffset(this.y);
+  }
 },
-50);
+100);
+
+// Link events
+document.body.addEventListener("mousemove", OnMouseMove);
+window.addEventListener("deviceorientation", OnDeviceOrientation);
 
 // Lifecycle Events
 onUnmounted(() => store.flashOff());
@@ -121,13 +137,8 @@ section {
   }
   .container {
     transition: transform 0.1s linear;
-    transform: translate(
-        calc(var(--x-offset) * $mouse-move-attenuation),
-        calc(var(--y-offset) * $mouse-move-attenuation)
-      )
-      rotate(45deg);
-
-    backface-visibility: hidden;
+    rotate: 45deg;
+    transform: translate(var(--x-offset), var(--y-offset));
     width: 50vw;
   }
 }
@@ -163,11 +174,8 @@ section {
 @media (max-width: 800px) {
   .valign .container {
     width: 100vw;
-    transform: translate(
-        calc(var(--x-offset) * $mouse-move-attenuation),
-        calc(var(--y-offset) * $mouse-move-attenuation)
-      )
-      rotate(45deg) scale(0.8);
+    scale: 0.8;
+    transform: translate(var(--x-offset), var(--y-offset));
   }
   .row {
     &:nth-child(1) {
