@@ -1,8 +1,5 @@
 <script setup lang="ts">
-export declare interface PopSign {
-  image: string;
-  flash: string;
-}
+import type { PopSign } from "../works";
 defineProps({
   sign: {
     type: Object as () => PopSign,
@@ -15,7 +12,7 @@ defineProps({
 <template>
   <div class="pop">
     <div class="pop-container">
-      <img :src="flash ? sign.flash : sign.image" :alt="sign.image" />
+      <img :src="flash ? sign.flash_cutout.low : sign.cutout.low" :alt="sign.work.name" />
     </div>
   </div>
 </template>
