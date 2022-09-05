@@ -1,43 +1,34 @@
-import {
-  PommegranatesBotticelli_Pop,
-  FallenAngel_Pop,
-  Helios_Pop,
-  Selene_Pop,
-  SiTianWang_Pop,
-  LitterAheadLilith_Pop,
-  StopHorny_Pop,
-  TwilightZone_Pop,
-} from "../works";
+import { Pop } from "../works";
 
 export const grid = [
   [
     // 1st row
-    PommegranatesBotticelli_Pop,
-    FallenAngel_Pop,
-    Selene_Pop,
+    Pop.PommegranatesBotticelli,
+    Pop.FallenAngel,
+    Pop.Selene,
   ],
   [
     // 2nd row
-    SiTianWang_Pop,
-    StopHorny_Pop,
-    TwilightZone_Pop,
+    Pop.SiTianWang,
+    Pop.StopHorny,
+    Pop.TwilightZone,
   ],
   [
     // 3rd row
-    LitterAheadLilith_Pop,
-    Helios_Pop,
-    Selene_Pop,
-    PommegranatesBotticelli_Pop,
+    Pop.LitterAheadLilith,
+    Pop.Helios,
+    Pop.Selene,
+    Pop.PommegranatesBotticelli,
   ],
   [
     // 4th row
-    TwilightZone_Pop,
-    FallenAngel_Pop,
-    StopHorny_Pop,
+    Pop.TwilightZone,
+    Pop.FallenAngel,
+    Pop.StopHorny,
   ],
   [
     // 5th row
-    PommegranatesBotticelli_Pop,
-    SiTianWang_Pop,
+    Pop.PommegranatesBotticelli,
+    Pop.SiTianWang,
   ],
 ];

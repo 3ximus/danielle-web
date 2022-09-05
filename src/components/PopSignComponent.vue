@@ -12,7 +12,10 @@ defineProps({
 <template>
   <div class="pop">
     <div class="pop-container">
-      <img :src="flash ? sign.flash_cutout.low : sign.cutout.low" :alt="sign.work.name" />
+      <img
+        :src="flash ? sign.flash_cutout.low : sign.cutout.low"
+        :alt="sign.work.name"
+      />
     </div>
   </div>
 </template>

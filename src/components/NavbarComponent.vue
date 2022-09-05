@@ -81,9 +81,7 @@ import { store } from "@/store";
 
 @media (max-width: 800px) {
   .navbar {
-  padding: 10px 0 0 10px;
+    padding: 10px 0 0 10px;
   }
-
 }
-
 </style>

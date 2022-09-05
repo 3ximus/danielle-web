@@ -31,8 +31,7 @@ const OnDeviceOrientation = throttle(function (
   this: any,
   event: DeviceOrientationEvent
 ) {
-  // document.body.removeEventListener('mousermove', OnMouseMove);
-  document.body.onmousemove = null; // disable mouse move
+  document.body.removeEventListener("mousemove", OnMouseMove);
   if (!event.gamma || !event.beta) return;
 
   const x = event.gamma! * 30;
@@ -137,8 +136,7 @@ section {
   }
   .container {
     transition: transform 0.1s linear;
-    rotate: 45deg;
-    transform: translate(var(--x-offset), var(--y-offset));
+    transform: translate(var(--x-offset), var(--y-offset)) rotate(45deg);
     width: 50vw;
   }
 }
@@ -175,7 +173,7 @@ section {
   .valign .container {
     width: 100vw;
     scale: 0.8;
-    transform: translate(var(--x-offset), var(--y-offset));
+    transform: translate(var(--x-offset), var(--y-offset)) rotate(45deg);
   }
   .row {
     &:nth-child(1) {
