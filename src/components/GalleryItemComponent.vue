@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Work } from "../works";
+import type { GalleryItem } from "../works";
 defineProps({
-  work: {
-    type: Object as () => Work,
+  item: {
+    type: Object as () => GalleryItem,
     required: true,
   },
   flash: Boolean,
@@ -10,11 +10,37 @@ defineProps({
 </script>
 
 <template>
-  <div class="pop">
-    <div class="pop-container">
-      <img
-        :src="work.cover"
-      />
-    </div>
+  <div class="item">
+    <RouterLink :to="'/gallery/' + item.work.slug">
+      <img :src="item.work.cover" />
+    </RouterLink>
   </div>
 </template>
+
+<style scoped lang="scss">
+@media screen and (min-width: 800px) {
+  .tall {
+    grid-row: span 2 / auto;
+  }
+
+  .fat {
+    grid-column: span 2 / auto;
+  }
+}
+
+.item {
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  margin: 10px;
+  &:hover {
+    scale: 1.02;
+    opacity: 0.4;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    object-fit: cover;
+  }
+}
+</style>

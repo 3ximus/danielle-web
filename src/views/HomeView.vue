@@ -166,7 +166,7 @@ section {
   position: absolute;
   bottom: $switch-position;
   right: $switch-position;
-  z-index: 100;
+  z-index: 50;
 }
 
 @media (max-width: 800px) {

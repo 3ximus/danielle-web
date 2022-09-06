@@ -4,14 +4,15 @@ import GalleryItemComponent from "@/components/GalleryItemComponent.vue";
 </script>
 <template>
   <section>
-    <div class="content">
-      <GalleryItemComponent v-for="work in gallery" :work="work" />
-    </div>
+    <GalleryItemComponent v-for="item in gallery" :item="item" />
   </section>
 </template>
 
 <style scoped lang="scss">
+$mincol-width: 300px;
 section {
-  color: blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($mincol-width, 1fr));
+  grid-auto-rows: auto;
 }
 </style>

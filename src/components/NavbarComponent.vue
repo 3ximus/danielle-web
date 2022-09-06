@@ -1,28 +1,41 @@
 <script setup lang="ts">
 import { store } from "@/store";
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+const currentRoute = computed(() => useRoute().name);
 </script>
 
 <template>
-  <header class="navbar" :flash-on="store.isFlashOn">
+  <header
+    class="navbar"
+    :flash-on="store.isFlashOn"
+    :at-home="currentRoute === 'home'"
+  >
     <h1>DANIELLE ROMAINE</h1>
     <h2>Fine Artist</h2>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="gallery">Gallery</RouterLink>
-      <RouterLink to="about">About</RouterLink>
-      <RouterLink to="contact">Contact</RouterLink>
+      <RouterLink to="/gallery">Gallery</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/contact">Contact</RouterLink>
     </nav>
   </header>
 </template>
 
 <style scope lang="scss">
 .navbar {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 100;
   width: fit-content;
   font-family: LemonMilk;
-  padding: 20px 0 0 20px;
+  padding: 25px;
   color: var(--text-color);
+  background-color: none;
+  transition: background-color 1s;
+  &[at-home="false"] {
+    background-color: var(--background-color);
+  }
   &[flash-on="true"] {
     --text-color: var(--text-dark-theme);
   }
@@ -81,7 +94,13 @@ import { store } from "@/store";
 
 @media (max-width: 800px) {
   .navbar {
-    padding: 10px 0 0 10px;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    /* &[at-home="false"] { */
+    /*   h2 { */
+    /*     display: none; */
+    /*   } */
+    /* } */
   }
 }
 </style>

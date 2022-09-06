@@ -6,37 +6,112 @@
 //       \/  \/  \___/ |_|   |_|\_\|___/
 
 export interface Work {
-  name?: string;
-  year?: string;
+  name: string;
+  slug: string;
+  year?: number;
   cover?: string;
   images: string[];
 }
 
 export namespace Works {
   export const PommegranatesBotticelli: Work = {
+    name: "Pommegranates and Botticelli",
+    slug: "pomegranates-botticelli",
+    year: 2021,
+    cover: "pomegranates_botticelli/88.webp",
     images: [],
   };
   export const FallenAngel: Work = {
+    name: "FallenAngel",
+    slug: "fallenangel",
     images: [],
   };
   export const HeliosSelene: Work = {
+    name: "export",
+    slug: "export",
+    cover: "/helios_selene/1.jpg",
+    images: [],
+  };
+  export const Squid: Work = {
+    name: "Squid",
+    slug: "squid",
+    cover: "/squid/89.webp",
+    images: [],
+  };
+  export const StopNoHare: Work = {
+    name: "StopNoHare",
+    slug: "stopnohare",
+    cover: "/stop_no_hare/82.webp",
+    images: [],
+  };
+  export const SoloTravel: Work = {
+    name: "SoloTravel",
+    slug: "solotravel",
+    cover: "/solo_travel/75.webp",
     images: [],
   };
   export const SiTianWang: Work = {
+    name: "SiTianWang",
+    slug: "sitianwang",
+    cover: "/si_tian_wang/44.webp",
+    images: [],
+  };
+  export const DuoWenTianWang: Work = {
+    name: "DuoWenTianWang",
+    slug: "duowentianwang",
+    cover: "/duo_wen_tian_wang/41.webp",
+    images: [],
+  };
+  export const PedestrianSitting: Work = {
+    name: "PedestrianSitting",
+    slug: "pedestriansitting",
+    cover: "/pedestrian_sitting/27.webp",
     images: [],
   };
   export const LitterAheadLilith: Work = {
+    name: "LitterAheadLilith",
+    slug: "litteraheadlilith",
     cover: "/litter_ahead_lilith/gallery.webp",
     images: [],
   };
   export const StopHorny: Work = {
+    name: "StopHorny",
+    slug: "stophorny",
     images: [],
   };
   export const TwilightZone: Work = {
+    name: "TwilightZone",
+    slug: "twilightzone",
     images: [],
   };
   export const MediaSexuality: Work = {
+    name: "MediaSexuality",
+    slug: "mediasexuality",
     cover: "/media_and_sexuality/gallery.webp",
+    images: [],
+  };
+  export const FindingSelf: Work = {
+    name: "FindingSelf",
+    slug: "finding-self",
+    cover: "/finding_self/4.webp",
+    images: [],
+  };
+  export const BavarianLionShield: Work = {
+    name: "BavarianLionShield",
+    slug: "bavarian-lion-shield",
+    cover: "/bavarian_lion_shield/52.webp",
+    images: [],
+  };
+  export const MaleStudy: Work = {
+    name: "MaleStudy",
+    slug: "male-study",
+    cover: "/male_study/56.webp",
+    images: [],
+  };
+  export const FeminineStudies: Work = {
+    name: "FeminineStudies",
+    slug: "feminine-studies",
+    cover: "/feminine_studies/58.webp",
     images: [],
   };
 }
@@ -159,4 +234,19 @@ export namespace Pop {
     },
     work: Works.TwilightZone,
   };
+}
+
+//    _____       _ _                 _____ _
+//   / ____|     | | |               |_   _| |
+//  | |  __  __ _| | | ___ _ __ _   _  | | | |_ ___ _ __ ___
+//  | | |_ |/ _` | | |/ _ | '__| | | | | | | __/ _ | '_ ` _ \
+//  | |__| | (_| | | |  __| |  | |_| |_| |_| ||  __| | | | | |
+//   \_____|\__,_|_|_|\___|_|   \__, |_____|\__\___|_| |_| |_|
+//                               __/ |
+//                              |___/
+
+export interface GalleryItem {
+  work: Work;
+  fat?: boolean;
+  tall?: boolean;
 }
