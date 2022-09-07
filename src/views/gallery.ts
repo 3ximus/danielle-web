@@ -8,7 +8,7 @@ export const gallery: GalleryItem[] = [
   { work: Works.BavarianLionShield },
   { work: Works.HeliosSelene },
   { work: Works.DuoWenTianWang },
-  { work: Works.PommegranatesBotticelli },
+  { work: Works.PomegranatesBotticelli },
   { work: Works.PedestrianSitting },
   { work: Works.SiTianWang },
   { work: Works.SoloTravel },

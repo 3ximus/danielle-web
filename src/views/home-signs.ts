@@ -3,7 +3,7 @@ import { Pop } from "../works";
 export const grid = [
   [
     // 1st row
-    Pop.PommegranatesBotticelli,
+    Pop.PomegranatesBotticelli,
     Pop.FallenAngel,
     Pop.Selene,
   ],
@@ -18,7 +18,7 @@ export const grid = [
     Pop.LitterAheadLilith,
     Pop.Helios,
     Pop.Selene,
-    Pop.PommegranatesBotticelli,
+    Pop.PomegranatesBotticelli,
   ],
   [
     // 4th row
@@ -28,7 +28,7 @@ export const grid = [
   ],
   [
     // 5th row
-    Pop.PommegranatesBotticelli,
+    Pop.PomegranatesBotticelli,
     Pop.SiTianWang,
   ],
 ];

@@ -14,8 +14,8 @@ export interface Work {
 }
 
 export namespace Works {
-  export const PommegranatesBotticelli: Work = {
-    name: "Pommegranates and Botticelli",
+  export const PomegranatesBotticelli: Work = {
+    name: "Pomegranates and Botticelli",
     slug: "pomegranates-botticelli",
     year: 2021,
     cover: "pomegranates_botticelli/88.webp",
@@ -23,12 +23,12 @@ export namespace Works {
   };
   export const FallenAngel: Work = {
     name: "FallenAngel",
-    slug: "fallenangel",
+    slug: "fallen-angel",
     images: [],
   };
   export const HeliosSelene: Work = {
-    name: "export",
-    slug: "export",
+    name: "Helios and Selene",
+    slug: "helios-selene",
     cover: "/helios_selene/1.jpg",
     images: [],
   };
@@ -39,32 +39,32 @@ export namespace Works {
     images: [],
   };
   export const StopNoHare: Work = {
-    name: "StopNoHare",
-    slug: "stopnohare",
+    name: "Stop No Hare",
+    slug: "stop-no-hare",
     cover: "/stop_no_hare/82.webp",
     images: [],
   };
   export const SoloTravel: Work = {
-    name: "SoloTravel",
-    slug: "solotravel",
+    name: "Solo Travel",
+    slug: "solo-travel",
     cover: "/solo_travel/75.webp",
     images: [],
   };
   export const SiTianWang: Work = {
-    name: "SiTianWang",
-    slug: "sitianwang",
+    name: "Si Tian Wang",
+    slug: "si-tian-wang",
     cover: "/si_tian_wang/44.webp",
     images: [],
   };
   export const DuoWenTianWang: Work = {
-    name: "DuoWenTianWang",
-    slug: "duowentianwang",
+    name: "Duo Wen Tian Wang",
+    slug: "duo-wen-tian-wang",
     cover: "/duo_wen_tian_wang/41.webp",
     images: [],
   };
   export const PedestrianSitting: Work = {
-    name: "PedestrianSitting",
-    slug: "pedestriansitting",
+    name: "Pedestrian Sitting",
+    slug: "pedestrian-sitting",
     cover: "/pedestrian_sitting/27.webp",
     images: [],
   };
@@ -138,7 +138,7 @@ export interface PopSign {
 }
 
 export namespace Pop {
-  export const PommegranatesBotticelli: PopSign = {
+  export const PomegranatesBotticelli: PopSign = {
     cutout: {
       high: "/pomegranates_botticelli/cover.webp",
       low: "/pomegranates_botticelli/low/cover.webp",
@@ -147,7 +147,7 @@ export namespace Pop {
       high: "/pomegranates_botticelli/flash.webp",
       low: "/pomegranates_botticelli/low/flash.webp",
     },
-    work: Works.PommegranatesBotticelli,
+    work: Works.PomegranatesBotticelli,
   };
 
   export const FallenAngel: PopSign = {

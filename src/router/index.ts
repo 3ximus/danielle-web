@@ -22,13 +22,14 @@ const router = createRouter({
     },
     {
       path: "/gallery",
-      name: "gallery",
       component: GalleryView,
-    },
-    {
-      path: "/gallery/:slug",
-      name: "work",
-      component: () => import("../views/WorkView.vue"),
+      children: [
+        {
+          path: "/gallery/:slug",
+          name: "work",
+          component: () => import("../views/WorkView.vue"),
+        },
+      ],
     },
   ],
 });

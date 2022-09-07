@@ -31,8 +31,8 @@ const OnDeviceOrientation = throttle(function (
   this: any,
   event: DeviceOrientationEvent
 ) {
-  document.body.removeEventListener("mousemove", OnMouseMove);
   if (!event.gamma || !event.beta) return;
+  document.body.removeEventListener("mousemove", OnMouseMove);
 
   const x = event.gamma! * 30;
   const y = event.beta! * 30;
