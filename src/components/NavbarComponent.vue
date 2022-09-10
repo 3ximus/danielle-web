@@ -1,15 +1,21 @@
 <script setup lang="ts">
 import { store } from "@/store";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-const currentRoute = computed(() => useRoute().name);
+const atHome = computed(() => useRoute().name === "home");
+let scrolled = ref(false);
+
+window.addEventListener("scroll", () => {
+  scrolled.value = window.scrollY > 100;
+});
 </script>
 
 <template>
   <header
     class="navbar"
+    :scrolled="scrolled"
     :flash-on="store.isFlashOn"
-    :at-home="currentRoute === 'home'"
+    :at-home="atHome"
   >
     <h1>DANIELLE ROMAINE</h1>
     <h2>Fine Artist</h2>
@@ -31,12 +37,12 @@ const currentRoute = computed(() => useRoute().name);
   font-family: LemonMilk;
   padding: 25px;
   color: var(--text-color);
-  background-color: none;
+  background-color: transparent;
   transition: background-color 1s;
-  &[at-home="false"] {
+  &[at-home=false] {
     background-color: var(--background-color);
   }
-  &[flash-on="true"] {
+  &[flash-on=true] {
     --text-color: var(--text-dark-theme);
   }
   nav {
@@ -89,6 +95,11 @@ const currentRoute = computed(() => useRoute().name);
     font-size: var(--fs-text);
     opacity: 0.5;
     transition: color 0.4s;
+  }
+  &[scrolled=true] {
+    h2 {
+      opacity: 0;
+    }
   }
 }
 

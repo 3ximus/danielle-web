@@ -8,7 +8,7 @@
 export interface Work {
   name: string;
   slug: string;
-  year?: number;
+  year: number;
   cover?: string;
   images: string[];
 }
@@ -22,96 +22,112 @@ export namespace Works {
     images: [],
   };
   export const FallenAngel: Work = {
-    name: "FallenAngel",
+    name: "Fallen Angel",
     slug: "fallen-angel",
+    year: 2021,
     images: [],
   };
   export const HeliosSelene: Work = {
     name: "Helios and Selene",
     slug: "helios-selene",
     cover: "/helios_selene/1.jpg",
+    year: 2021,
     images: [],
   };
   export const Squid: Work = {
     name: "Squid",
     slug: "squid",
     cover: "/squid/89.webp",
+    year: 2021,
     images: [],
   };
   export const StopNoHare: Work = {
     name: "Stop No Hare",
     slug: "stop-no-hare",
     cover: "/stop_no_hare/82.webp",
+    year: 2021,
     images: [],
   };
   export const SoloTravel: Work = {
     name: "Solo Travel",
     slug: "solo-travel",
     cover: "/solo_travel/75.webp",
+    year: 2021,
     images: [],
   };
   export const SiTianWang: Work = {
     name: "Si Tian Wang",
     slug: "si-tian-wang",
     cover: "/si_tian_wang/44.webp",
+    year: 2021,
     images: [],
   };
   export const DuoWenTianWang: Work = {
     name: "Duo Wen Tian Wang",
     slug: "duo-wen-tian-wang",
     cover: "/duo_wen_tian_wang/41.webp",
+    year: 2021,
     images: [],
   };
   export const PedestrianSitting: Work = {
     name: "Pedestrian Sitting",
     slug: "pedestrian-sitting",
     cover: "/pedestrian_sitting/27.webp",
+    year: 2021,
     images: [],
   };
   export const LitterAheadLilith: Work = {
-    name: "LitterAheadLilith",
+    name: "Litter Ahead Lilith",
     slug: "litteraheadlilith",
     cover: "/litter_ahead_lilith/gallery.webp",
+    year: 2021,
     images: [],
   };
   export const StopHorny: Work = {
-    name: "StopHorny",
-    slug: "stophorny",
+    name: "Stop Horny",
+    slug: "stop-horny",
+    year: 2021,
     images: [],
   };
   export const TwilightZone: Work = {
-    name: "TwilightZone",
-    slug: "twilightzone",
+    name: "Twilight Zone",
+    slug: "twilight-zone",
+    year: 2021,
     images: [],
   };
   export const MediaSexuality: Work = {
-    name: "MediaSexuality",
-    slug: "mediasexuality",
+    name: "Media Sexuality",
+    slug: "media-sexuality",
     cover: "/media_and_sexuality/gallery.webp",
+    year: 2021,
     images: [],
   };
   export const FindingSelf: Work = {
-    name: "FindingSelf",
+    name: "Finding Self",
     slug: "finding-self",
     cover: "/finding_self/4.webp",
+    year: 2021,
     images: [],
   };
   export const BavarianLionShield: Work = {
-    name: "BavarianLionShield",
+    name: "Bavarian Lion Shield",
     slug: "bavarian-lion-shield",
     cover: "/bavarian_lion_shield/52.webp",
+    year: 2021,
     images: [],
   };
   export const MaleStudy: Work = {
-    name: "MaleStudy",
+    name: "Male Study",
     slug: "male-study",
     cover: "/male_study/56.webp",
+    year: 2021,
     images: [],
   };
   export const FeminineStudies: Work = {
-    name: "FeminineStudies",
+    name: "Feminine Studies",
     slug: "feminine-studies",
     cover: "/feminine_studies/58.webp",
+    year: 2021,
     images: [],
   };
 }
