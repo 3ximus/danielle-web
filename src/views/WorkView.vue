@@ -1,12 +1,23 @@
 <script setup lang="ts">
 import router from "@/router";
 import type { Work } from "@/works";
+import { gallery } from "@/views/gallery";
+import { useRoute } from "vue-router";
+import { onBeforeMount } from "vue";
 
-defineProps({
+const props = defineProps({
   work: {
-    type: Object as () => Work,
+    type: Object as () => Work | undefined,
     required: true,
   },
+});
+
+let selectedWork: Work =
+  props.work ||
+  gallery.find((i) => i.work.slug === useRoute().params.slug)?.work!;
+
+onBeforeMount(() => {
+  if (!selectedWork) dismiss();
 });
 
 function dismiss() {
@@ -17,8 +28,8 @@ function dismiss() {
 <template>
   <div class="work-modal" @click="dismiss">
     <div class="modal-content">
-      <h1>{{ work.name }}</h1>
-      <img :src="work.cover" alt="">
+      <h1>{{ selectedWork.name }}</h1>
+      <img :src="selectedWork.cover" alt="" />
     </div>
   </div>
 </template>

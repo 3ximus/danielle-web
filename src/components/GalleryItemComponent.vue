@@ -11,9 +11,9 @@ defineProps({
 
 <template>
   <div class="item" @click="$emit('open-work', item.work)">
-    <RouterLink :to="'/gallery/' + item.work.slug">
-      <img :src="item.work.cover" />
-    </RouterLink>
+    <!-- <RouterLink :to="'/gallery/' + item.work.slug"> -->
+    <img :src="item.work.cover" />
+    <!-- </RouterLink> -->
   </div>
 </template>
 
