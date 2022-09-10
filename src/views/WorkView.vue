@@ -12,6 +12,10 @@ const props = defineProps({
   },
 });
 
+function dismiss() {
+  router.push("/gallery");
+}
+
 let selectedWork: Work =
   props.work ||
   gallery.find((i) => i.work.slug === useRoute().params.slug)?.work!;
@@ -19,10 +23,9 @@ let selectedWork: Work =
 onBeforeMount(() => {
   if (!selectedWork) dismiss();
 });
-
-function dismiss() {
-  router.push("/gallery");
-}
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") dismiss();
+});
 </script>
 
 <template>
