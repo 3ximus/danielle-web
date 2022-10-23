@@ -32,7 +32,21 @@ document.addEventListener("keydown", (event) => {
   <div class="work-modal" @click="dismiss">
     <div class="modal-content">
       <h1>{{ selectedWork.name }}</h1>
-      <img :src="selectedWork.cover" alt="" />
+      <div class="container">
+        <div class="cover-image">
+          <img
+            :src="selectedWork.cover"
+            alt=""
+            onload="this.style.transform = 'scale(1)'"
+          />
+        </div>
+        <div class="description">
+          <p v-for="statement in selectedWork.statements">{{ statement }}</p>
+        </div>
+      </div>
+      <div class="images">
+        <img v-for="image in selectedWork.images" :src="image" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -44,19 +58,28 @@ document.addEventListener("keydown", (event) => {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   z-index: 200;
-  background-color: rgba(0, 0, 0, 0.8);
   .modal-content {
-    width: 90%;
-    height: 90%;
-    margin: auto;
-    margin-top: 10px;
-    padding: 2%;
+    min-height: 100%;
+    padding: 5%;
     background-color: var(--background-color);
-    border-radius: 10px;
-    font-family: LemonMilk;
-    img {
-      max-width: 60%;
+    h1 {
+      font-family: LemonMilk;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      .cover-image {
+        width: 50%;
+        padding: 20px;
+        img {
+          max-width: 100%;
+          transform: scale(1.5);
+          transition: 0.5s;
+          object-fit: cover;
+        }
+      }
     }
   }
 }

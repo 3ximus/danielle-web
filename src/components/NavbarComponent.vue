@@ -105,7 +105,7 @@ window.addEventListener("scroll", () => {
 
 @media (max-width: 800px) {
   .navbar {
-    width: 100%;
+    width: 97%;
     padding: 10px 0 10px 10px;
     /* &[at-home="false"] { */
     /*   h2 { */

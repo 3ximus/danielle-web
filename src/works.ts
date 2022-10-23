@@ -11,6 +11,7 @@ export interface Work {
   year: number;
   cover?: string;
   images: string[];
+  statements?: string[];
 }
 
 export namespace Works {
@@ -33,6 +34,10 @@ export namespace Works {
     cover: "/helios_selene/1.jpg",
     year: 2021,
     images: [],
+    statements: [
+      "Helios, God of the Sun, and Selene, Goddess of the moon, are painted in oil as busts on No Parking signs.",
+      "Ironically, the one that is reflective in the dark is Helios rather than Selene.",
+    ],
   };
   export const Squid: Work = {
     name: "Squid",
@@ -61,6 +66,10 @@ export namespace Works {
     cover: "/si_tian_wang/44.webp",
     year: 2021,
     images: [],
+    statements: [
+      "The Four Heavenly Kings are Gods in Buddhism, each representing and watching over a cardinal direction. Each King has a distinct color, weapon, direction, and purpose.",
+      "On this sign, the arrows and head direction correlate to what region they rule. The mudra, a hand symbol shown in red, alongside the mantra in the top left, are used to pray to the God of the North, Duōwén Tiānwáng (not depicted). The lemon in the bottom right symbolizes a connection to this fourth God as well.",
+    ],
   };
   export const DuoWenTianWang: Work = {
     name: "Duo Wen Tian Wang",
@@ -68,6 +77,11 @@ export namespace Works {
     cover: "/duo_wen_tian_wang/41.webp",
     year: 2021,
     images: [],
+    statements: [
+      'As the "main" God of the Four Heavenly Kings, Duōwén Tiānwáng is most commonly prayed to for prosperity seeing as he is associated with good fortune.',
+      "Usually carrying a lemon in one hand and a mongoose spitting jewels in another, he is shown as a wealth-giving God rather than one of greed.",
+      "The arrow on the sign reveals he is God of the North and his five-pronged crown symbolizes the Transcendental Buddhas. The umbrella, being his weapon of choice, is painted at the bottom, while the top is adorned with jewels.",
+    ],
   };
   export const PedestrianSitting: Work = {
     name: "Pedestrian Sitting",
@@ -75,19 +89,41 @@ export namespace Works {
     cover: "/pedestrian_sitting/27.webp",
     year: 2021,
     images: [],
+    statements: [
+      "Joking at the iconography of a pedestrian crossing, the pedestrian’s sign is now made into a functional chair- now doing the opposite of what the well-known icon was meant to do. Here, the pedestrian has given in to the societal norms of a “fast food lifestyle” so to speak, being highly inactive and ultimately lazy.",
+    ],
   };
   export const LitterAheadLilith: Work = {
     name: "Litter Ahead Lilith",
     slug: "litteraheadlilith",
     cover: "/litter_ahead_lilith/gallery.webp",
     year: 2021,
-    images: [],
+    images: [
+      "/litter_ahead_lilith/31.webp",
+      "/litter_ahead_lilith/32.webp",
+      "/litter_ahead_lilith/33.webp",
+      "/litter_ahead_lilith/34.webp",
+      "/litter_ahead_lilith/35.webp",
+    ],
+    statements: [
+      "Lilith, being known as the first Eve in the Garden of Eden, has been demonized in Judaism for not being subservient to Adam and lying beneath him.",
+      "Seeing as she was created as his equal, Lilith realized she was her own person, and upon being banished, she grew wings and flew away.",
+      "Once found by angels sent to retrieve her, she was told that for each day she would not come back, some of her babies would be killed as consequence.",
+      "Commonly seen as a serpent woman who now kills the unborn and babies, she was spiteful of the fate put upon her by God.",
+      "The sign that once read “Litter Patrol Ahead” now jokes that Lilith is commenting that behind the ivy there is “litter ahead” in the Garden of Eden.",
+      "The figure shown, Lilith, is faceless here, implying any woman could be in her place.",
+      "However, she’s now shown as an angel for not complying with a sexist destiny.",
+    ],
   };
   export const StopHorny: Work = {
     name: "Stop Horny",
     slug: "stop-horny",
     year: 2021,
     images: [],
+    statements: [
+      "Depicting the painting Mars and Venus by Botticelli on the left, this piece discusses the implications of getting in a lustful relationship in the modern era. Venus, Goddess of fertility and love, is shown conquering Mars, the God of war. Tired and utterly defeated, he met his match, ultimately stating that love really does conquer war.",
+      "To the bottom right, a fortune from a cookie reads “take the next opportunity presented to you” in French. Finding companionship nowadays requires different aspects than it used to, seeing as there is a large disconnect in how people interact due to technology. Many are seemingly defeated as well, not very interested in putting in the efforts needed to deepen relationships or meet new people. Overall, this sign is reminding the viewer to stay open minded, while cautioning of the large quantity of surface level relationships.",
+    ],
   };
   export const TwilightZone: Work = {
     name: "Twilight Zone",
@@ -108,6 +144,9 @@ export namespace Works {
     cover: "/finding_self/4.webp",
     year: 2021,
     images: [],
+    statements: [
+      "The classic medium of oil paint paired with modern street signs show the duality and dynamism of one's own being. The inner struggles of gender identity and acceptance are shown in this triptych, Finding Self, by creating a dialogue from self to viewer via my own thoughts. Through questioning myself, a form of care and love had been created; one never spoken, yet quickly understood.",
+    ],
   };
   export const BavarianLionShield: Work = {
     name: "Bavarian Lion Shield",
@@ -211,7 +250,6 @@ export namespace Pop {
       high: "/si_tian_wang/flash.webp",
       low: "/si_tian_wang/low/flash.webp",
     },
-
     work: Works.SiTianWang,
   };
 
