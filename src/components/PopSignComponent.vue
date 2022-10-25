@@ -1,25 +1,26 @@
 <script setup lang="ts">
 import type { PopSign } from "../works";
 import { gallery } from "@/views/gallery";
+import { computed } from "vue";
 
-defineProps({
+const props = defineProps({
   sign: {
     type: Object as () => PopSign,
     required: true,
   },
   flash: Boolean,
 });
+
+const routeLink = computed(() =>
+  gallery.find((i) => i.work.slug === props.sign.work.slug)
+    ? "/work/" + props.sign.work.slug
+    : ""
+);
 </script>
 
 <template>
   <div class="pop">
-    <RouterLink
-      :to="
-        gallery.find((i) => i.work.slug === sign.work.slug)
-          ? '/work/' + sign.work.slug
-          : ''
-      "
-    >
+    <RouterLink :to="routeLink">
       <div class="pop-container">
         <img
           :src="flash ? sign.flash_cutout.low : sign.cutout.low"
@@ -34,7 +35,6 @@ defineProps({
 .pop {
   /* width: 300px; */
   height: 40vh;
-  cursor: pointer;
   padding: 20px;
   transition: 0.3s cubic-bezier(1, 0, 0.2, 1);
   &-container {
@@ -46,6 +46,7 @@ defineProps({
       filter: drop-shadow(15px 30px 25px #444);
     }
     img {
+      cursor: pointer;
       position: relative;
       top: 0;
       left: 0;

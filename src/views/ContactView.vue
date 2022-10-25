@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ButtonComponent from "@/components/ButtonComponent.vue";
+import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
 import { ref } from "vue";
 //import emailjs from 'emailjs-com';
 

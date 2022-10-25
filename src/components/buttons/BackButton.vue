@@ -16,7 +16,7 @@ $sign_color: #d99522;
   width: 50px;
   height: 50px;
   transform: rotate(45deg);
-  transition: all 0.2s;
+  transition: all 0.3s;
   cursor: pointer;
   &:hover {
     transform: rotate(45deg) scale(1.1);

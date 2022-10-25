@@ -19,8 +19,10 @@ window.addEventListener("scroll", () => {
     :flash-on="store.isFlashOn"
     :at-home="atHome"
   >
-    <h1>DANIELLE ROMAINE</h1>
-    <h2>Fine Artist</h2>
+    <div class="row">
+      <h1>DANIELLE ROMAINE</h1>
+      <h2>Fine Artist</h2>
+    </div>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/gallery">Gallery</RouterLink>
@@ -41,6 +43,10 @@ window.addEventListener("scroll", () => {
   color: var(--text-color);
   background-color: transparent;
   transition: background-color 1s;
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
   &[at-home="false"] {
     background-color: var(--background-color);
   }
@@ -84,23 +90,20 @@ window.addEventListener("scroll", () => {
   }
   h1 {
     margin: 0;
-    margin-bottom: 5px;
     white-space: nowrap;
     transition: color 0.4s;
     font-family: HighwayGothic;
     font-size: var(--fs-title);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
   }
   h2 {
-    margin: 0;
-    margin-bottom: 10px;
     font-size: var(--fs-text);
     opacity: 0.5;
     transition: color 0.4s;
   }
   &[scrolled="true"] {
     h2 {
-      opacity: 0;
+      display: none;
     }
   }
 }
@@ -109,6 +112,13 @@ window.addEventListener("scroll", () => {
   .navbar {
     width: 97%;
     padding: 10px 0 10px 10px;
+    .row {
+      flex-direction: column;
+      h2 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
   }
 }
 </style>

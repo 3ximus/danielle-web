@@ -1,14 +1,17 @@
 <script setup lang="ts">
-import BackButton from "@/components/BackButton.vue";
+import BackButton from "@/components/buttons/BackButton.vue";
+import ScrollButton from "@/components/buttons/ScrollButton.vue";
 import router from "@/router";
 import type { Work } from "@/works";
 import { gallery } from "@/views/gallery";
 import { useRoute } from "vue-router";
-import { onBeforeMount, onBeforeUnmount } from "vue";
+import { onBeforeMount, onBeforeUnmount, ref } from "vue";
 
 const selectedWork: Work = gallery.find(
   (i) => i.work.slug === useRoute().params.slug
 )?.work!;
+
+const images = ref<HTMLInputElement | null>(null);
 
 const dismiss = () => router.back();
 
@@ -23,13 +26,14 @@ onBeforeMount(() => {
 onBeforeUnmount(() => {
   document.removeEventListener("keydown", keydown_dismiss);
 });
+
 </script>
 
 <template>
   <div class="work-modal">
+    <BackButton @click="dismiss" />
     <div class="modal-content">
-      <BackButton @click="dismiss" />
-      <h1 class="name">{{ selectedWork.name }}</h1>
+      <h1 class="title">{{ selectedWork.name }}</h1>
       <div class="container">
         <div class="cover-image">
           <img
@@ -48,10 +52,11 @@ onBeforeUnmount(() => {
           </p>
         </div>
       </div>
-      <div class="images">
+      <div class="images" ref="images">
         <img v-for="image in selectedWork.images" :src="image" alt="" />
       </div>
     </div>
+    <ScrollButton @click="images?.scrollIntoView({ behavior: 'smooth' })" />
   </div>
 </template>
 
@@ -72,19 +77,24 @@ $title: clamp(10px, 10vw, 40px);
     min-height: 100%;
     padding: 5%;
     background-color: var(--background-color);
-    .name {
+    .title {
       font-family: LemonMilk;
       font-size: $title;
+      letter-spacing: 3px;
+      margin-bottom: 50px;
     }
     .container {
       display: flex;
       flex-direction: row;
       gap: 3%;
+      height: 65vh;
       .cover-image {
-        width: 40%;
+        width: fit-content;
+        max-width: 50%;
+        text-align: center;
         img {
-          max-width: 100%;
-          height: 100%;
+          width: 100%;
+          max-height: 100%;
           transform: scale(1.5);
           transition: 0.5s;
           object-fit: contain;
@@ -96,7 +106,21 @@ $title: clamp(10px, 10vw, 40px);
           color: grey;
           font-size: 1.3rem;
           margin: 4px;
+          margin-left: 0;
         }
+        .statement {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+          font-size: 16px;
+        }
+      }
+    }
+    .images {
+      margin-top: 300px;
+      height: 300px;
+      img {
+        height: 100%;
       }
     }
   }
