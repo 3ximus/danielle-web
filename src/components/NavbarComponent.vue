@@ -21,6 +21,7 @@ window.addEventListener("scroll", () => {
   >
     <div class="row">
       <h1>DANIELLE ROMAINE</h1>
+      <hr />
       <h2>Fine Artist</h2>
     </div>
     <nav>
@@ -46,6 +47,7 @@ window.addEventListener("scroll", () => {
   .row {
     display: flex;
     flex-direction: row;
+    gap: 22px;
   }
   &[at-home="false"] {
     background-color: var(--background-color);
@@ -99,12 +101,18 @@ window.addEventListener("scroll", () => {
   h2 {
     font-size: var(--fs-text);
     opacity: 0.5;
-    transition: color 0.4s;
+    letter-spacing: 3px;
+    transition: color 0.4s, height 0.4s, opacity 0.4s;
+    height: 25px;
   }
-  &[scrolled="true"] {
-    h2 {
-      display: none;
-    }
+  hr {
+    height: 5px;
+    width: 5px;
+    background: black;
+    opacity: 0.5;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
   }
 }
 
@@ -114,9 +122,20 @@ window.addEventListener("scroll", () => {
     padding: 10px 0 10px 10px;
     .row {
       flex-direction: column;
+      gap: 0px;
       h2 {
         margin-top: 5px;
         margin-bottom: 5px;
+        margin-left: 1px;
+      }
+      hr {
+        display: none;
+      }
+    }
+    &[scrolled="true"] {
+      h2 {
+        height: 0px;
+        opacity: 0;
       }
     }
   }
