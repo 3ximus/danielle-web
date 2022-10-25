@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import type { GalleryItem } from "../works";
+import router from "@/router";
+
 defineProps({
   item: {
     type: Object as () => GalleryItem,
@@ -10,14 +12,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="item" @click="$emit('open-work', item.work)">
-    <!-- <RouterLink :to="'/gallery/' + item.work.slug"> -->
+  <div class="item" @click="router.push('/gallery/' + item.work.slug)">
     <img :src="item.work.cover" />
     <div class="title">
       <h1 class="name">{{ item.work.name }}</h1>
       <h2 class="year">{{ item.work.year }}</h2>
     </div>
-    <!-- </RouterLink> -->
   </div>
 </template>
 

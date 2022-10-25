@@ -3,16 +3,14 @@ import ButtonComponent from "@/components/ButtonComponent.vue";
 </script>
 
 <template>
-  <div>
-    <div class="about">
-      <h2>ABOUT ME</h2>
-      <br />
+  <section class="about">
+    <h2>ABOUT ME</h2>
+    <br />
 
-      <RouterLink to="contact">
-        <ButtonComponent>Get in touch</ButtonComponent>
-      </RouterLink>
-    </div>
-  </div>
+    <RouterLink to="contact">
+      <ButtonComponent>Get in touch</ButtonComponent>
+    </RouterLink>
+  </section>
 </template>
 
 <style scoped lang="scss">

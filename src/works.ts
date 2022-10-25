@@ -7,10 +7,12 @@
 
 export interface Work {
   name: string;
-  slug: string;
+  slug: string; // url
+  cover?: string; // used in gallery
+  images: string[]; // images when previewing work
   year: number;
-  cover?: string;
-  images: string[];
+  dimensions?: string;
+  media?: string;
   statements?: string[];
 }
 
@@ -97,7 +99,6 @@ export namespace Works {
     name: "Litter Ahead Lilith",
     slug: "litteraheadlilith",
     cover: "/litter_ahead_lilith/gallery.webp",
-    year: 2021,
     images: [
       "/litter_ahead_lilith/31.webp",
       "/litter_ahead_lilith/32.webp",
@@ -105,14 +106,14 @@ export namespace Works {
       "/litter_ahead_lilith/34.webp",
       "/litter_ahead_lilith/35.webp",
     ],
+    year: 2021,
+    dimensions: "36x36in.",
+    media: "Oil Panit on Road Sign",
     statements: [
-      "Lilith, being known as the first Eve in the Garden of Eden, has been demonized in Judaism for not being subservient to Adam and lying beneath him.",
-      "Seeing as she was created as his equal, Lilith realized she was her own person, and upon being banished, she grew wings and flew away.",
-      "Once found by angels sent to retrieve her, she was told that for each day she would not come back, some of her babies would be killed as consequence.",
-      "Commonly seen as a serpent woman who now kills the unborn and babies, she was spiteful of the fate put upon her by God.",
+      "Lilith, being known as the first Eve in the Garden of Eden, has been demonized in Judaism for not being subservient to Adam and lying beneath him. Seeing as she was created as his equal, Lilith realized she was her own person, and upon being banished, she grew wings and flew away.",
+      "Once found by angels sent to retrieve her, she was told that for each day she would not come back, some of her babies would be killed as consequence. Commonly seen as a serpent woman who now kills the unborn and babies, she was spiteful of the fate put upon her by God.",
       "The sign that once read “Litter Patrol Ahead” now jokes that Lilith is commenting that behind the ivy there is “litter ahead” in the Garden of Eden.",
-      "The figure shown, Lilith, is faceless here, implying any woman could be in her place.",
-      "However, she’s now shown as an angel for not complying with a sexist destiny.",
+      "The figure shown, Lilith, is faceless here, implying any woman could be in her place. However, she’s now shown as an angel for not complying with a sexist destiny.",
     ],
   };
   export const StopHorny: Work = {
@@ -129,6 +130,7 @@ export namespace Works {
     name: "Twilight Zone",
     slug: "twilight-zone",
     year: 2021,
+    cover: "/media_and_sexuality/gallery.webp",
     images: [],
   };
   export const MediaSexuality: Work = {

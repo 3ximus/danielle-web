@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
-import GalleryView from "@/views/GalleryView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,23 +12,33 @@ const router = createRouter({
     {
       path: "/about",
       name: "about",
-      component: () => import("../views/AboutView.vue"),
+      component: () => import("@/views/AboutView.vue"),
     },
     {
       path: "/contact",
       name: "contact",
-      component: () => import("../views/ContactView.vue"),
+      component: () => import("@/views/ContactView.vue"),
     },
     {
       path: "/gallery",
-      component: GalleryView,
-      children: [
-        {
-          path: "/gallery/:slug",
-          name: "work",
-          component: () => import("../views/WorkView.vue"),
-        },
-      ],
+      name: "gallery",
+      component: () => import("@/views/GalleryView.vue"),
+    },
+    {
+      path: "/gallery/:slug",
+      name: "work",
+      components: {
+        default: () => import("@/views/GalleryView.vue"),
+        workView: () => import("@/views/WorkView.vue"),
+      },
+    },
+    {
+      path: "/work/:slug",
+      name: "work-home",
+      components: {
+        default: () => import("@/views/HomeView.vue"),
+        workView: () => import("@/views/WorkView.vue"),
+      },
     },
   ],
 });

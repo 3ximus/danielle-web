@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import type { PopSign } from "../works";
+import { gallery } from "@/views/gallery";
+
 defineProps({
   sign: {
     type: Object as () => PopSign,
@@ -11,18 +13,26 @@ defineProps({
 
 <template>
   <div class="pop">
-    <div class="pop-container">
-      <img
-        :src="flash ? sign.flash_cutout.low : sign.cutout.low"
-        :alt="sign.work.name"
-      />
-    </div>
+    <RouterLink
+      :to="
+        gallery.find((i) => i.work.slug === sign.work.slug)
+          ? '/work/' + sign.work.slug
+          : ''
+      "
+    >
+      <div class="pop-container">
+        <img
+          :src="flash ? sign.flash_cutout.low : sign.cutout.low"
+          :alt="sign.work.name"
+        />
+      </div>
+    </RouterLink>
   </div>
 </template>
 
 <style scoped lang="scss">
 .pop {
-  //width: 300px;
+  /* width: 300px; */
   height: 40vh;
   cursor: pointer;
   padding: 20px;

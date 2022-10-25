@@ -13,50 +13,48 @@ function sendEmail(event: Event): void {
 </script>
 
 <template>
-  <div>
-    <div class="contact">
-      <h2>GET IN TOUCH</h2>
+  <section class="contact">
+    <h2>GET IN TOUCH</h2>
 
-      <p>
-        For inquiries on exhibiting pieces, buying, or general questions, please
-        feel free to contact.
-      </p>
+    <p>
+      For inquiries on exhibiting pieces, buying, or general questions, please
+      feel free to contact.
+    </p>
 
-      <p>
-        <a href="mailto:gingsnaps1399@gmail.com" target="_blank"
-          >gingsnaps1399@gmail.com</a
-        >
-      </p>
-      <form @submit.prevent="sendEmail">
-        <input
-          class="input"
-          v-model="name"
-          type="text"
-          name="name"
-          placeholder="Name"
-          required
-        />
-        <input
-          class="input"
-          v-model="email"
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-        <textarea
-          class="input"
-          v-model="message"
-          rows="7"
-          name="message"
-          placeholder="Message"
-          required
-        />
-        <br />
-        <ButtonComponent type="submit">Send</ButtonComponent>
-      </form>
-    </div>
-  </div>
+    <p>
+      <a href="mailto:gingsnaps1399@gmail.com" target="_blank"
+        >gingsnaps1399@gmail.com</a
+      >
+    </p>
+    <form @submit.prevent="sendEmail">
+      <input
+        class="input"
+        v-model="name"
+        type="text"
+        name="name"
+        placeholder="Name"
+        required
+      />
+      <input
+        class="input"
+        v-model="email"
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <textarea
+        class="input"
+        v-model="message"
+        rows="7"
+        name="message"
+        placeholder="Message"
+        required
+      />
+      <br />
+      <ButtonComponent type="submit">Send</ButtonComponent>
+    </form>
+  </section>
 </template>
 
 <style scoped lang="scss">

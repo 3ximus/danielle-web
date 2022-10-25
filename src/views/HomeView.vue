@@ -62,7 +62,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <section>
+  <section class="home">
     <div class="valign valign-light" :flash-on="store.isFlashOn">
       <div class="container">
         <div class="row" v-for="row in grid">

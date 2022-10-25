@@ -2,7 +2,9 @@
 import { store } from "@/store";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-const atHome = computed(() => useRoute().name === "home");
+const atHome = computed(() =>
+  ["home", "work-home"].includes(useRoute().name?.toString() || "")
+);
 let scrolled = ref(false);
 
 window.addEventListener("scroll", () => {
@@ -39,10 +41,10 @@ window.addEventListener("scroll", () => {
   color: var(--text-color);
   background-color: transparent;
   transition: background-color 1s;
-  &[at-home=false] {
+  &[at-home="false"] {
     background-color: var(--background-color);
   }
-  &[flash-on=true] {
+  &[flash-on="true"] {
     --text-color: var(--text-dark-theme);
   }
   nav {
@@ -96,7 +98,7 @@ window.addEventListener("scroll", () => {
     opacity: 0.5;
     transition: color 0.4s;
   }
-  &[scrolled=true] {
+  &[scrolled="true"] {
     h2 {
       opacity: 0;
     }
@@ -107,11 +109,6 @@ window.addEventListener("scroll", () => {
   .navbar {
     width: 97%;
     padding: 10px 0 10px 10px;
-    /* &[at-home="false"] { */
-    /*   h2 { */
-    /*     display: none; */
-    /*   } */
-    /* } */
   }
 }
 </style>
