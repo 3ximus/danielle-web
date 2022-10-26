@@ -12,7 +12,10 @@ const props = defineProps({
 });
 
 const routeLink = computed(() =>
-  gallery.find((i) => i.work.slug === props.sign.work.slug)
+  gallery
+    .map((s) => s.works)
+    .flat()
+    .find((w) => w.slug === props.sign.work.slug)
     ? "/work/" + props.sign.work.slug
     : ""
 );

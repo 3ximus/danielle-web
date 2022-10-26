@@ -1,19 +1,38 @@
-import { Works } from "../works";
-import type { GalleryItem } from "../works";
+import { Works, type Work } from "../works";
 
-export const gallery: GalleryItem[] = [
-  { work: Works.LitterAheadLilith, fat: true },
-  { work: Works.FindingSelf },
-  { work: Works.MediaSexuality },
-  { work: Works.BavarianLionShield },
-  { work: Works.HeliosSelene },
-  { work: Works.DuoWenTianWang },
-  { work: Works.PomegranatesBotticelli },
-  { work: Works.PedestrianSitting },
-  { work: Works.SiTianWang },
-  { work: Works.SoloTravel },
-  { work: Works.StopNoHare },
-  { work: Works.Squid },
-  { work: Works.MaleStudy },
-  { work: Works.FeminineStudies },
+export interface Section {
+  name: string;
+  works: Work[];
+}
+
+export const gallery: Section[] = [
+  {
+    name: "Section 1",
+    works: [
+      Works.LitterAheadLilith,
+      Works.FindingSelf,
+      Works.MediaSexuality,
+      Works.BavarianLionShield,
+    ],
+  },
+  {
+    name: "Section 2",
+    works: [
+      Works.HeliosSelene,
+      Works.SiTianWang,
+      Works.DuoWenTianWang,
+      Works.PomegranatesBotticelli,
+      Works.PedestrianSitting,
+    ],
+  },
+  {
+    name: "Section 3",
+    works: [
+      Works.SoloTravel,
+      Works.StopNoHare,
+      Works.Squid,
+      Works.MaleStudy,
+      Works.FeminineStudies,
+    ],
+  },
 ];

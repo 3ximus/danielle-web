@@ -7,9 +7,10 @@ import { gallery } from "@/views/gallery";
 import { useRoute } from "vue-router";
 import { onBeforeMount, onBeforeUnmount, ref } from "vue";
 
-const selectedWork: Work = gallery.find(
-  (i) => i.work.slug === useRoute().params.slug
-)?.work!;
+const selectedWork: Work = gallery
+  .map((s) => s.works)
+  .flat()
+  .find((w) => w.slug === useRoute().params.slug);
 
 const images = ref<HTMLInputElement | null>(null);
 
@@ -26,7 +27,6 @@ onBeforeMount(() => {
 onBeforeUnmount(() => {
   document.removeEventListener("keydown", keydown_dismiss);
 });
-
 </script>
 
 <template>

@@ -2,9 +2,7 @@
 import { store } from "@/store";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-const atHome = computed(() =>
-  ["home", "work-home"].includes(useRoute().name?.toString() || "")
-);
+const atHome = computed(() => useRoute().name?.toString().endsWith("home"));
 let scrolled = ref(false);
 
 window.addEventListener("scroll", () => {

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { GalleryItem } from "../works";
 import router from "@/router";
+import type {Work} from "@/works";
 
 defineProps({
   item: {
-    type: Object as () => GalleryItem,
+    type: Object as () => Work,
     required: true,
   },
   flash: Boolean,
@@ -12,26 +12,16 @@ defineProps({
 </script>
 
 <template>
-  <div class="item" @click="router.push('/gallery/' + item.work.slug)">
-    <img :src="item.work.cover" />
+  <div class="item" @click="router.push('/gallery/' + item.slug)">
+    <img :src="item.cover" />
     <div class="title">
-      <h1 class="name">{{ item.work.name }}</h1>
-      <h2 class="year">{{ item.work.year }}</h2>
+      <h1 class="name">{{ item.name }}</h1>
+      <h2 class="year">{{ item.year }}</h2>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-@media screen and (min-width: 800px) {
-  .tall {
-    grid-row: span 2 / auto;
-  }
-
-  .fat {
-    grid-column: span 2 / auto;
-  }
-}
-
 .item {
   transition: scale 0.3s ease-out;
   cursor: pointer;
