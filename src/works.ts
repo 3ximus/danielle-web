@@ -28,6 +28,7 @@ export namespace Works {
     name: "Fallen Angel",
     slug: "fallen-angel",
     year: 2021,
+    cover: "/fallen_angel/cover.webp",
     images: [],
   };
   export const HeliosSelene: Work = {
@@ -120,6 +121,7 @@ export namespace Works {
     name: "Stop Horny",
     slug: "stop-horny",
     year: 2021,
+    cover: "/stop_horny/cover.webp",
     images: [],
     statements: [
       "Depicting the painting Mars and Venus by Botticelli on the left, this piece discusses the implications of getting in a lustful relationship in the modern era. Venus, Goddess of fertility and love, is shown conquering Mars, the God of war. Tired and utterly defeated, he met his match, ultimately stating that love really does conquer war.",
