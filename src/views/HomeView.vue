@@ -89,7 +89,7 @@ $switch-position: 50px;
 $mouse-move-attenuation: 0.04;
 $animation-time: 0.8s;
 
-section {
+.home {
   position: absolute;
   top: 0;
   left: 0;

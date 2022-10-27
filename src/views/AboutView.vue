@@ -5,6 +5,7 @@ import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
 <template>
   <section class="about">
     <h2>ABOUT ME</h2>
+    <img src="/us.png" alt="">
     <br />
 
     <RouterLink to="contact">
