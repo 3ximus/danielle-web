@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BackButton from "@/components/buttons/BackButton.vue";
-import ScrollButton from "@/components/buttons/ScrollButton.vue";
+import BackButtonComponent from "@/components/buttons/BackButton.vue";
+import ScrollButtonComponent from "@/components/buttons/ScrollButton.vue";
 import router from "@/router";
 import type { Work } from "@/works";
 import { gallery } from "@/views/gallery";
@@ -24,14 +24,12 @@ onBeforeMount(() => {
   if (!selectedWork) dismiss();
   document.addEventListener("keydown", keydown_dismiss);
 });
-onBeforeUnmount(() => {
-  document.removeEventListener("keydown", keydown_dismiss);
-});
+onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
 </script>
 
 <template>
   <div class="work-modal">
-    <BackButton @click="dismiss" />
+    <BackButtonComponent @click="dismiss" />
     <div class="modal-content">
       <h1 class="title">{{ selectedWork.name }}</h1>
       <div class="container">
@@ -56,7 +54,9 @@ onBeforeUnmount(() => {
         <img v-for="image in selectedWork.images" :src="image" alt="" />
       </div>
     </div>
-    <ScrollButton @click="images?.scrollIntoView({ behavior: 'smooth' })" />
+    <ScrollButtonComponent
+      @click="images?.scrollIntoView({ behavior: 'smooth' })"
+    />
   </div>
 </template>
 

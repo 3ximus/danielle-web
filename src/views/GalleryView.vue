@@ -1,26 +1,38 @@
 <script setup lang="ts">
 import GalleryItemComponent from "@/components/GalleryItemComponent.vue";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import { ref } from "vue";
-import { onBeforeRouteUpdate } from "vue-router";
+import { store } from "@/store";
+import { onBeforeMount, onBeforeUnmount, ref } from "vue";
 import { gallery } from "./gallery";
 
-const galleryElement = ref<HTMLInputElement | null>(null);
+const galleryElement = ref<HTMLInputElement[] | null>(null);
+const collectionHeaders = ref<HTMLInputElement[] | null>(null);
 
-onBeforeRouteUpdate(async (to, from) => {
-  if (to.name?.toString().startsWith("work")) {
-    disableBodyScroll(galleryElement.value!);
-  } else if (from.name?.toString().startsWith("work")) {
-    enableBodyScroll(galleryElement.value!);
+function scrolled() {
+  const index = collectionHeaders
+    .value!.map((el) => window.scrollY > el.offsetTop - 140)
+    .lastIndexOf(true);
+  if (index >= 0) {
+    store.setGalleryCollection(gallery[index].name);
+  } else {
+    store.setGalleryCollection("");
   }
-});
+}
+
+onBeforeMount(() => window.addEventListener("scroll", scrolled));
+onBeforeUnmount(() => window.removeEventListener("scroll", scrolled));
 </script>
 <template>
   <section class="gallery">
-    <div v-for="section in gallery" class="section" ref="galleryElement">
-      <h2>{{ section.name }}</h2>
-      <div class="section-elements">
-        <GalleryItemComponent v-for="item in section.works" :item="item" />
+    <div
+      v-for="(collection, index) in gallery"
+      class="collection"
+      ref="galleryElement"
+    >
+      <h2 ref="collectionHeaders" class="collection-name">
+        {{ collection.name }}
+      </h2>
+      <div class="collection-elements">
+        <GalleryItemComponent v-for="item in collection.works" :item="item" />
       </div>
     </div>
   </section>
@@ -28,9 +40,14 @@ onBeforeRouteUpdate(async (to, from) => {
 
 <style scoped lang="scss">
 $mincol-width: 300px;
-.section-elements {
+.collection-elements {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($mincol-width, 1fr));
   grid-auto-rows: auto;
+}
+
+.collection-name {
+  font-family: LemonMilk;
+  margin: 10px;
 }
 </style>

@@ -1,13 +1,13 @@
 import { Works, type Work } from "../works";
 
-export interface Section {
+export interface Collection {
   name: string;
   works: Work[];
 }
 
-export const gallery: Section[] = [
+export const gallery: Collection[] = [
   {
-    name: "Section 1",
+    name: "Collection 1",
     works: [
       Works.PedestrianSitting,
       Works.LitterAheadLilith,
@@ -17,7 +17,7 @@ export const gallery: Section[] = [
     ],
   },
   {
-    name: "Section 2",
+    name: "Collection 2",
     works: [
       Works.FindingSelf,
       Works.PomegranatesBotticelli,
@@ -28,7 +28,7 @@ export const gallery: Section[] = [
     ],
   },
   {
-    name: "Section 3",
+    name: "Collection 3",
     works: [
       Works.MediaSexuality,
       Works.BavarianLionShield,
