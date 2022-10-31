@@ -13,7 +13,6 @@ const selectedWork: Work = gallery
   .find((w) => w.slug === useRoute().params.slug)!;
 
 const images = ref<HTMLInputElement | null>(null);
-
 const dismiss = () => router.back();
 
 function keydown_dismiss(event: KeyboardEvent) {
@@ -53,10 +52,10 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
       <div class="images" ref="images">
         <img v-for="image in selectedWork.images" :src="image" alt="" />
       </div>
+      <ScrollButtonComponent
+        @click="images?.scrollIntoView({ behavior: 'smooth' })"
+      />
     </div>
-    <ScrollButtonComponent
-      @click="images?.scrollIntoView({ behavior: 'smooth' })"
-    />
   </div>
 </template>
 
@@ -117,10 +116,48 @@ $title: clamp(10px, 10vw, 40px);
       }
     }
     .images {
-      margin-top: 300px;
-      height: 300px;
+      margin-top: 200px;
+      display: flex;
+      gap: 10px;
       img {
+        max-height: 300px;
         height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .work-modal {
+    .modal-content {
+      padding-top: 70px;
+      .title {
+        font-size: 20px;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+      }
+      .container {
+        flex-direction: column;
+        height: fit-content;
+        .cover-image {
+          max-width: 100%;
+        }
+        hr {
+          display: none;
+        }
+        .description {
+          width: 100%;
+        }
+      }
+      .images {
+        margin-top: 20px;
+        flex-direction: column;
+        img {
+          min-width: 100%;
+          max-height: unset;
+          height: unset;
+        }
       }
     }
   }

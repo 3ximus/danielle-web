@@ -23,11 +23,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", scrolled));
 </script>
 <template>
   <section class="gallery">
-    <div
-      v-for="(collection, index) in gallery"
-      class="collection"
-      ref="galleryElement"
-    >
+    <div v-for="collection in gallery" class="collection" ref="galleryElement">
       <h2 ref="collectionHeaders" class="collection-name">
         {{ collection.name }}
       </h2>

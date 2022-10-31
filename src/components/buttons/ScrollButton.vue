@@ -47,6 +47,12 @@ $pop_duration: 0.3s;
   }
 }
 
+@media (max-width: 800px) {
+  .scroll-arrow {
+    display: none;
+  }
+}
+
 @keyframes wiggle {
   0% {
     transform: rotate(45deg);

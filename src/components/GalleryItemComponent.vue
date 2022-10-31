@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import router from "@/router";
-import type {Work} from "@/works";
+import type { Work } from "@/works";
 
 defineProps({
   item: {
@@ -22,8 +22,10 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
+$transitionTime: 0.2s;
+
 .item {
-  transition: scale 0.3s ease-out;
+  transition: scale $transitionTime ease-out;
   cursor: pointer;
   margin: 10px;
   position: relative;
@@ -42,7 +44,7 @@ defineProps({
     transform: translate(-50%, -50%);
     opacity: 0;
     font-family: LemonMilk;
-    transition: opacity 0.4s ease-out;
+    transition: opacity $transitionTime ease-out;
     .year {
       font-size: 17px;
       color: #222;
@@ -56,7 +58,7 @@ defineProps({
     width: 100%;
     height: 100%;
     background-color: var(--background-color);
-    transition: opacity 0.3s ease-out;
+    transition: opacity $transitionTime ease-out;
     opacity: 0;
   }
   &:hover {
