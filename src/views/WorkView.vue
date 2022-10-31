@@ -13,6 +13,7 @@ const selectedWork: Work = gallery
   .find((w) => w.slug === useRoute().params.slug)!;
 
 const images = ref<HTMLInputElement | null>(null);
+
 const dismiss = () => router.back();
 
 function keydown_dismiss(event: KeyboardEvent) {
@@ -52,10 +53,10 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
       <div class="images" ref="images">
         <img v-for="image in selectedWork.images" :src="image" alt="" />
       </div>
-      <ScrollButtonComponent
-        @click="images?.scrollIntoView({ behavior: 'smooth' })"
-      />
     </div>
+    <ScrollButtonComponent
+      @click="images?.scrollIntoView({ behavior: 'smooth' })"
+    />
   </div>
 </template>
 
@@ -118,6 +119,8 @@ $title: clamp(10px, 10vw, 40px);
     .images {
       margin-top: 200px;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
       img {
         max-height: 300px;
@@ -153,10 +156,11 @@ $title: clamp(10px, 10vw, 40px);
       .images {
         margin-top: 20px;
         flex-direction: column;
+        flex-wrap: unset;
         img {
           min-width: 100%;
-          max-height: unset;
           height: unset;
+          max-height: unset;
         }
       }
     }

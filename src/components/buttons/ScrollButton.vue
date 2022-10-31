@@ -29,7 +29,7 @@ $pop_duration: 0.3s;
     top: -50px;
     left: 50px;
     opacity: 0;
-    transition: opacity $pop_duration $pop_duration ease-out;
+    transition: opacity $pop_duration ease-out;
   }
   &:hover {
     scale: 1.1;
@@ -39,6 +39,7 @@ $pop_duration: 0.3s;
     animation: wiggle $pop_duration ease-in forwards;
     &:after {
       opacity: 1;
+      transition: opacity $pop_duration $pop_duration ease-out;
     }
   }
   img {

@@ -103,7 +103,9 @@ export namespace Works {
     images: [
       "/litter_ahead_lilith/31.webp",
       "/litter_ahead_lilith/32.webp",
-      "/litter_ahead_lilith/33.webp",
+      "/litter_ahead_lilith/34.webp",
+      "/litter_ahead_lilith/34.webp",
+      "/litter_ahead_lilith/34.webp",
       "/litter_ahead_lilith/34.webp",
       "/litter_ahead_lilith/35.webp",
     ],
