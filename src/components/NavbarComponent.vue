@@ -29,7 +29,9 @@ onBeforeUnmount(() => window.removeEventListener("scroll", setScrolled));
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink>
       </nav>
-      <h3>{{ store.galleryCollectionName }}</h3>
+      <h3 v-if="useRoute().name === 'gallery'">
+        {{ store.galleryCollectionName }}
+      </h3>
     </div>
   </header>
 </template>

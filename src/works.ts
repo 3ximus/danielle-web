@@ -153,7 +153,7 @@ export namespace Works {
     media: "Paint Marker on road sign",
     dimensions: "36x36in.",
     slug: "twilight-zone",
-    cover: "/media_and_sexuality/gallery.webp",
+    cover: "/twilight_zone/cover.webp",
     images: [],
     statements: [
       "After the passing of my father in 2020 and riddled with grief that I wasn’t there at his time of death, I made this piece as a representation of the show he watched as a child and introduced me to years prior. In the episode Nothing in the Dark of The Twilight Zone, an elderly woman lets no one in her home out of fear that they may be the grim reaper. After a wounded man ends up at her doorstep, she reluctantly brings him inside to nurse him to health. However, while he did turn out to be the reaper, he held her hand and showed her she passed peacefully, painlessly, and with someone at her side. I’d like to imagine that is how my father passed.",

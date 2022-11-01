@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
 import { ref } from "vue";
-//import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 
 const name = ref("");
 const email = ref("");
@@ -18,12 +18,12 @@ function sendEmail(event: Event): void {
 
     <p>
       For inquiries on exhibiting pieces, buying, or general questions, please
-      feel free to contact.
+      feel free to contact me.
     </p>
 
     <p>
       <a href="mailto:gingsnaps1399@gmail.com" target="_blank"
-        >gingsnaps1399@gmail.com</a
+        >danielleromaineart@gmail.com</a
       >
     </p>
     <form @submit.prevent="sendEmail">
@@ -59,6 +59,7 @@ function sendEmail(event: Event): void {
 
 <style scoped lang="scss">
 .contact {
+  max-width: 600px;
   margin: 40px;
   line-height: 2em;
   a {

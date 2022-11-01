@@ -19,7 +19,10 @@ function scrolled() {
 }
 
 onBeforeMount(() => window.addEventListener("scroll", scrolled));
-onBeforeUnmount(() => window.removeEventListener("scroll", scrolled));
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", scrolled);
+  store.setGalleryCollection("");
+});
 </script>
 <template>
   <section class="gallery">
