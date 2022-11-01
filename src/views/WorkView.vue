@@ -121,7 +121,7 @@ $title: clamp(10px, 10vw, 40px);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
+      gap: 20px;
       img {
         max-height: 300px;
         height: 100%;

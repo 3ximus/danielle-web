@@ -18,9 +18,11 @@ export interface Work {
 
 export namespace Works {
   export const PomegranatesBotticelli: Work = {
-    name: "Pomegranates and Botticelli",
-    slug: "pomegranates-botticelli",
+    name: "Pomegranates and Botticelli; Caution, Bump",
     year: 2021,
+    media: "Oil paint & collage on road sign",
+    dimensions: "24x24in.",
+    slug: "pomegranates-botticelli",
     cover: "pomegranates_botticelli/88.webp",
     images: [],
   };
@@ -32,10 +34,12 @@ export namespace Works {
     images: [],
   };
   export const HeliosSelene: Work = {
-    name: "Helios and Selene",
+    name: "Helios & Selene",
+    year: 2022,
+    media: "Oil paint on street signs",
+    dimensions: "12x18in. (x2)",
     slug: "helios-selene",
     cover: "/helios_selene/1.jpg",
-    year: 2021,
     images: [],
     statements: [
       "Helios, God of the Sun, and Selene, Goddess of the moon, are painted in oil as busts on No Parking signs.",
@@ -58,16 +62,20 @@ export namespace Works {
   };
   export const SoloTravel: Work = {
     name: "Solo Travel",
+    year: 2021,
+    media: "Oil paint & mixed media",
+    dimensions: "Approx. 24x30in.",
     slug: "solo-travel",
     cover: "/solo_travel/75.webp",
-    year: 2021,
     images: [],
   };
   export const SiTianWang: Work = {
-    name: "Si Tian Wang",
+    name: "四天王 (Sì Tiān Wáng)",
+    year: 2020,
+    media: "Oil paint & marker on road sign",
+    dimensions: "30x48in.",
     slug: "si-tian-wang",
     cover: "/si_tian_wang/44.webp",
-    year: 2021,
     images: [],
     statements: [
       "The Four Heavenly Kings are Gods in Buddhism, each representing and watching over a cardinal direction. Each King has a distinct color, weapon, direction, and purpose.",
@@ -75,10 +83,12 @@ export namespace Works {
     ],
   };
   export const DuoWenTianWang: Work = {
-    name: "Duo Wen Tian Wang",
+    name: "多闻天王 (Duōwén Tiānwáng)",
+    year: 2020,
+    media: "Oil paint & marker on road sign",
+    dimensions: "24x30in.",
     slug: "duo-wen-tian-wang",
     cover: "/duo_wen_tian_wang/41.webp",
-    year: 2021,
     images: [],
     statements: [
       'As the "main" God of the Four Heavenly Kings, Duōwén Tiānwáng is most commonly prayed to for prosperity seeing as he is associated with good fortune.',
@@ -88,41 +98,39 @@ export namespace Works {
   };
   export const PedestrianSitting: Work = {
     name: "Pedestrian Sitting",
+    year: 2017,
+    media: "Road sign and piping",
     slug: "pedestrian-sitting",
     cover: "/pedestrian_sitting/27.webp",
-    year: 2021,
     images: [],
     statements: [
       "Joking at the iconography of a pedestrian crossing, the pedestrian’s sign is now made into a functional chair- now doing the opposite of what the well-known icon was meant to do. Here, the pedestrian has given in to the societal norms of a “fast food lifestyle” so to speak, being highly inactive and ultimately lazy.",
     ],
   };
   export const LitterAheadLilith: Work = {
-    name: "Litter Ahead Lilith",
-    slug: "litteraheadlilith",
+    name: "Litter Ahead; Lilith",
+    year: 2020,
+    media: "Oil paint on road sign",
+    dimensions: "36x36in.",
+    slug: "litter-ahead-lilith",
     cover: "/litter_ahead_lilith/gallery.webp",
     images: [
       "/litter_ahead_lilith/31.webp",
       "/litter_ahead_lilith/32.webp",
       "/litter_ahead_lilith/34.webp",
-      "/litter_ahead_lilith/34.webp",
-      "/litter_ahead_lilith/34.webp",
-      "/litter_ahead_lilith/34.webp",
       "/litter_ahead_lilith/35.webp",
     ],
-    year: 2021,
-    dimensions: "36x36in.",
-    media: "Oil Panit on Road Sign",
     statements: [
-      "Lilith, being known as the first Eve in the Garden of Eden, has been demonized in Judaism for not being subservient to Adam and lying beneath him. Seeing as she was created as his equal, Lilith realized she was her own person, and upon being banished, she grew wings and flew away.",
-      "Once found by angels sent to retrieve her, she was told that for each day she would not come back, some of her babies would be killed as consequence. Commonly seen as a serpent woman who now kills the unborn and babies, she was spiteful of the fate put upon her by God.",
-      "The sign that once read “Litter Patrol Ahead” now jokes that Lilith is commenting that behind the ivy there is “litter ahead” in the Garden of Eden.",
-      "The figure shown, Lilith, is faceless here, implying any woman could be in her place. However, she’s now shown as an angel for not complying with a sexist destiny.",
+      "Lilith, being known as the first Eve in the Garden of Eden, has been demonized in Judaism for not being subservient to Adam and lying beneath him. Seeing as she was created as his equal, Lilith realized she was her own person, and upon being banished, she grew wings and flew away. Once found by angels sent to retrieve her, she was told that for each day she would not come back, some of her babies would be killed as consequence. Commonly seen as a serpent woman who now kills the unborn and babies, she was spiteful of the fate put upon her by God.",
+      "The sign that once read “Litter Patrol Ahead” now jokes that Lilith is commenting that behind the ivy there is “litter ahead” in the Garden of Eden. The figure shown, Lilith, is faceless here, implying any woman could be in her place. However, she’s now shown as an angel for not complying with a sexist destiny.",
     ],
   };
   export const StopHorny: Work = {
-    name: "Stop Horny",
-    slug: "stop-horny",
+    name: "Stop, Horny",
     year: 2021,
+    media: "Oil paint & collage on road sign",
+    dimensions: "18x18in.",
+    slug: "stop-horny",
     cover: "/stop_horny/cover.webp",
     images: [],
     statements: [
@@ -131,9 +139,11 @@ export namespace Works {
     ],
   };
   export const TwilightZone: Work = {
-    name: "Twilight Zone",
-    slug: "twilight-zone",
+    name: "Twilight Zone; Nothing in the Dark",
     year: 2021,
+    media: "Paint Marker on road sign",
+    dimensions: "36x36in.",
+    slug: "twilight-zone",
     cover: "/media_and_sexuality/gallery.webp",
     images: [],
   };
@@ -145,10 +155,12 @@ export namespace Works {
     images: [],
   };
   export const FindingSelf: Work = {
-    name: "Finding Self",
+    name: "Finding Self; Closed-Off",
+    year: 2021,
+    media: "Oil paint & marker on road sign",
+    dimensions: "24x24in. (x3)",
     slug: "finding-self",
     cover: "/finding_self/4.webp",
-    year: 2021,
     images: [],
     statements: [
       "The classic medium of oil paint paired with modern street signs show the duality and dynamism of one's own being. The inner struggles of gender identity and acceptance are shown in this triptych, Finding Self, by creating a dialogue from self to viewer via my own thoughts. Through questioning myself, a form of care and love had been created; one never spoken, yet quickly understood.",
@@ -173,6 +185,15 @@ export namespace Works {
     slug: "feminine-studies",
     cover: "/feminine_studies/58.webp",
     year: 2021,
+    images: [],
+  };
+  export const WarOnWomen: Work = {
+    name: "Another War on Women",
+    slug: "war-on-women",
+    year: 2021,
+    media: "Oil paint & collage on road sign",
+    dimensions: "24x24in.",
+    cover: "/feminine_studies/58.webp",
     images: [],
   };
 }
