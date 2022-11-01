@@ -1,14 +1,35 @@
 <script setup lang="ts">
 import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
 import { ref } from "vue";
-// import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 const name = ref("");
 const email = ref("");
 const message = ref("");
 
-function sendEmail(event: Event): void {
-  console.log(name.value, email.value, message.value);
+const form = ref<HTMLInputElement[] | null>(null);
+
+function sendEmail(): void {
+  emailjs
+    .send(
+      "service_oztye7t",
+      "template_967nxtw",
+      {
+        from_name: name.value,
+        from_email: email.value,
+        reply_to: email.value,
+        message: message.value,
+      },
+      "C4c_KaDXK0NO8sb_M"
+    )
+    .then(
+      (result: any) => {
+        console.log("SUCCESS!", result.text);
+      },
+      (error: any) => {
+        console.log("FAILED...", error.text);
+      }
+    );
 }
 </script>
 
@@ -26,7 +47,7 @@ function sendEmail(event: Event): void {
         >danielleromaineart@gmail.com</a
       >
     </p>
-    <form @submit.prevent="sendEmail">
+    <form ref="form" @submit.prevent="sendEmail">
       <input
         class="input"
         v-model="name"
