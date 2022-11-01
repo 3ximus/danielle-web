@@ -5,9 +5,7 @@
 </template>
 
 <style scoped lang="scss">
-$scroll_color: #f6c814;
 $pop_duration: 0.3s;
-
 .scroll-arrow {
   position: absolute;
   bottom: 30px;
@@ -33,9 +31,9 @@ $pop_duration: 0.3s;
   }
   &:hover {
     scale: 1.1;
-    background: $scroll_color;
+    background: var(--yellow-sign-color);
     border: solid 3px black;
-    outline: 2px solid $scroll_color;
+    outline: 2px solid var(--yellow-sign-color);
     animation: wiggle $pop_duration ease-in forwards;
     &:after {
       opacity: 1;

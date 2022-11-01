@@ -59,8 +59,7 @@ function sendEmail(event: Event): void {
 
 <style scoped lang="scss">
 .contact {
-  max-width: 400px;
-  text-align: center;
+  margin: 40px;
   line-height: 2em;
   a {
     color: var(--text-color);
@@ -88,9 +87,6 @@ function sendEmail(event: Event): void {
     &:focus {
       border-bottom-color: black;
     }
-  }
-  @media (max-width: 1024px) {
-    width: 90%;
   }
 }
 </style>

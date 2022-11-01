@@ -25,6 +25,9 @@ export namespace Works {
     slug: "pomegranates-botticelli",
     cover: "pomegranates_botticelli/88.webp",
     images: [],
+    statements: [
+      "Referring to classical art knowledge, the reference of pomegranates are a few things; pomegranates didn’t just depict fertility, but also the anatomy of a human heart, and being the immortality and resurrection of Jesus. A close up on two of the angels from Botticelli’s painting Madonna of the Magnificat is shown atop the sign where baby Jesus was crowned while sitting on Mary’s lap. The words “Caution, Bump” poke fun that, while one was said to conceive without having sex, those who can end up with a baby bump should use protection."
+    ]
   };
   export const FallenAngel: Work = {
     name: "Fallen Angel",
@@ -68,6 +71,12 @@ export namespace Works {
     slug: "solo-travel",
     cover: "/solo_travel/75.webp",
     images: [],
+    statements: [
+      "Discussing this piece as a general representation:",
+      "Raw, hanging meat represents the experience of how a woman is seen while traveling. The cheesecloth, acting as the canvas, depicts the delicateness and fragility of the situation while the airport photograph and skyline show the strong-willed nature of the traveler. The woman in the picture is faceless not only for anonymity, but also for empathy knowing it can happen to anyone.",
+      "Personal story:",
+      "Based on when I traveled solo for the first time a few years back. I was stalked and hit by a Vespa that resulted in me staying longer in Rome. I found out the man preyed on women at the hostel and assaulted the ones he could get alone. After trying to isolate me by showing people indecent pictures of “me”, I had him kicked out of the hostel's bar. After waiting outside full of rage, he showed the picture to me once more, stating “it isn’t you obviously, she was passed out and a bitch anyway”. I recognized the girl as another solo traveler when he showed me the picture of her face- eyes shut and naked on his bed. I screamed and broke his lip.",
+    ],
   };
   export const SiTianWang: Work = {
     name: "四天王 (Sì Tiān Wáng)",
@@ -146,6 +155,9 @@ export namespace Works {
     slug: "twilight-zone",
     cover: "/media_and_sexuality/gallery.webp",
     images: [],
+    statements: [
+      "After the passing of my father in 2020 and riddled with grief that I wasn’t there at his time of death, I made this piece as a representation of the show he watched as a child and introduced me to years prior. In the episode Nothing in the Dark of The Twilight Zone, an elderly woman lets no one in her home out of fear that they may be the grim reaper. After a wounded man ends up at her doorstep, she reluctantly brings him inside to nurse him to health. However, while he did turn out to be the reaper, he held her hand and showed her she passed peacefully, painlessly, and with someone at her side. I’d like to imagine that is how my father passed.",
+    ],
   };
   export const MediaSexuality: Work = {
     name: "Media Sexuality",
@@ -195,6 +207,9 @@ export namespace Works {
     dimensions: "24x24in.",
     cover: "/feminine_studies/58.webp",
     images: [],
+    statements: [
+      "Following the Taliban taking over Afghanistan in May of 2021, I made this piece  to discuss womens’ rights issues in solidarity for those affected by this. The pose of the two references the sculpture “the Rape of Proserpina” while Guernica lies at the bottom- yet again preaching anti-war and the violence that comes with it. The word “Detour” expresses how society regressed in a matter of moments, deleting human rights and history as well. Her halo, simply put, represents the innocence and hope that was lost by women and children.",
+    ],
   };
 }
 

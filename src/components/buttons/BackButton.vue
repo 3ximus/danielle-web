@@ -5,7 +5,6 @@
 </template>
 
 <style scoped lang="scss">
-$sign_color: #d99522;
 .back-button {
   position: absolute;
   left: 4%;
@@ -20,9 +19,9 @@ $sign_color: #d99522;
   cursor: pointer;
   &:hover {
     transform: rotate(45deg) scale(1.1);
-    background: $sign_color;
+    background: var(--orange-sign-color);
     border: solid 3px black;
-    outline: 2px solid $sign_color;
+    outline: 2px solid var(--orange-sign-color);
   }
   img {
     width: 34px;
