@@ -6,10 +6,13 @@ import emailjs from "emailjs-com";
 const name = ref("");
 const email = ref("");
 const message = ref("");
-
 const form = ref<HTMLInputElement[] | null>(null);
 
+type ButtonStatus = "waiting" | "success" | "error" | "none";
+const formStatus = ref<ButtonStatus>("none");
+
 function sendEmail(): void {
+  formStatus.value = "waiting";
   emailjs
     .send(
       "service_oztye7t",
@@ -24,10 +27,14 @@ function sendEmail(): void {
     )
     .then(
       (result: any) => {
-        console.log("SUCCESS!", result.text);
+        console.log("Email sent!", result.text);
+        formStatus.value = "success";
+        name.value = "";
+        email.value = "";
+        message.value = "";
       },
       (error: any) => {
-        console.log("FAILED...", error.text);
+        console.log("Email failed...", error.text);
       }
     );
 }
@@ -73,7 +80,9 @@ function sendEmail(): void {
         required
       />
       <br />
-      <ButtonComponent type="submit">Send</ButtonComponent>
+      <ButtonComponent type="submit" :status="formStatus">{{
+        formStatus === "success" ? "Sent" : "Send"
+      }}</ButtonComponent>
     </form>
   </section>
 </template>

@@ -1,14 +1,12 @@
 <script setup lang="ts">
-defineProps({
-  type: {
-    type: null, // ignore type checking
-    default: "button",
-  },
-});
+defineProps<{
+  type?: "button" | "submit" | "reset";
+  status?: "waiting" | "success" | "error" | "none";
+}>();
 </script>
 
 <template>
-  <button class="dr-button" :type="type">
+  <button class="dr-button" :type="type" :data-status="status">
     <span class="dr-button-label">
       <slot></slot>
     </span>
@@ -21,6 +19,7 @@ defineProps({
   font-family: LemonMilk;
   cursor: pointer;
   color: white;
+  height: 42px;
   min-width: 100px;
   padding: 5px 10px;
   margin-top: 30px;
@@ -28,15 +27,47 @@ defineProps({
   border-radius: 6px;
   outline: none;
   border: none;
-  transition: transform 0.3s, filter 0.3s;
+  transform: scale(1);
+  transition: all 0.3s;
 
   &:hover {
     transform: scale(1.02);
     filter: drop-shadow(4px 5px 10px #888);
   }
   &-label {
-    position: relative;
     z-index: 1;
+  }
+
+  &[data-status="waiting"] {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 34px;
+      z-index: 3;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      border-top: 4px solid white;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      animation: spin 0.8s ease-out infinite;
+    }
+    .dr-button-label {
+      opacity: 0;
+    }
+  }
+
+  &[data-status="success"] {
+    &:after {
+      content: ' 🗸'
+    }
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
   }
 }
 

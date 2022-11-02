@@ -11,11 +11,8 @@ function scrolled() {
   const index = collectionHeaders
     .value!.map((el) => window.scrollY > el.offsetTop - 140)
     .lastIndexOf(true);
-  if (index >= 0) {
-    store.setGalleryCollection(gallery[index].name);
-  } else {
-    store.setGalleryCollection("");
-  }
+  if (index >= 0) store.setGalleryCollection(gallery[index].name);
+  else store.setGalleryCollection("");
 }
 
 onBeforeMount(() => window.addEventListener("scroll", scrolled));
