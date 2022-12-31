@@ -19,7 +19,6 @@ const dismiss = () => router.back();
 function keydown_dismiss(event: KeyboardEvent) {
   if (event.key === "Escape") dismiss();
 }
-
 onBeforeMount(() => {
   if (!selectedWork) dismiss();
   document.addEventListener("keydown", keydown_dismiss);

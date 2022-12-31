@@ -11,7 +11,7 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
     </Transition>
   </RouterView>
 
-  <RouterView name="workView" v-slot="{ Component }">
+  <RouterView name="secondaryView" v-slot="{ Component }">
     <Transition name="fade">
       <Component :is="Component" />
     </Transition>

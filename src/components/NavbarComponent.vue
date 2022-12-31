@@ -18,7 +18,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", setScrolled));
     :at-home="atHome"
   >
     <div class="row">
-      <h1>DANIELLE ROMAINE</h1>
+      <RouterLink to="/"><h1>DANIELLE ROMAINE</h1></RouterLink>
       <hr />
       <h2>Fine Artist</h2>
     </div>
@@ -101,6 +101,10 @@ onBeforeUnmount(() => window.removeEventListener("scroll", setScrolled));
         transform: scaleX(1);
       }
     }
+  }
+  a {
+    color: var(--text-color);
+    text-decoration: none;
   }
   h1 {
     margin: 0;

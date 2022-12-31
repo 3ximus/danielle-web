@@ -29,7 +29,7 @@ const router = createRouter({
       name: "work",
       components: {
         default: () => import("@/views/GalleryView.vue"),
-        workView: () => import("@/views/WorkView.vue"),
+        secondaryView: () => import("@/views/WorkView.vue"),
       },
     },
     {
@@ -37,7 +37,15 @@ const router = createRouter({
       name: "work-home",
       components: {
         default: () => import("@/views/HomeView.vue"),
-        workView: () => import("@/views/WorkView.vue"),
+        secondaryView: () => import("@/views/WorkView.vue"),
+      },
+    },
+    {
+      path: "/exhibition/:slug",
+      name: "exhibition",
+      components: {
+        default: () => import("@/views/AboutView.vue"),
+        secondaryView: () => import("@/views/ExhibitionView.vue"),
       },
     },
   ],

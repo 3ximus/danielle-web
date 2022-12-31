@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
+import { exhibitions } from "./exhibitions";
 </script>
 
 <template>
@@ -25,6 +26,14 @@ import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
     appreciate the artworks for their composition and color usage regardless of
     its concept.
     <br />
+
+    <h2>PAST EXHIBITIONS</h2>
+
+    <div v-for="exhibition in exhibitions">
+      <RouterLink :to="'exhibition/' + exhibition.slug">
+        <h2>{{ exhibition.name }}</h2>
+      </RouterLink>
+    </div>
 
     <RouterLink to="contact">
       <ButtonComponent>Get in touch</ButtonComponent>

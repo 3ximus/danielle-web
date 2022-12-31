@@ -4,7 +4,6 @@ import { store } from "@/store";
 import { onBeforeMount, onBeforeUnmount, ref } from "vue";
 import { gallery } from "./gallery";
 
-const galleryElement = ref<HTMLInputElement[] | null>(null);
 const collectionHeaders = ref<HTMLInputElement[] | null>(null);
 
 function scrolled() {
@@ -23,7 +22,7 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <section class="gallery">
-    <div v-for="collection in gallery" class="collection" ref="galleryElement">
+    <div v-for="collection in gallery" class="collection">
       <h2 ref="collectionHeaders" class="collection-name">
         {{ collection.name }}
       </h2>

@@ -128,6 +128,7 @@ export namespace Works {
       "/litter_ahead_lilith/32.webp",
       "/litter_ahead_lilith/34.webp",
       "/litter_ahead_lilith/35.webp",
+      "/litter_ahead_lilith/flash.webp",
     ],
     statements: [
       "Lilith, being known as the first Eve in the Garden of Eden, has been demonized in Judaism for not being subservient to Adam and lying beneath him. Seeing as she was created as his equal, Lilith realized she was her own person, and upon being banished, she grew wings and flew away. Once found by angels sent to retrieve her, she was told that for each day she would not come back, some of her babies would be killed as consequence. Commonly seen as a serpent woman who now kills the unborn and babies, she was spiteful of the fate put upon her by God.",
