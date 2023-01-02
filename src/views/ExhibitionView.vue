@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BackButtonComponent from "@/components/buttons/BackButton.vue";
+import ImageRowComponent from "@/components/ImageRowComponent.vue";
 import router from "@/router";
 import { onBeforeMount, onBeforeUnmount } from "vue";
 import { useRoute } from "vue-router";
@@ -26,9 +27,8 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
     <div class="modal-content">
       <h1 class="title">{{ exhibition.name }}</h1>
 
-      <div class="images" ref="images">
-        <img v-for="image in exhibition.images" :src="image" alt="" />
-      </div>
+      <ImageRowComponent ref="images" :images="exhibition.images"/>
+
     </div>
   </div>
 </template>
@@ -57,19 +57,6 @@ $title: clamp(10px, 10vw, 40px);
       letter-spacing: 3px;
       margin-bottom: 50px;
     }
-
-    .images {
-      margin-top: 200px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      img {
-        max-height: 300px;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
   }
 }
 
@@ -81,16 +68,6 @@ $title: clamp(10px, 10vw, 40px);
         font-size: 20px;
         margin-bottom: 30px;
         letter-spacing: 2px;
-      }
-      .images {
-        margin-top: 20px;
-        flex-direction: column;
-        flex-wrap: unset;
-        img {
-          min-width: 100%;
-          height: unset;
-          max-height: unset;
-        }
       }
     }
   }

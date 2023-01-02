@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BackButtonComponent from "@/components/buttons/BackButton.vue";
 import ScrollButtonComponent from "@/components/buttons/ScrollButton.vue";
+import ImageRowComponent from "@/components/ImageRowComponent.vue";
 import router from "@/router";
 import type { Work } from "@/works";
 import { gallery } from "@/views/gallery";
@@ -49,9 +50,9 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
           </p>
         </div>
       </div>
-      <div class="images" ref="images">
-        <img v-for="image in selectedWork.images" :src="image" alt="" />
-      </div>
+
+      <ImageRowComponent ref="images" :images="selectedWork.images"/>
+
     </div>
     <ScrollButtonComponent
       @click="images?.scrollIntoView({ behavior: 'smooth' })"
@@ -115,18 +116,6 @@ $title: clamp(10px, 10vw, 40px);
         }
       }
     }
-    .images {
-      margin-top: 200px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      img {
-        max-height: 300px;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
   }
 }
 
@@ -150,16 +139,6 @@ $title: clamp(10px, 10vw, 40px);
         }
         .description {
           width: 100%;
-        }
-      }
-      .images {
-        margin-top: 20px;
-        flex-direction: column;
-        flex-wrap: unset;
-        img {
-          min-width: 100%;
-          height: unset;
-          max-height: unset;
         }
       }
     }
