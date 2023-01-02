@@ -29,11 +29,12 @@ import { exhibitions } from "./exhibitions";
 
     <h2>PAST EXHIBITIONS</h2>
 
-    <div v-for="exhibition in exhibitions">
-      <RouterLink :to="'exhibition/' + exhibition.slug">
-        <h2>{{ exhibition.name }}</h2>
-      </RouterLink>
-    </div>
+    <RouterLink
+      v-for="exhibition in exhibitions"
+      :to="'/exhibition/' + exhibition.slug"
+    >
+      <p class="exhibition">{{ exhibition.name }}</p>
+    </RouterLink>
 
     <RouterLink to="contact">
       <ButtonComponent>Get in touch</ButtonComponent>
@@ -45,5 +46,41 @@ import { exhibitions } from "./exhibitions";
 .about {
   line-height: 2em;
   margin: 40px;
+
+  h2 {
+    letter-spacing: 2px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .exhibition {
+    position: relative;
+    width: fit-content;
+    font-family: LemonMilk;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--green-sign-color);
+    margin-left: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--green-sign-color);
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      transition: all 0.2s;
+    }
+    &:hover::before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
 }
 </style>

@@ -14,7 +14,6 @@ function keydown_dismiss(event: KeyboardEvent) {
   if (event.key === "Escape") dismiss();
 }
 onBeforeMount(() => {
-  console.log('mounting');
   if (!exhibition) dismiss();
   document.addEventListener("keydown", keydown_dismiss);
 });
