@@ -12,7 +12,7 @@ export interface Work {
   images: string[]; // images when previewing work
   year: number;
   dimensions?: string;
-  media?: string;
+  medium?: string;
   statements?: string[];
 
   sold?: boolean;
@@ -22,7 +22,7 @@ export namespace Works {
   export const PomegranatesBotticelli: Work = {
     name: "Pomegranates and Botticelli; Caution, Bump",
     year: 2021,
-    media: "Oil paint & collage on road sign",
+    medium: "Oil paint & collage on road sign",
     dimensions: "24x24in.",
     slug: "pomegranates-botticelli",
     cover: "pomegranates_botticelli/88.webp",
@@ -35,22 +35,26 @@ export namespace Works {
     statements: [
       "Referring to classical art knowledge, the reference of pomegranates are a few things; pomegranates didn’t just depict fertility, but also the anatomy of a human heart, and being the immortality and resurrection of Jesus. A close up on two of the angels from Botticelli’s painting Madonna of the Magnificat is shown atop the sign where baby Jesus was crowned while sitting on Mary’s lap. The words “Caution, Bump” poke fun that, while one was said to conceive without having sex, those who can end up with a baby bump should use protection.",
     ],
+    sold: true,
   };
   export const FallenAngel: Work = {
     name: "Fallen Angel",
     slug: "fallen-angel",
     year: 2021,
+    medium: "Oil paint on road sign",
+    dimensions: "24x24in.",
     cover: "/fallen_angel/cover.webp",
     images: [
       "/fallen_angel/80.webp",
       "/fallen_angel/81.webp",
       "/fallen_angel/flash.webp",
     ],
+    sold: true,
   };
   export const HeliosSelene: Work = {
     name: "Helios & Selene",
     year: 2022,
-    media: "Oil paint on street signs",
+    medium: "Oil paint on street signs",
     dimensions: "12x18in. (x2)",
     slug: "helios-selene",
     cover: "/helios_selene/1.webp",
@@ -82,7 +86,7 @@ export namespace Works {
   export const SoloTravel: Work = {
     name: "Solo Travel",
     year: 2021,
-    media: "Oil paint & mixed media",
+    medium: "Oil paint & mixed media",
     dimensions: "Approx. 24x30in.",
     slug: "solo-travel",
     cover: "/solo_travel/75.webp",
@@ -102,7 +106,7 @@ export namespace Works {
   export const SiTianWang: Work = {
     name: "四天王 (Sì Tiān Wáng)",
     year: 2020,
-    media: "Oil paint & marker on road sign",
+    medium: "Oil paint & marker on road sign",
     dimensions: "30x48in.",
     slug: "si-tian-wang",
     cover: "/si_tian_wang/44.webp",
@@ -120,7 +124,7 @@ export namespace Works {
   export const DuoWenTianWang: Work = {
     name: "多闻天王 (Duōwén Tiānwáng)",
     year: 2020,
-    media: "Oil paint & marker on road sign",
+    medium: "Oil paint & marker on road sign",
     dimensions: "24x30in.",
     slug: "duo-wen-tian-wang",
     cover: "/duo_wen_tian_wang/41.webp",
@@ -141,7 +145,7 @@ export namespace Works {
   export const PedestrianSitting: Work = {
     name: "Pedestrian Sitting",
     year: 2017,
-    media: "Road sign and piping",
+    medium: "Road sign and piping",
     slug: "pedestrian-sitting",
     cover: "/pedestrian_sitting/27.webp",
     images: [
@@ -156,7 +160,7 @@ export namespace Works {
   export const LitterAheadLilith: Work = {
     name: "Litter Ahead; Lilith",
     year: 2020,
-    media: "Oil paint on road sign",
+    medium: "Oil paint on road sign",
     dimensions: "36x36in.",
     slug: "litter-ahead-lilith",
     cover: "/litter_ahead_lilith/gallery.webp",
@@ -175,7 +179,7 @@ export namespace Works {
   export const StopHorny: Work = {
     name: "Stop, Horny",
     year: 2021,
-    media: "Oil paint & collage on road sign",
+    medium: "Oil paint & collage on road sign",
     dimensions: "18x18in.",
     slug: "stop-horny",
     cover: "/stop_horny/cover.webp",
@@ -193,7 +197,7 @@ export namespace Works {
   export const TwilightZone: Work = {
     name: "Twilight Zone; Nothing in the Dark",
     year: 2021,
-    media: "Paint Marker on road sign",
+    medium: "Paint Marker on road sign",
     dimensions: "36x36in.",
     slug: "twilight-zone",
     cover: "/twilight_zone/cover.webp",
@@ -217,7 +221,7 @@ export namespace Works {
   export const FindingSelf: Work = {
     name: "Finding Self; Closed-Off",
     year: 2021,
-    media: "Oil paint & marker on road sign",
+    medium: "Oil paint & marker on road sign",
     dimensions: "24x24in. (x3)",
     slug: "finding-self",
     cover: "/finding_self/4.webp",
@@ -245,6 +249,7 @@ export namespace Works {
       "/bavarian_lion_shield/54.webp",
       "/bavarian_lion_shield/55.webp",
     ],
+    sold: true,
   };
   export const MaleStudy: Work = {
     name: "Male Study",
@@ -280,7 +285,7 @@ export namespace Works {
     name: "Another War on Women",
     slug: "war-on-women",
     year: 2021,
-    media: "Oil paint & collage on road sign",
+    medium: "Oil paint & collage on road sign",
     dimensions: "24x24in.",
     cover: "/feminine_studies/58.webp",
     images: [],
@@ -292,6 +297,8 @@ export namespace Works {
     name: "Picnic Here",
     slug: "picnic-here",
     cover: "/picnic_here/IMG_5545.webp",
+    medium: "Oil paint on street signs",
+    dimensions: "12x18in.",
     year: 2022,
     images: [
       "/picnic_here/IMG_5546.webp",
@@ -304,6 +311,8 @@ export namespace Works {
     name: "Carousel",
     slug: "carousel",
     cover: "/carousel/IMG_5580.webp",
+    medium: "Chalk pastel, spray paint, & acrylic on road sign",
+    dimensions: "24x30in.",
     year: 2022,
     images: [
       "/carousel/IMG_5581.webp",

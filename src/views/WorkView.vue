@@ -2,6 +2,7 @@
 import BackButtonComponent from "@/components/buttons/BackButton.vue";
 import ScrollButtonComponent from "@/components/buttons/ScrollButton.vue";
 import ImageRowComponent from "@/components/ImageRowComponent.vue";
+import SoldIconComponent from "@/components/SoldIconComponent.vue";
 import router from "@/router";
 import type { Work } from "@/works";
 import { gallery } from "@/views/gallery";
@@ -39,12 +40,14 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
             alt=""
             onload="this.style.transform = 'scale(1)'"
           />
+          <SoldIconComponent v-if="selectedWork.sold"/>
+
         </div>
         <hr />
         <div class="description">
           <p class="details">{{ selectedWork.year }}</p>
           <p class="details">{{ selectedWork.dimensions }}</p>
-          <p class="details">{{ selectedWork.media }}</p>
+          <p class="details">{{ selectedWork.medium }}</p>
           <p class="statement" v-for="statement in selectedWork.statements">
             {{ statement }}
           </p>
@@ -139,6 +142,7 @@ $title: clamp(10px, 10vw, 40px);
         }
         .description {
           width: 100%;
+          margin-top: 10px;
         }
       }
     }
