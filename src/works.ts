@@ -68,14 +68,14 @@ export namespace Works {
     slug: "squid",
     cover: "/squid/89.webp",
     year: 2021,
-    images: [],
+    images: ["/squid/90.webp", "/squid/91.webp"],
   };
   export const StopNoHare: Work = {
     name: "Stop No Hare",
     slug: "stop-no-hare",
     cover: "/stop_no_hare/82.webp",
     year: 2021,
-    images: [],
+    images: ["/stop_no_hare/83.webp", "/stop_no_hare/84.webp"],
   };
   export const SoloTravel: Work = {
     name: "Solo Travel",
@@ -84,7 +84,12 @@ export namespace Works {
     dimensions: "Approx. 24x30in.",
     slug: "solo-travel",
     cover: "/solo_travel/75.webp",
-    images: [],
+    images: [
+      "/solo_travel/76.webp",
+      "/solo_travel/77.webp",
+      "/solo_travel/78.webp",
+      "/solo_travel/79.webp",
+    ],
     statements: [
       "Discussing this piece as a general representation:",
       "Raw, hanging meat represents the experience of how a woman is seen while traveling. The cheesecloth, acting as the canvas, depicts the delicateness and fragility of the situation while the airport photograph and skyline show the strong-willed nature of the traveler. The woman in the picture is faceless not only for anonymity, but also for empathy knowing it can happen to anyone.",
@@ -99,7 +104,12 @@ export namespace Works {
     dimensions: "30x48in.",
     slug: "si-tian-wang",
     cover: "/si_tian_wang/44.webp",
-    images: [],
+    images: [
+      "/si_tian_wang/43.webp",
+      "/si_tian_wang/45.webp",
+      "/si_tian_wang/46.webp",
+      "/si_tian_wang/flash.webp",
+    ],
     statements: [
       "The Four Heavenly Kings are Gods in Buddhism, each representing and watching over a cardinal direction. Each King has a distinct color, weapon, direction, and purpose.",
       "On this sign, the arrows and head direction correlate to what region they rule. The mudra, a hand symbol shown in red, alongside the mantra in the top left, are used to pray to the God of the North, Duōwén Tiānwáng (not depicted). The lemon in the bottom right symbolizes a connection to this fourth God as well.",
@@ -112,7 +122,14 @@ export namespace Works {
     dimensions: "24x30in.",
     slug: "duo-wen-tian-wang",
     cover: "/duo_wen_tian_wang/41.webp",
-    images: [],
+    images: [
+      "/duo_wen_tian_wang/36.webp",
+      "/duo_wen_tian_wang/37.webp",
+      "/duo_wen_tian_wang/38.webp",
+      "/duo_wen_tian_wang/39.webp",
+      "/duo_wen_tian_wang/40.webp",
+      "/duo_wen_tian_wang/42.webp",
+    ],
     statements: [
       'As the "main" God of the Four Heavenly Kings, Duōwén Tiānwáng is most commonly prayed to for prosperity seeing as he is associated with good fortune.',
       "Usually carrying a lemon in one hand and a mongoose spitting jewels in another, he is shown as a wealth-giving God rather than one of greed.",
@@ -125,7 +142,11 @@ export namespace Works {
     media: "Road sign and piping",
     slug: "pedestrian-sitting",
     cover: "/pedestrian_sitting/27.webp",
-    images: [],
+    images: [
+      "/pedestrian_sitting/26.webp",
+      "/pedestrian_sitting/28.webp",
+      "/pedestrian_sitting/29.webp",
+    ],
     statements: [
       "Joking at the iconography of a pedestrian crossing, the pedestrian’s sign is now made into a functional chair- now doing the opposite of what the well-known icon was meant to do. Here, the pedestrian has given in to the societal norms of a “fast food lifestyle” so to speak, being highly inactive and ultimately lazy.",
     ],
@@ -156,7 +177,12 @@ export namespace Works {
     dimensions: "18x18in.",
     slug: "stop-horny",
     cover: "/stop_horny/cover.webp",
-    images: [],
+    images: [
+      "/stop_horny/8.webp",
+      "/stop_horny/9.webp",
+      "/stop_horny/10.webp",
+      "/stop_horny/11.webp",
+    ],
     statements: [
       "Depicting the painting Mars and Venus by Botticelli on the left, this piece discusses the implications of getting in a lustful relationship in the modern era. Venus, Goddess of fertility and love, is shown conquering Mars, the God of war. Tired and utterly defeated, he met his match, ultimately stating that love really does conquer war.",
       "To the bottom right, a fortune from a cookie reads “take the next opportunity presented to you” in French. Finding companionship nowadays requires different aspects than it used to, seeing as there is a large disconnect in how people interact due to technology. Many are seemingly defeated as well, not very interested in putting in the efforts needed to deepen relationships or meet new people. Overall, this sign is reminding the viewer to stay open minded, while cautioning of the large quantity of surface level relationships.",
@@ -179,7 +205,12 @@ export namespace Works {
     slug: "media-sexuality",
     cover: "/media_and_sexuality/gallery.webp",
     year: 2021,
-    images: [],
+    images: [
+      "/media_and_sexuality/71.webp",
+      "/media_and_sexuality/72.webp",
+      "/media_and_sexuality/73.webp",
+      "/media_and_sexuality/74.webp",
+    ],
   };
   export const FindingSelf: Work = {
     name: "Finding Self; Closed-Off",
@@ -188,7 +219,16 @@ export namespace Works {
     dimensions: "24x24in. (x3)",
     slug: "finding-self",
     cover: "/finding_self/4.webp",
-    images: [],
+    images: [
+      "/finding_self/5.webp",
+      "/finding_self/6.webp",
+      "/finding_self/19.webp",
+      "/finding_self/20.webp",
+      "/finding_self/21.webp",
+      "/finding_self/22.webp",
+      "/finding_self/23.webp",
+      "/finding_self/24.webp",
+    ],
     statements: [
       "The classic medium of oil paint paired with modern street signs show the duality and dynamism of one's own being. The inner struggles of gender identity and acceptance are shown in this triptych, Finding Self, by creating a dialogue from self to viewer via my own thoughts. Through questioning myself, a form of care and love had been created; one never spoken, yet quickly understood.",
     ],
@@ -198,21 +238,41 @@ export namespace Works {
     slug: "bavarian-lion-shield",
     cover: "/bavarian_lion_shield/52.webp",
     year: 2021,
-    images: [],
+    images: [
+      "/bavarian_lion_shield/53.webp",
+      "/bavarian_lion_shield/54.webp",
+      "/bavarian_lion_shield/55.webp",
+    ],
   };
   export const MaleStudy: Work = {
     name: "Male Study",
     slug: "male-study",
     cover: "/male_study/56.webp",
     year: 2021,
-    images: [],
+    images: ["/male_study/57.webp"],
   };
   export const FeminineStudies: Work = {
     name: "Feminine Studies",
     slug: "feminine-studies",
     cover: "/feminine_studies/58.webp",
     year: 2021,
-    images: [],
+    images: [
+      "/feminine_studies/48.webp",
+      "/feminine_studies/49.webp",
+      "/feminine_studies/50.webp",
+      "/feminine_studies/51.webp",
+      "/feminine_studies/59.webp",
+      "/feminine_studies/60.webp",
+      "/feminine_studies/61.webp",
+      "/feminine_studies/62.webp",
+      "/feminine_studies/63.webp",
+      "/feminine_studies/64.webp",
+      "/feminine_studies/65.webp",
+      "/feminine_studies/66.webp",
+      "/feminine_studies/67.webp",
+      "/feminine_studies/68.webp",
+      "/feminine_studies/69.webp",
+    ],
   };
   export const WarOnWomen: Work = {
     name: "Another War on Women",
@@ -244,10 +304,10 @@ export namespace Works {
     cover: "/carousel/IMG_5580.webp",
     year: 2022,
     images: [
-      "/picnic_here/IMG_5581.webp",
-      "/picnic_here/IMG_5582.webp",
-      "/picnic_here/IMG_5583.webp",
-      "/picnic_here/IMG_5584.webp",
+      "/carousel/IMG_5581.webp",
+      "/carousel/IMG_5582.webp",
+      "/carousel/IMG_5583.webp",
+      "/carousel/IMG_5584.webp",
     ],
   };
 }
