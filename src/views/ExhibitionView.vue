@@ -25,6 +25,10 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
     <BackButtonComponent @click="dismiss" />
     <div class="modal-content">
       <h1 class="title">{{ exhibition.name }}</h1>
+
+      <div class="images" ref="images">
+        <img v-for="image in exhibition.images" :src="image" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -52,6 +56,19 @@ $title: clamp(10px, 10vw, 40px);
       font-size: $title;
       letter-spacing: 3px;
       margin-bottom: 50px;
+    }
+
+    .images {
+      margin-top: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      img {
+        max-height: 300px;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 }

@@ -14,6 +14,8 @@ export interface Work {
   dimensions?: string;
   media?: string;
   statements?: string[];
+
+  sold?: boolean;
 }
 
 export namespace Works {

@@ -39,6 +39,6 @@ export const exhibitions: Exhibition[] = [
     name: "Queer Love (February 2022)",
     slug: "queer-love",
     description: "My other exhibition",
-    images: ["1.webp"],
+    images: ["queer_love/1.webp"],
   },
 ];

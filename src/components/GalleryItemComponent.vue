@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <div class="item" @click="router.push('/gallery/' + item.slug)">
-    <img :src="item.cover" />
+    <img :src="item.cover" onload="this.style.opacity=1"/>
     <div class="title">
       <h1 class="name">{{ item.name }}</h1>
       <h2 class="year">{{ item.year }}</h2>
@@ -34,6 +34,8 @@ $transitionTime: 0.2s;
     height: 100%;
     max-width: 100vw;
     object-fit: cover;
+    opacity: 0;
+    transition: .4s .8s;
   }
 
   .title {
