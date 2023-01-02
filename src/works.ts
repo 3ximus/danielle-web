@@ -24,7 +24,12 @@ export namespace Works {
     dimensions: "24x24in.",
     slug: "pomegranates-botticelli",
     cover: "pomegranates_botticelli/88.webp",
-    images: [],
+    images: [
+      "pomegranates_botticelli/85.webp",
+      "pomegranates_botticelli/86.webp",
+      "pomegranates_botticelli/87.webp",
+      "pomegranates_botticelli/flash.webp",
+    ],
     statements: [
       "Referring to classical art knowledge, the reference of pomegranates are a few things; pomegranates didn’t just depict fertility, but also the anatomy of a human heart, and being the immortality and resurrection of Jesus. A close up on two of the angels from Botticelli’s painting Madonna of the Magnificat is shown atop the sign where baby Jesus was crowned while sitting on Mary’s lap. The words “Caution, Bump” poke fun that, while one was said to conceive without having sex, those who can end up with a baby bump should use protection.",
     ],
@@ -34,7 +39,11 @@ export namespace Works {
     slug: "fallen-angel",
     year: 2021,
     cover: "/fallen_angel/cover.webp",
-    images: [],
+    images: [
+      "/fallen_angel/80.webp",
+      "/fallen_angel/81.webp",
+      "/fallen_angel/flash.webp",
+    ],
   };
   export const HeliosSelene: Work = {
     name: "Helios & Selene",
@@ -42,8 +51,13 @@ export namespace Works {
     media: "Oil paint on street signs",
     dimensions: "12x18in. (x2)",
     slug: "helios-selene",
-    cover: "/helios_selene/1.jpg",
-    images: [],
+    cover: "/helios_selene/1.webp",
+    images: [
+      "/helios_selene/helios.webp",
+      "/helios_selene/hflash.webp",
+      "/helios_selene/selene.webp",
+      "/helios_selene/sflash.webp",
+    ],
     statements: [
       "Helios, God of the Sun, and Selene, Goddess of the moon, are painted in oil as busts on No Parking signs.",
       "Ironically, the one that is reflective in the dark is Helios rather than Selene.",
