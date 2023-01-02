@@ -8,16 +8,23 @@ export interface Exhibition {
 
 export const exhibitions: Exhibition[] = [
   {
-    name: "Milk Moon",
-    slug: "milk-moon",
-    url: "https://milk-moon.web.app/",
+    name: "Cafe Faro (October 2022-)",
+    slug: "cafe-faro",
+    url: "",
     description: "My exhibition",
     images: [],
   },
   {
-    name: "Other",
-    slug: "other",
-    url: "https://milk-moon.web.app/",
+    name: "Milk Moon (May 2022)",
+    slug: "milk-moon",
+    url: "",
+    description: "My other exhibition",
+    images: [],
+  },
+  {
+    name: "Queer Love (February 2022)",
+    slug: "queer-love",
+    url: "",
     description: "My other exhibition",
     images: [],
   },
