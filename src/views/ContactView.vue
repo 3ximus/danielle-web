@@ -92,6 +92,9 @@ function sendEmail(): void {
   max-width: 600px;
   margin: 40px;
   line-height: 2em;
+  h2 {
+    letter-spacing: 2px;
+  }
   a {
     color: var(--text-color);
   }
