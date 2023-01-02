@@ -72,4 +72,28 @@ $title: clamp(10px, 10vw, 40px);
     }
   }
 }
+
+@media (max-width: 800px) {
+  .exhibition-modal {
+    .modal-content {
+      padding-top: 70px;
+      .title {
+        font-size: 20px;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+      }
+      .images {
+        margin-top: 20px;
+        flex-direction: column;
+        flex-wrap: unset;
+        img {
+          min-width: 100%;
+          height: unset;
+          max-height: unset;
+        }
+      }
+    }
+  }
+}
+
 </style>
