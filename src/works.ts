@@ -26,8 +26,8 @@ export namespace Works {
     cover: "pomegranates_botticelli/88.webp",
     images: [],
     statements: [
-      "Referring to classical art knowledge, the reference of pomegranates are a few things; pomegranates didn’t just depict fertility, but also the anatomy of a human heart, and being the immortality and resurrection of Jesus. A close up on two of the angels from Botticelli’s painting Madonna of the Magnificat is shown atop the sign where baby Jesus was crowned while sitting on Mary’s lap. The words “Caution, Bump” poke fun that, while one was said to conceive without having sex, those who can end up with a baby bump should use protection."
-    ]
+      "Referring to classical art knowledge, the reference of pomegranates are a few things; pomegranates didn’t just depict fertility, but also the anatomy of a human heart, and being the immortality and resurrection of Jesus. A close up on two of the angels from Botticelli’s painting Madonna of the Magnificat is shown atop the sign where baby Jesus was crowned while sitting on Mary’s lap. The words “Caution, Bump” poke fun that, while one was said to conceive without having sex, those who can end up with a baby bump should use protection.",
+    ],
   };
   export const FallenAngel: Work = {
     name: "Fallen Angel",
@@ -210,6 +210,30 @@ export namespace Works {
     images: [],
     statements: [
       "Following the Taliban taking over Afghanistan in May of 2021, I made this piece  to discuss womens’ rights issues in solidarity for those affected by this. The pose of the two references the sculpture “the Rape of Proserpina” while Guernica lies at the bottom- yet again preaching anti-war and the violence that comes with it. The word “Detour” expresses how society regressed in a matter of moments, deleting human rights and history as well. Her halo, simply put, represents the innocence and hope that was lost by women and children.",
+    ],
+  };
+  export const PicnicHere: Work = {
+    name: "Picnic Here",
+    slug: "picnic-here",
+    cover: "/picnic_here/IMG_5545.webp",
+    year: 2022,
+    images: [
+      "/picnic_here/IMG_5546.webp",
+      "/picnic_here/IMG_5547.webp",
+      "/picnic_here/IMG_5548.webp",
+      "/picnic_here/IMG_5549.webp",
+    ],
+  };
+  export const Carousel: Work = {
+    name: "Carousel",
+    slug: "carousel",
+    cover: "/carousel/IMG_5580.webp",
+    year: 2022,
+    images: [
+      "/picnic_here/IMG_5581.webp",
+      "/picnic_here/IMG_5582.webp",
+      "/picnic_here/IMG_5583.webp",
+      "/picnic_here/IMG_5584.webp",
     ],
   };
 }
