@@ -14,7 +14,10 @@ const selectedWork: Work = gallery
   .flat()
   .find((w) => w.slug === useRoute().params.slug)!;
 
-const images = ref<HTMLInputElement | null>(null);
+const images = ref<InstanceType<typeof ImageRowComponent>>();
+function scrollToImages() {
+  images.value.$el.scrollIntoView({ behavior: "smooth" });
+}
 
 const dismiss = () => router.back();
 
@@ -40,8 +43,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
             alt=""
             onload="this.style.transform = 'scale(1)'"
           />
-          <SoldIconComponent v-if="selectedWork.sold"/>
-
+          <SoldIconComponent v-if="selectedWork.sold" />
         </div>
         <hr />
         <div class="description">
@@ -54,12 +56,9 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
         </div>
       </div>
 
-      <ImageRowComponent ref="images" :images="selectedWork.images"/>
-
+      <ImageRowComponent ref="images" :images="selectedWork.images" />
     </div>
-    <ScrollButtonComponent
-      @click="images?.scrollIntoView({ behavior: 'smooth' })"
-    />
+    <ScrollButtonComponent @click="scrollToImages" />
   </div>
 </template>
 
