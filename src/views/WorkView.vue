@@ -16,7 +16,7 @@ const selectedWork: Work = gallery
 
 const images = ref<InstanceType<typeof ImageRowComponent>>();
 function scrollToImages() {
-  images.value.$el.scrollIntoView({ behavior: "smooth" });
+  images.value?.$el.scrollIntoView({ behavior: "smooth" });
 }
 
 const dismiss = () => router.back();

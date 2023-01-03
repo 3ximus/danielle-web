@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, type PropType } from "vue";
 
-const props = defineProps({
+defineProps({
   images: {
-    type: Array<String>
+    type: Array as PropType<string[]>,
+    default: () => [],
   },
 });
 
 const fullscreenImage = ref("");
 
-function showFullscreen(image:string) {
+function showFullscreen(image: string) {
   fullscreenImage.value = image;
 }
 
 function dismissFullscreen() {
-  fullscreenImage.value = '';
+  fullscreenImage.value = "";
 }
 </script>
 
@@ -67,6 +68,7 @@ function dismissFullscreen() {
   height: 100vh;
   margin: auto;
   background-color: #ffffffaa;
+  z-index: 100;
   img {
     object-fit: contain;
     padding-top: 5vh;
