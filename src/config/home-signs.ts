@@ -1,4 +1,4 @@
-import { Pop } from "../works";
+import { Pop } from "./works";
 
 export const grid = [
   [

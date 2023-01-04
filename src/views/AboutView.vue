@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
-import { exhibitions } from "./exhibitions";
+import { exhibitions } from "@/config/exhibitions";
 </script>
 
 <template>

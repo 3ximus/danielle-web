@@ -4,7 +4,7 @@ import ImageRowComponent from "@/components/ImageRowComponent.vue";
 import router from "@/router";
 import { onBeforeMount, onBeforeUnmount } from "vue";
 import { useRoute } from "vue-router";
-import { exhibitions, type Exhibition } from "./exhibitions";
+import { exhibitions, type Exhibition } from "@/config/exhibitions";
 const dismiss = () => router.back();
 
 const exhibition: Exhibition = exhibitions.find(

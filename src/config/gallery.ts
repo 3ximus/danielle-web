@@ -1,4 +1,4 @@
-import { Works, type Work } from "../works";
+import { Works, type Work } from "./works";
 
 export interface Collection {
   name: string;
@@ -7,18 +7,11 @@ export interface Collection {
 
 export const gallery: Collection[] = [
   {
-    name: "Collection 1",
-    works: [
-      Works.PedestrianSitting,
-      Works.LitterAheadLilith,
-      Works.SiTianWang,
-      Works.DuoWenTianWang,
-      Works.FallenAngel,
-      Works.TwilightZone,
-    ],
+    name: "Collection 4",
+    works: [Works.TibetanChamMask1],
   },
   {
-    name: "Collection 2",
+    name: "Collection 3",
     works: [
       Works.FindingSelf,
       Works.PomegranatesBotticelli,
@@ -32,7 +25,18 @@ export const gallery: Collection[] = [
     ],
   },
   {
-    name: "Collection 3",
+    name: "Collection 2",
+    works: [
+      Works.PedestrianSitting,
+      Works.LitterAheadLilith,
+      Works.SiTianWang,
+      Works.DuoWenTianWang,
+      Works.FallenAngel,
+      Works.TwilightZone,
+    ],
+  },
+  {
+    name: "Collection 1",
     works: [
       Works.MediaSexuality,
       Works.BavarianLionShield,
@@ -40,9 +44,5 @@ export const gallery: Collection[] = [
       Works.MaleStudy,
       Works.FeminineStudies,
     ],
-  },
-  {
-    name: "Collection 4",
-    works: [Works.TibetanChamMask1],
   },
 ];

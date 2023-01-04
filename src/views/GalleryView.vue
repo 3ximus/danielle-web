@@ -2,7 +2,7 @@
 import GalleryItemComponent from "@/components/GalleryItemComponent.vue";
 import { store } from "@/store";
 import { onBeforeMount, onBeforeUnmount, ref } from "vue";
-import { gallery } from "./gallery";
+import { gallery } from "@/config/gallery";
 
 const collectionHeaders = ref<HTMLInputElement[] | null>(null);
 

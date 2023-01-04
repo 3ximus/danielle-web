@@ -4,8 +4,8 @@ import ScrollButtonComponent from "@/components/buttons/ScrollButton.vue";
 import ImageRowComponent from "@/components/ImageRowComponent.vue";
 import SoldIconComponent from "@/components/SoldIconComponent.vue";
 import router from "@/router";
-import type { Work } from "@/works";
-import { gallery } from "@/views/gallery";
+import type { Work } from "@/config/works";
+import { gallery } from "@/config/gallery";
 import { useRoute } from "vue-router";
 import { onBeforeMount, onBeforeUnmount, ref } from "vue";
 import ButtonComponent from "../components/buttons/ButtonComponent.vue";
@@ -41,8 +41,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
         <div class="cover-image">
           <img
             :src="selectedWork.cover"
-            alt=""
-            onload="this.style.transform = 'scale(1)'"
+            onload="this.style.transform='scale(1)'"
           />
           <SoldIconComponent v-if="selectedWork.sold" />
         </div>

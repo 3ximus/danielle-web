@@ -4,7 +4,7 @@ import PopSignComponent from "@/components/PopSignComponent.vue";
 import { store } from "@/store";
 import throttle from "lodash.throttle";
 import { onBeforeMount, onUnmounted } from "vue";
-import { grid } from "./home-signs";
+import { grid } from "@/config/home-signs";
 
 const MOVEMENT_ATTENUATION = 0.04;
 

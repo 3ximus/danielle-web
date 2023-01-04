@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import router from "@/router";
-import type { Work } from "@/works";
+import type { Work } from "@/config/works";
 
 defineProps({
   item: {

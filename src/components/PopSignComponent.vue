@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { PopSign } from "../works";
-import { gallery } from "@/views/gallery";
+import type { PopSign } from "@/config/works";
+import { gallery } from "@/config/gallery";
 import { computed } from "vue";
 
 const props = defineProps({
