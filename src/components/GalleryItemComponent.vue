@@ -35,7 +35,7 @@ $transitionTime: 0.2s;
     max-width: 100vw;
     object-fit: cover;
     opacity: 0;
-    transition: .4s .8s;
+    transition: .4s .4s;
   }
 
   .title {
