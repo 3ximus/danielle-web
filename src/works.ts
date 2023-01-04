@@ -330,13 +330,13 @@ export namespace Works {
   export const PicnicHere: Work = {
     name: "Picnic Here",
     slug: "picnic-here",
-    cover: "/picnic_here/cover.webp",
-    galleryCover: "/picnic_here/low/cover.webp",
     medium: "Oil paint on street sign",
     dimensions: "12x18in.",
     year: 2022,
+    cover: "/picnic_here/cover.webp",
+    galleryCover: "/picnic_here/low/cover.webp",
     images: [
-      "/picnic_here/IMG_5546.webp",
+      "/picnic_here/flash.webp",
       "/picnic_here/IMG_5547.webp",
       "/picnic_here/IMG_5548.webp",
       "/picnic_here/IMG_5549.webp",
@@ -439,5 +439,10 @@ export namespace Pop {
     cutout: "/twilight_zone/low/cut.webp",
     flash_cutout: "/twilight_zone/low/cut.webp",
     work: Works.TwilightZone,
+  };
+  export const PicnicHere: PopSign = {
+    cutout: "/picnic_here/low/cut.webp",
+    flash_cutout: "/picnic_here/low/flash.webp",
+    work: Works.PicnicHere,
   };
 }

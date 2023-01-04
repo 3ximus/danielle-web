@@ -8,6 +8,7 @@ import type { Work } from "@/works";
 import { gallery } from "@/views/gallery";
 import { useRoute } from "vue-router";
 import { onBeforeMount, onBeforeUnmount, ref } from "vue";
+import ButtonComponent from "../components/buttons/ButtonComponent.vue";
 
 const selectedWork: Work = gallery
   .map((s) => s.works)
@@ -57,6 +58,12 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
       </div>
 
       <ImageRowComponent ref="images" :images="selectedWork.images" />
+
+      <div class="container-footer">
+        <RouterLink to="/gallery">
+          <ButtonComponent>Go to Gallery</ButtonComponent>
+        </RouterLink>
+      </div>
     </div>
     <ScrollButtonComponent @click="scrollToImages" />
   </div>
@@ -116,6 +123,12 @@ $title: clamp(10px, 10vw, 40px);
             sans-serif;
           font-size: 16px;
         }
+      }
+
+      &-footer {
+        display: flex;
+        justify-content: center;
+        margin: 40px;
       }
     }
   }

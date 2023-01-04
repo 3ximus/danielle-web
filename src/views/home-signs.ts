@@ -11,6 +11,7 @@ export const grid = [
     // 2nd row
     Pop.SiTianWang,
     Pop.StopHorny,
+    Pop.PicnicHere,
     Pop.TwilightZone,
   ],
   [
@@ -24,7 +25,7 @@ export const grid = [
     // 4th row
     Pop.TwilightZone,
     Pop.FallenAngel,
-    Pop.StopHorny,
+    Pop.PicnicHere,
   ],
   [
     // 5th row
