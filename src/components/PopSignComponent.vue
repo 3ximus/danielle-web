@@ -26,7 +26,7 @@ const routeLink = computed(() =>
     <RouterLink :to="routeLink">
       <div class="pop-container">
         <img
-          :src="flash ? sign.flash_cutout.low : sign.cutout.low"
+          :src="flash ? sign.flash_cutout : sign.cutout"
           :alt="sign.work.name"
         />
       </div>

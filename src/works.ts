@@ -8,7 +8,8 @@
 export interface Work {
   name: string;
   slug: string; // url
-  cover: string; // used in gallery
+  cover: string; // used in works page
+  galleryCover: string; // low res gallery cover
   images: string[]; // images when previewing work
   year: number;
   dimensions?: string;
@@ -25,7 +26,8 @@ export namespace Works {
     medium: "Oil paint & collage on road sign",
     dimensions: "24x24in.",
     slug: "pomegranates-botticelli",
-    cover: "pomegranates_botticelli/88.webp",
+    cover: "pomegranates_botticelli/cover.webp",
+    galleryCover: "pomegranates_botticelli/cover.webp",
     images: [
       "pomegranates_botticelli/85.webp",
       "pomegranates_botticelli/86.webp",
@@ -44,6 +46,7 @@ export namespace Works {
     medium: "Oil paint on road sign",
     dimensions: "24x24in.",
     cover: "/fallen_angel/cover.webp",
+    galleryCover: "/fallen_angel/cover.webp",
     images: [
       "/fallen_angel/80.webp",
       "/fallen_angel/81.webp",
@@ -57,7 +60,8 @@ export namespace Works {
     medium: "Oil paint on street signs",
     dimensions: "12x18in. (x2)",
     slug: "helios-selene",
-    cover: "/helios_selene/1.webp",
+    cover: "/helios_selene/cover.webp",
+    galleryCover: "/helios_selene/cover.webp",
     images: [
       "/helios_selene/helios.webp",
       "/helios_selene/hflash.webp",
@@ -76,6 +80,7 @@ export namespace Works {
     dimensions: "12x18in. (x2)",
     slug: "aphrodite-ares",
     cover: "/aphrodite_ares/cover.webp",
+    galleryCover: "/aphrodite_ares/cover.webp",
     images: [
       "/aphrodite_ares/ares.webp",
       "/aphrodite_ares/ares_flash.webp",
@@ -86,14 +91,16 @@ export namespace Works {
   export const Squid: Work = {
     name: "Squid",
     slug: "squid",
-    cover: "/squid/89.webp",
+    cover: "/squid/cover.webp",
+    galleryCover: "/squid/cover.webp",
     year: 2021,
     images: ["/squid/90.webp", "/squid/91.webp"],
   };
   export const StopNoHare: Work = {
     name: "Stop No Hare",
     slug: "stop-no-hare",
-    cover: "/stop_no_hare/82.webp",
+    cover: "/stop_no_hare/cover.webp",
+    galleryCover: "/stop_no_hare/cover.webp",
     year: 2021,
     images: ["/stop_no_hare/83.webp", "/stop_no_hare/84.webp"],
   };
@@ -103,7 +110,8 @@ export namespace Works {
     medium: "Oil paint & mixed media",
     dimensions: "Approx. 24x30in.",
     slug: "solo-travel",
-    cover: "/solo_travel/75.webp",
+    cover: "/solo_travel/cover.webp",
+    galleryCover: "/solo_travel/cover.webp",
     images: [
       "/solo_travel/76.webp",
       "/solo_travel/77.webp",
@@ -123,7 +131,8 @@ export namespace Works {
     medium: "Oil paint & marker on road sign",
     dimensions: "30x48in.",
     slug: "si-tian-wang",
-    cover: "/si_tian_wang/44.webp",
+    cover: "/si_tian_wang/cut.webp",
+    galleryCover: "/si_tian_wang/cut.webp",
     images: [
       "/si_tian_wang/43.webp",
       "/si_tian_wang/45.webp",
@@ -141,7 +150,8 @@ export namespace Works {
     medium: "Oil paint & marker on road sign",
     dimensions: "24x30in.",
     slug: "duo-wen-tian-wang",
-    cover: "/duo_wen_tian_wang/41.webp",
+    cover: "/duo_wen_tian_wang/cover.webp",
+    galleryCover: "/duo_wen_tian_wang/cover.webp",
     images: [
       "/duo_wen_tian_wang/36.webp",
       "/duo_wen_tian_wang/37.webp",
@@ -161,7 +171,8 @@ export namespace Works {
     year: 2017,
     medium: "Road sign and piping",
     slug: "pedestrian-sitting",
-    cover: "/pedestrian_sitting/27.webp",
+    cover: "/pedestrian_sitting/cover.webp",
+    galleryCover: "/pedestrian_sitting/cover.webp",
     images: [
       "/pedestrian_sitting/26.webp",
       "/pedestrian_sitting/28.webp",
@@ -177,7 +188,8 @@ export namespace Works {
     medium: "Oil paint on road sign",
     dimensions: "36x36in.",
     slug: "litter-ahead-lilith",
-    cover: "/litter_ahead_lilith/gallery.webp",
+    cover: "/litter_ahead_lilith/cover.webp",
+    galleryCover: "/litter_ahead_lilith/cover.webp",
     images: [
       "/litter_ahead_lilith/31.webp",
       "/litter_ahead_lilith/32.webp",
@@ -197,6 +209,7 @@ export namespace Works {
     dimensions: "18x18in.",
     slug: "stop-horny",
     cover: "/stop_horny/cover.webp",
+    galleryCover: "/stop_horny/cover.webp",
     images: [
       "/stop_horny/8.webp",
       "/stop_horny/9.webp",
@@ -215,6 +228,7 @@ export namespace Works {
     dimensions: "36x36in.",
     slug: "twilight-zone",
     cover: "/twilight_zone/cover.webp",
+    galleryCover: "/twilight_zone/cover.webp",
     images: [],
     statements: [
       "After the passing of my father in 2020 and riddled with grief that I wasn’t there at his time of death, I made this piece as a representation of the show he watched as a child and introduced me to years prior. In the episode Nothing in the Dark of The Twilight Zone, an elderly woman lets no one in her home out of fear that they may be the grim reaper. After a wounded man ends up at her doorstep, she reluctantly brings him inside to nurse him to health. However, while he did turn out to be the reaper, he held her hand and showed her she passed peacefully, painlessly, and with someone at her side. I’d like to imagine that is how my father passed.",
@@ -223,7 +237,8 @@ export namespace Works {
   export const MediaSexuality: Work = {
     name: "Media Sexuality",
     slug: "media-sexuality",
-    cover: "/media_and_sexuality/gallery.webp",
+    cover: "/media_and_sexuality/cover.webp",
+    galleryCover: "/media_and_sexuality/cover.webp",
     year: 2021,
     images: [
       "/media_and_sexuality/71.webp",
@@ -238,7 +253,8 @@ export namespace Works {
     medium: "Oil paint & marker on road sign",
     dimensions: "24x24in. (x3)",
     slug: "finding-self",
-    cover: "/finding_self/4.webp",
+    cover: "/finding_self/cover.webp",
+    galleryCover: "/finding_self/cover.webp",
     images: [
       "/finding_self/5.webp",
       "/finding_self/6.webp",
@@ -256,7 +272,8 @@ export namespace Works {
   export const BavarianLionShield: Work = {
     name: "Bavarian Lion Shield",
     slug: "bavarian-lion-shield",
-    cover: "/bavarian_lion_shield/52.webp",
+    cover: "/bavarian_lion_shield/cover.webp",
+    galleryCover: "/bavarian_lion_shield/cover.webp",
     year: 2021,
     images: [
       "/bavarian_lion_shield/53.webp",
@@ -268,14 +285,16 @@ export namespace Works {
   export const MaleStudy: Work = {
     name: "Male Study",
     slug: "male-study",
-    cover: "/male_study/56.webp",
+    cover: "/male_study/cover.webp",
+    galleryCover: "/male_study/cover.webp",
     year: 2021,
     images: ["/male_study/57.webp"],
   };
   export const FeminineStudies: Work = {
     name: "Feminine Studies",
     slug: "feminine-studies",
-    cover: "/feminine_studies/58.webp",
+    cover: "/feminine_studies/cover.webp",
+    galleryCover: "/feminine_studies/cover.webp",
     year: 2021,
     images: [
       "/feminine_studies/48.webp",
@@ -301,7 +320,8 @@ export namespace Works {
     year: 2021,
     medium: "Oil paint & collage on road sign",
     dimensions: "24x24in.",
-    cover: "/feminine_studies/58.webp",
+    cover: "/feminine_studies/cover.webp",
+    galleryCover: "/feminine_studies/cover.webp",
     images: [],
     statements: [
       "Following the Taliban taking over Afghanistan in May of 2021, I made this piece  to discuss womens’ rights issues in solidarity for those affected by this. The pose of the two references the sculpture “the Rape of Proserpina” while Guernica lies at the bottom- yet again preaching anti-war and the violence that comes with it. The word “Detour” expresses how society regressed in a matter of moments, deleting human rights and history as well. Her halo, simply put, represents the innocence and hope that was lost by women and children.",
@@ -310,7 +330,8 @@ export namespace Works {
   export const PicnicHere: Work = {
     name: "Picnic Here",
     slug: "picnic-here",
-    cover: "/picnic_here/IMG_5545.webp",
+    cover: "/picnic_here/cover.webp",
+    galleryCover: "/picnic_here/cover.webp",
     medium: "Oil paint on street signs",
     dimensions: "12x18in.",
     year: 2022,
@@ -324,7 +345,8 @@ export namespace Works {
   export const Carousel: Work = {
     name: "Carousel",
     slug: "carousel",
-    cover: "/carousel/IMG_5580.webp",
+    cover: "/carousel/cover.webp",
+    galleryCover: "/carousel/cover.webp",
     medium: "Chalk pastel, spray paint, & acrylic on road sign",
     dimensions: "24x30in.",
     year: 2022,
@@ -347,111 +369,57 @@ export namespace Works {
 //                  |_|               |___/
 
 export interface PopSign {
-  cutout: {
-    low: string;
-    high: string;
-  };
-  flash_cutout: {
-    low: string;
-    high: string;
-  };
+  cutout: string;
+  flash_cutout: string;
   work: Work;
 }
 
 export namespace Pop {
   export const PomegranatesBotticelli: PopSign = {
-    cutout: {
-      high: "/pomegranates_botticelli/cover.webp",
-      low: "/pomegranates_botticelli/low/cover.webp",
-    },
-    flash_cutout: {
-      high: "/pomegranates_botticelli/flash.webp",
-      low: "/pomegranates_botticelli/low/flash.webp",
-    },
+    cutout:  "/pomegranates_botticelli/low/cut.webp",
+    flash_cutout:  "/pomegranates_botticelli/low/flash.webp",
     work: Works.PomegranatesBotticelli,
   };
 
   export const FallenAngel: PopSign = {
-    cutout: {
-      high: "/fallen_angel/cover.webp",
-      low: "/fallen_angel/low/cover.webp",
-    },
-    flash_cutout: {
-      high: "/fallen_angel/flash.webp",
-      low: "/fallen_angel/low/flash.webp",
-    },
+    cutout:  "/fallen_angel/low/cut.webp",
+    flash_cutout:  "/fallen_angel/low/flash.webp",
     work: Works.FallenAngel,
   };
 
   export const Helios: PopSign = {
-    cutout: {
-      high: "/helios_selene/helios.webp",
-      low: "/helios_selene/low/helios.webp",
-    },
-    flash_cutout: {
-      high: "/helios_selene/hflash.webp",
-      low: "/helios_selene/low/hflash.webp",
-    },
+    cutout:  "/helios_selene/low/helios.webp",
+    flash_cutout:  "/helios_selene/low/hflash.webp",
     work: Works.HeliosSelene,
   };
 
   export const Selene: PopSign = {
-    cutout: {
-      high: "/helios_selene/selene.webp",
-      low: "/helios_selene/low/selene.webp",
-    },
-    flash_cutout: {
-      high: "/helios_selene/sflash.webp",
-      low: "/helios_selene/low/sflash.webp",
-    },
+    cutout:  "/helios_selene/low/selene.webp",
+    flash_cutout:  "/helios_selene/low/sflash.webp",
     work: Works.HeliosSelene,
   };
 
   export const SiTianWang: PopSign = {
-    cutout: {
-      high: "/si_tian_wang/cover.webp",
-      low: "/si_tian_wang/low/cover.webp",
-    },
-    flash_cutout: {
-      high: "/si_tian_wang/flash.webp",
-      low: "/si_tian_wang/low/flash.webp",
-    },
+    cutout:  "/si_tian_wang/low/cut.webp",
+    flash_cutout:  "/si_tian_wang/low/flash.webp",
     work: Works.SiTianWang,
   };
 
   export const LitterAheadLilith: PopSign = {
-    cutout: {
-      high: "/litter_ahead_lilith/cover.webp",
-      low: "/litter_ahead_lilith/low/cover.webp",
-    },
-    flash_cutout: {
-      high: "/litter_ahead_lilith/flash.webp",
-      low: "/litter_ahead_lilith/low/flash.webp",
-    },
+    cutout:  "/litter_ahead_lilith/low/cut.webp",
+    flash_cutout:  "/litter_ahead_lilith/low/flash.webp",
     work: Works.LitterAheadLilith,
   };
 
   export const StopHorny: PopSign = {
-    cutout: {
-      high: "/stop_horny/cover.webp",
-      low: "/stop_horny/low/cover.webp",
-    },
-    flash_cutout: {
-      high: "/stop_horny/cover.webp",
-      low: "/stop_horny/low/cover.webp",
-    },
+    cutout:  "/stop_horny/low/cut.webp",
+    flash_cutout:  "/stop_horny/low/flash.webp",
     work: Works.StopHorny,
   };
 
   export const TwilightZone: PopSign = {
-    cutout: {
-      high: "/twilight_zone/cover.webp",
-      low: "/twilight_zone/low/cover.webp",
-    },
-    flash_cutout: {
-      high: "/twilight_zone/cover.webp",
-      low: "/twilight_zone/low/cover.webp",
-    },
+    cutout:  "/twilight_zone/low/cut.webp",
+    flash_cutout:  "/twilight_zone/low/cut.webp",
     work: Works.TwilightZone,
   };
 }

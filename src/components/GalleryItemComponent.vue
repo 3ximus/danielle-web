@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <div class="item" @click="router.push('/gallery/' + item.slug)">
-    <img :src="item.cover" onload="this.style.opacity=1"/>
+    <img :src="item.galleryCover" onload="this.style.opacity=1"/>
     <div class="title">
       <h1 class="name">{{ item.name }}</h1>
       <h2 class="year">{{ item.year }}</h2>
