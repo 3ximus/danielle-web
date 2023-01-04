@@ -8,7 +8,7 @@
 export interface Work {
   name: string;
   slug: string; // url
-  cover?: string; // used in gallery
+  cover: string; // used in gallery
   images: string[]; // images when previewing work
   year: number;
   dimensions?: string;
@@ -67,6 +67,20 @@ export namespace Works {
     statements: [
       "Helios, God of the Sun, and Selene, Goddess of the moon, are painted in oil as busts on No Parking signs.",
       "Ironically, the one that is reflective in the dark is Helios rather than Selene.",
+    ],
+  };
+  export const AphroditeAres: Work = {
+    name: "Aphrodite & Ares",
+    year: 2022,
+    medium: "Oil paint on street signs",
+    dimensions: "12x18in. (x2)",
+    slug: "aphrodite-ares",
+    cover: "/aphrodite_ares/cover.webp",
+    images: [
+      "/aphrodite_ares/ares.webp",
+      "/aphrodite_ares/ares_flash.webp",
+      "/aphrodite_ares/aphrodite.webp",
+      "/aphrodite_ares/aphrodite_flash.webp",
     ],
   };
   export const Squid: Work = {

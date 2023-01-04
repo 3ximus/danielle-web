@@ -26,6 +26,7 @@ export const gallery: Collection[] = [
       Works.StopNoHare,
       Works.Squid,
       Works.HeliosSelene,
+      Works.AphroditeAres,
       Works.PicnicHere,
       Works.Carousel
     ],
