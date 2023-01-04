@@ -27,8 +27,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
     <div class="modal-content">
       <h1 class="title">{{ exhibition.name }}</h1>
 
-      <ImageRowComponent ref="images" :images="exhibition.images"/>
-
+      <ImageRowComponent ref="images" :images="exhibition.images" />
     </div>
   </div>
 </template>
@@ -72,5 +71,4 @@ $title: clamp(10px, 10vw, 40px);
     }
   }
 }
-
 </style>

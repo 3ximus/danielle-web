@@ -28,7 +28,7 @@ export const gallery: Collection[] = [
       Works.HeliosSelene,
       Works.AphroditeAres,
       Works.PicnicHere,
-      Works.Carousel
+      Works.Carousel,
     ],
   },
   {
@@ -40,5 +40,9 @@ export const gallery: Collection[] = [
       Works.MaleStudy,
       Works.FeminineStudies,
     ],
+  },
+  {
+    name: "Collection 4",
+    works: [Works.TibetanChamMask1],
   },
 ];

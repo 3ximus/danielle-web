@@ -332,7 +332,7 @@ export namespace Works {
     slug: "picnic-here",
     cover: "/picnic_here/cover.webp",
     galleryCover: "/picnic_here/low/cover.webp",
-    medium: "Oil paint on street signs",
+    medium: "Oil paint on street sign",
     dimensions: "12x18in.",
     year: 2022,
     images: [
@@ -357,6 +357,24 @@ export namespace Works {
       "/carousel/IMG_5584.webp",
     ],
   };
+
+  export const TibetanChamMask1: Work = {
+    name: "Tibetan Cham Mask 1",
+    slug: "tibetan-cham-mask-1",
+    cover: "/tibetan_cham_mask_1/cover.webp",
+    galleryCover: "/tibetan_cham_mask_1/low/cover.webp",
+    medium: "Oil paint on street sign",
+    dimensions: "24x24in. (not including strings)",
+    year: 2023,
+    images: [
+      "/tibetan_cham_mask_1/flash.webp",
+      "/tibetan_cham_mask_1/1.webp",
+      "/tibetan_cham_mask_1/2.webp",
+      "/tibetan_cham_mask_1/3.webp",
+      "/tibetan_cham_mask_1/4.webp",
+      "/tibetan_cham_mask_1/7.webp",
+    ],
+  };
 }
 
 //      ______              _____  _
@@ -376,50 +394,50 @@ export interface PopSign {
 
 export namespace Pop {
   export const PomegranatesBotticelli: PopSign = {
-    cutout:  "/pomegranates_botticelli/low/cut.webp",
-    flash_cutout:  "/pomegranates_botticelli/low/flash.webp",
+    cutout: "/pomegranates_botticelli/low/cut.webp",
+    flash_cutout: "/pomegranates_botticelli/low/flash.webp",
     work: Works.PomegranatesBotticelli,
   };
 
   export const FallenAngel: PopSign = {
-    cutout:  "/fallen_angel/low/cut.webp",
-    flash_cutout:  "/fallen_angel/low/flash.webp",
+    cutout: "/fallen_angel/low/cut.webp",
+    flash_cutout: "/fallen_angel/low/flash.webp",
     work: Works.FallenAngel,
   };
 
   export const Helios: PopSign = {
-    cutout:  "/helios_selene/low/helios.webp",
-    flash_cutout:  "/helios_selene/low/hflash.webp",
+    cutout: "/helios_selene/low/helios.webp",
+    flash_cutout: "/helios_selene/low/hflash.webp",
     work: Works.HeliosSelene,
   };
 
   export const Selene: PopSign = {
-    cutout:  "/helios_selene/low/selene.webp",
-    flash_cutout:  "/helios_selene/low/sflash.webp",
+    cutout: "/helios_selene/low/selene.webp",
+    flash_cutout: "/helios_selene/low/sflash.webp",
     work: Works.HeliosSelene,
   };
 
   export const SiTianWang: PopSign = {
-    cutout:  "/si_tian_wang/low/cut.webp",
-    flash_cutout:  "/si_tian_wang/low/flash.webp",
+    cutout: "/si_tian_wang/low/cut.webp",
+    flash_cutout: "/si_tian_wang/low/flash.webp",
     work: Works.SiTianWang,
   };
 
   export const LitterAheadLilith: PopSign = {
-    cutout:  "/litter_ahead_lilith/low/cut.webp",
-    flash_cutout:  "/litter_ahead_lilith/low/flash.webp",
+    cutout: "/litter_ahead_lilith/low/cut.webp",
+    flash_cutout: "/litter_ahead_lilith/low/flash.webp",
     work: Works.LitterAheadLilith,
   };
 
   export const StopHorny: PopSign = {
-    cutout:  "/stop_horny/low/cut.webp",
-    flash_cutout:  "/stop_horny/low/flash.webp",
+    cutout: "/stop_horny/low/cut.webp",
+    flash_cutout: "/stop_horny/low/flash.webp",
     work: Works.StopHorny,
   };
 
   export const TwilightZone: PopSign = {
-    cutout:  "/twilight_zone/low/cut.webp",
-    flash_cutout:  "/twilight_zone/low/cut.webp",
+    cutout: "/twilight_zone/low/cut.webp",
+    flash_cutout: "/twilight_zone/low/cut.webp",
     work: Works.TwilightZone,
   };
 }

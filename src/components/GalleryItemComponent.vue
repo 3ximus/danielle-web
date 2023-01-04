@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <div class="item" @click="router.push('/gallery/' + item.slug)">
-    <img :src="item.galleryCover" onload="this.style.opacity=1"/>
+    <img :src="item.galleryCover" onload="this.style.opacity=1" />
     <div class="title">
       <h1 class="name">{{ item.name }}</h1>
       <h2 class="year">{{ item.year }}</h2>
@@ -29,13 +29,13 @@ $transitionTime: 0.2s;
   cursor: pointer;
   margin: 10px;
   position: relative;
+  max-width: 350px;
   img {
     width: 100%;
     height: 100%;
-    max-width: 100vw;
     object-fit: cover;
     opacity: 0;
-    transition: .4s .4s;
+    transition: 0.4s 0.4s;
   }
 
   .title {

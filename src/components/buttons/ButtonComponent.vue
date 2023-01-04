@@ -61,7 +61,7 @@ defineProps<{
 
   &[data-status="success"] {
     &:after {
-      content: ' 🗸'
+      content: " 🗸";
     }
   }
 }
