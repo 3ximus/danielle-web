@@ -3,7 +3,7 @@ import LightSwitchComponent from "@/components/LightSwitchComponent.vue";
 import PopSignComponent from "@/components/PopSignComponent.vue";
 import { store } from "@/store";
 import throttle from "lodash.throttle";
-import { onBeforeMount, onUnmounted } from "vue";
+import { computed, onBeforeMount, onUnmounted } from "vue";
 import { grid } from "@/config/home-signs";
 
 const MOVEMENT_ATTENUATION = 0.04;
@@ -36,20 +36,30 @@ onBeforeMount(() => {
   xOffset(0);
   yOffset(0);
 });
+
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+}
+
+const computedGrid = computed(() =>
+  grid.filter((_, index) => !isMobile() || !(index <= 0 || index >= 4))
+);
 </script>
 
 <template>
   <section class="home">
     <div class="valign valign-light" :flash-on="store.isFlashOn">
       <div class="container">
-        <div class="row" v-for="row in grid">
+        <div class="row" v-for="row in computedGrid">
           <PopSignComponent v-for="sign in row" :sign="sign" />
         </div>
       </div>
     </div>
     <div class="valign valign-dark" :flash-on="store.isFlashOn">
       <div class="container">
-        <div class="row" v-for="row in grid">
+        <div class="row" v-for="row in computedGrid">
           <PopSignComponent v-for="sign in row" :sign="sign" :flash="true" />
         </div>
       </div>
@@ -151,14 +161,6 @@ $animation-time: 0.8s;
     width: 100vw;
     scale: 0.8;
     transform: translate(var(--x-offset), var(--y-offset)) rotate(45deg);
-  }
-  .row {
-    &:nth-child(1) {
-      display: none;
-    }
-    &:nth-child(5) {
-      display: none;
-    }
   }
 }
 </style>
