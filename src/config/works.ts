@@ -258,6 +258,8 @@ export namespace Works {
     images: [
       "/finding_self/5.webp",
       "/finding_self/6.webp",
+      "/finding_self/7.webp",
+      "/finding_self/8.webp",
       "/finding_self/19.webp",
       "/finding_self/20.webp",
       "/finding_self/21.webp",
@@ -398,7 +400,7 @@ export interface PopSign {
 
 export namespace Pop {
   export const PomegranatesBotticelli: PopSign = {
-    cutout: "/pomegranates_botticelli/low/cover.webp",
+    cutout: "/pomegranates_botticelli/low/cut.webp",
     flash_cutout: "/pomegranates_botticelli/low/flash.webp",
     work: Works.PomegranatesBotticelli,
   };
