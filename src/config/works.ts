@@ -398,13 +398,13 @@ export interface PopSign {
 
 export namespace Pop {
   export const PomegranatesBotticelli: PopSign = {
-    cutout: "/pomegranates_botticelli/low/cut.webp",
+    cutout: "/pomegranates_botticelli/low/cover.webp",
     flash_cutout: "/pomegranates_botticelli/low/flash.webp",
     work: Works.PomegranatesBotticelli,
   };
 
   export const FallenAngel: PopSign = {
-    cutout: "/fallen_angel/low/cut.webp",
+    cutout: "/fallen_angel/low/cover.webp",
     flash_cutout: "/fallen_angel/low/flash.webp",
     work: Works.FallenAngel,
   };
@@ -422,30 +422,30 @@ export namespace Pop {
   };
 
   export const SiTianWang: PopSign = {
-    cutout: "/si_tian_wang/low/cut.webp",
+    cutout: "/si_tian_wang/low/cover.webp",
     flash_cutout: "/si_tian_wang/low/flash.webp",
     work: Works.SiTianWang,
   };
 
   export const LitterAheadLilith: PopSign = {
-    cutout: "/litter_ahead_lilith/low/cut.webp",
+    cutout: "/litter_ahead_lilith/low/cover.webp",
     flash_cutout: "/litter_ahead_lilith/low/flash.webp",
     work: Works.LitterAheadLilith,
   };
 
   export const StopHorny: PopSign = {
-    cutout: "/stop_horny/low/cut.webp",
+    cutout: "/stop_horny/low/cover.webp",
     flash_cutout: "/stop_horny/low/flash.webp",
     work: Works.StopHorny,
   };
 
   export const TwilightZone: PopSign = {
-    cutout: "/twilight_zone/low/cut.webp",
-    flash_cutout: "/twilight_zone/low/cut.webp",
+    cutout: "/twilight_zone/low/cover.webp",
+    flash_cutout: "/twilight_zone/low/cover.webp",
     work: Works.TwilightZone,
   };
   export const PicnicHere: PopSign = {
-    cutout: "/picnic_here/low/cut.webp",
+    cutout: "/picnic_here/low/cover.webp",
     flash_cutout: "/picnic_here/low/flash.webp",
     work: Works.PicnicHere,
   };
