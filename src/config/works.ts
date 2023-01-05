@@ -320,9 +320,14 @@ export namespace Works {
     year: 2021,
     medium: "Oil paint & collage on road sign",
     dimensions: "24x24in.",
-    cover: "/feminine_studies/cover.webp",
-    galleryCover: "/feminine_studies/low/cover.webp",
-    images: [],
+    cover: "/war_on_women/cover.webp",
+    galleryCover: "/war_on_women/low/cover.webp",
+    images: [
+      "/war_on_women/IMG-0699.webp",
+      "/war_on_women/IMG-0701.webp",
+      "/war_on_women/IMG-0702.webp",
+      "/war_on_women/IMG-0703.webp",
+    ],
     statements: [
       "Following the Taliban taking over Afghanistan in May of 2021, I made this piece  to discuss womens’ rights issues in solidarity for those affected by this. The pose of the two references the sculpture “the Rape of Proserpina” while Guernica lies at the bottom- yet again preaching anti-war and the violence that comes with it. The word “Detour” expresses how society regressed in a matter of moments, deleting human rights and history as well. Her halo, simply put, represents the innocence and hope that was lost by women and children.",
     ],
@@ -357,7 +362,6 @@ export namespace Works {
       "/carousel/IMG_5584.webp",
     ],
   };
-
   export const TibetanChamMask1: Work = {
     name: "Tibetan Cham Mask 1",
     slug: "tibetan-cham-mask-1",

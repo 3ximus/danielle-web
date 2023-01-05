@@ -33,6 +33,7 @@ export const gallery: Collection[] = [
       Works.DuoWenTianWang,
       Works.FallenAngel,
       Works.TwilightZone,
+      Works.WarOnWomen,
     ],
   },
   {
