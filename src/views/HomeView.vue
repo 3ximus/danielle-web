@@ -27,31 +27,8 @@ const OnMouseMove = throttle((event: MouseEvent) => {
   yOffset(-event.clientY + fullHeight / 2);
 }, 100);
 
-const OnDeviceOrientation = throttle(function (
-  this: any,
-  event: DeviceOrientationEvent
-) {
-  if (!event.gamma || !event.beta) return;
-  document.body.removeEventListener("mousemove", OnMouseMove);
-
-  const x = event.gamma! * 30;
-  const y = event.beta! * 30;
-
-  // don't allow every call to update values
-  if (Math.abs(x - (this.x || 0)) > 50) {
-    this.x = x;
-    xOffset(this.x);
-  }
-  if (Math.abs(y - (this.y || 0)) > 50) {
-    this.y = y;
-    yOffset(this.y);
-  }
-},
-100);
-
 // Link events
 document.body.addEventListener("mousemove", OnMouseMove);
-window.addEventListener("deviceorientation", OnDeviceOrientation);
 
 // Lifecycle Events
 onUnmounted(() => store.flashOff());

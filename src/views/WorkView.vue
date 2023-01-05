@@ -125,8 +125,7 @@ $title: clamp(10px, 10vw, 40px);
       }
 
       &-footer {
-        display: flex;
-        justify-content: center;
+        text-align: center;
         margin: 40px;
       }
     }

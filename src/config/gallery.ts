@@ -21,6 +21,7 @@ export const gallery: Collection[] = [
       Works.HeliosSelene,
       Works.AphroditeAres,
       Works.PicnicHere,
+      Works.WarOnWomen,
       Works.Carousel,
     ],
   },
@@ -33,7 +34,6 @@ export const gallery: Collection[] = [
       Works.DuoWenTianWang,
       Works.FallenAngel,
       Works.TwilightZone,
-      Works.WarOnWomen,
     ],
   },
   {

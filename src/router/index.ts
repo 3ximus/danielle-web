@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
+import AboutView from "@/views/AboutView.vue";
+import ContactView from "@/views/ContactView.vue";
+import GalleryView from "@/views/GalleryView.vue";
+import WorkView from "@/views/WorkView.vue";
+import ExhibitionView from "@/views/ExhibitionView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,40 +17,40 @@ const router = createRouter({
     {
       path: "/about",
       name: "about",
-      component: () => import("@/views/AboutView.vue"),
+      component: AboutView,
     },
     {
       path: "/contact",
       name: "contact",
-      component: () => import("@/views/ContactView.vue"),
+      component: ContactView,
     },
     {
       path: "/gallery",
       name: "gallery",
-      component: () => import("@/views/GalleryView.vue"),
+      component: GalleryView,
     },
     {
       path: "/gallery/:slug",
       name: "work",
       components: {
-        default: () => import("@/views/GalleryView.vue"),
-        secondaryView: () => import("@/views/WorkView.vue"),
+        default: GalleryView,
+        secondaryView: WorkView,
       },
     },
     {
       path: "/work/:slug",
       name: "work-home",
       components: {
-        default: () => import("@/views/HomeView.vue"),
-        secondaryView: () => import("@/views/WorkView.vue"),
+        default: HomeView,
+        secondaryView: WorkView,
       },
     },
     {
       path: "/exhibition/:slug",
       name: "exhibition",
       components: {
-        default: () => import("@/views/AboutView.vue"),
-        secondaryView: () => import("@/views/ExhibitionView.vue"),
+        default: AboutView,
+        secondaryView: ExhibitionView,
       },
     },
   ],
