@@ -48,6 +48,9 @@ function toogleFlash(event: Event) {
 @media (max-width: 800px) {
   .light-switch {
     right: 30px;
+    &:hover {
+      transform: translate(var(--x-offset), calc(var(--y-offset) - 160px));
+    }
     img {
       width: 30px;
     }
