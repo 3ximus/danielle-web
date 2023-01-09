@@ -58,11 +58,9 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
 
       <ImageRowComponent ref="images" :images="selectedWork.images" />
 
-      <div class="container-footer">
-        <RouterLink to="/gallery">
-          <ButtonComponent>Go to Gallery</ButtonComponent>
-        </RouterLink>
-      </div>
+      <RouterLink to="/gallery">
+        <ButtonComponent>Go to Gallery</ButtonComponent>
+      </RouterLink>
     </div>
     <ScrollButtonComponent @click="scrollToImages" />
   </div>
@@ -123,11 +121,13 @@ $title: clamp(10px, 10vw, 40px);
           font-size: 16px;
         }
       }
-
-      &-footer {
-        text-align: center;
-        margin: 40px;
-      }
+    }
+    // force button to center
+    .dr-button {
+      position: relative;
+      left: 50%;
+      translate: -50%;
+      margin-top: 50px;
     }
   }
 }

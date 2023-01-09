@@ -109,10 +109,14 @@ onBeforeUnmount(() => window.removeEventListener("scroll", setScrolled));
   h1 {
     margin: 0;
     white-space: nowrap;
-    transition: color 0.4s;
     font-family: HighwayGothic;
     font-size: var(--fs-title);
     letter-spacing: 3px;
+    opacity: 1;
+    transition: 0.4s;
+    &:hover {
+      color: var(--green-sign-color);
+    }
   }
   h2 {
     font-size: var(--fs-text);

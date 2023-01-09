@@ -6,7 +6,6 @@ import emailjs from "emailjs-com";
 const name = ref("");
 const email = ref("");
 const message = ref("");
-const form = ref<HTMLInputElement[] | null>(null);
 
 type ButtonStatus = "waiting" | "success" | "error" | "none";
 const formStatus = ref<ButtonStatus>("none");
@@ -54,7 +53,7 @@ function sendEmail(): void {
         >danielleromaineart@gmail.com</a
       >
     </p>
-    <form ref="form" @submit.prevent="sendEmail">
+    <form @submit.prevent="sendEmail">
       <input
         class="input"
         v-model="name"

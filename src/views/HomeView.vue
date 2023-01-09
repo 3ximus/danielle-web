@@ -43,9 +43,14 @@ function isMobile() {
   );
 }
 
-const computedGrid = computed(() =>
-  grid.filter((_, index) => !isMobile() || !(index <= 0 || index >= 4))
-);
+// remove elements of the home grid on mobile since they are unecessary to load and decrease performance
+const computedGrid = computed(() => {
+  if (isMobile())
+    return grid
+      .filter((_, index) => index > 0 && index < 4)
+      .map((arr, index) => (index === 1 ? arr.slice(0, 3) : arr.slice(0, 2)));
+  else return grid;
+});
 </script>
 
 <template>
@@ -72,7 +77,6 @@ const computedGrid = computed(() =>
 <style scoped lang="scss">
 $skew-effect: 5vw;
 $left-offset: 40px;
-$switch-position: 50px;
 $mouse-move-attenuation: 0.04;
 $animation-time: 0.8s;
 
@@ -106,16 +110,20 @@ $animation-time: 0.8s;
     }
   }
   &-dark {
+    --light-position-x: 50px;
+    --light-position-y: 50px;
     background-color: var(--background-dark-color);
     transition: clip-path $animation-time ease-in-out,
       opacity 0s $animation-time;
     z-index: 2;
-    clip-path: circle(0% at calc(100% - 80px) calc(100% - 60px));
+    clip-path: circle(
+      0% at calc(100% - var(--light-position-x)) var(--light-position-y)
+    );
     opacity: 0;
     &[flash-on="true"] {
       /* dark background animation */
       clip-path: circle(
-        150% at calc(100% - $switch-position) calc(100% - $switch-position)
+        150% at calc(100% - var(--light-position-x)) var(--light-position-y)
       );
       opacity: 1;
       transition: clip-path $animation-time ease-in-out, opacity 0s;
@@ -149,18 +157,17 @@ $animation-time: 0.8s;
   }
 }
 
-.switch {
-  position: absolute;
-  bottom: $switch-position;
-  right: $switch-position;
-  z-index: 50;
-}
-
 @media (max-width: 800px) {
-  .valign .container {
-    width: 100vw;
-    scale: 0.8;
-    transform: translate(var(--x-offset), var(--y-offset)) rotate(45deg);
+  .valign {
+    &-dark {
+      --light-position-x: 45px;
+      --light-position-y: 0px;
+    }
+    .container {
+      width: 100vw;
+      scale: 0.8;
+      transform: translate(var(--x-offset), var(--y-offset)) rotate(45deg);
+    }
   }
 }
 </style>
