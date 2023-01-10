@@ -256,6 +256,7 @@ export namespace Works {
     cover: "/finding_self/cover.webp",
     galleryCover: "/finding_self/low/cover.webp",
     images: [
+      "/finding_self/9.webp",
       "/finding_self/5.webp",
       "/finding_self/6.webp",
       "/finding_self/7.webp",
