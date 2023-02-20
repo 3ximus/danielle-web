@@ -382,6 +382,24 @@ export namespace Works {
       "/tibetan_cham_mask_1/7.webp",
     ],
   };
+  export const TibetanChamMask2: Work = {
+    name: "Tibetan Cham Mask 2",
+    slug: "tibetan-cham-mask-2",
+    cover: "/tibetan_cham_mask_2/1.jpg",
+    galleryCover: "/tibetan_cham_mask_2/1.jpg",
+    medium: "Oil paint on street sign",
+    dimensions: "24x24in. (not including strings)",
+    year: 2023,
+    images: [
+      "/tibetan_cham_mask_2/flash.jpg",
+      "/tibetan_cham_mask_2/1.jpg",
+      "/tibetan_cham_mask_2/3.jpg",
+      "/tibetan_cham_mask_2/4.jpg",
+      "/tibetan_cham_mask_2/5.jpg",
+      "/tibetan_cham_mask_2/6.jpg",
+      "/tibetan_cham_mask_2/7.jpg",
+    ],
+  };
 }
 
 //      ______              _____  _
