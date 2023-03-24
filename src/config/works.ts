@@ -399,6 +399,21 @@ export namespace Works {
       "/tibetan_cham_mask_2/6.jpg",
       "/tibetan_cham_mask_2/7.jpg",
     ],
+  };export const FragmentsOfSussex: Work = {
+    name: "Fragments of Sussex County, NJ",
+    slug: "fragments-of-sussex",
+    cover: "/fragments_of_sussex_county_nj/IMG-7639.jpg",
+    galleryCover: "/fragments_of_sussex_county_nj/IMG-7639.jpg",
+    medium: "Oil paint and marker on road sign",
+    dimensions: "36x36in.",
+    year: 2023,
+    images: [
+      "/fragments_of_sussex_county_nj/IMG-7634.jpg",
+      "/fragments_of_sussex_county_nj/IMG-7635.jpg",
+      "/fragments_of_sussex_county_nj/IMG-7637.jpg",
+      "/fragments_of_sussex_county_nj/IMG-7638.jpg",
+      "/fragments_of_sussex_county_nj/IMG-7639.jpg",
+    ],
   };
 }
 
