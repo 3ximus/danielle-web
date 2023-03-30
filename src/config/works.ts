@@ -366,7 +366,7 @@ export namespace Works {
     ],
   };
   export const TibetanChamMask1: Work = {
-    name: "Tibetan Cham Mask 1",
+    name: "Yama",
     slug: "tibetan-cham-mask-1",
     cover: "/tibetan_cham_mask_1/cover.webp",
     galleryCover: "/tibetan_cham_mask_1/low/cover.webp",
@@ -383,7 +383,7 @@ export namespace Works {
     ],
   };
   export const TibetanChamMask2: Work = {
-    name: "Tibetan Cham Mask 2",
+    name: "Yamantaka",
     slug: "tibetan-cham-mask-2",
     cover: "/tibetan_cham_mask_2/1.jpg",
     galleryCover: "/tibetan_cham_mask_2/1.jpg",
