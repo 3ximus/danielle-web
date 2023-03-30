@@ -388,7 +388,7 @@ export namespace Works {
     cover: "/tibetan_cham_mask_2/1.jpg",
     galleryCover: "/tibetan_cham_mask_2/1.jpg",
     medium: "Oil paint on street sign",
-    dimensions: "24x24in. (not including strings)",
+    dimensions: "24x24in. (not including earrings)",
     year: 2023,
     images: [
       "/tibetan_cham_mask_2/flash.jpg",
@@ -399,7 +399,22 @@ export namespace Works {
       "/tibetan_cham_mask_2/6.jpg",
       "/tibetan_cham_mask_2/7.jpg",
     ],
-  };export const FragmentsOfSussex: Work = {
+  };
+  export const TibetanChamMask3: Work = {
+    name: "Citipati",
+    slug: "tibetan-cham-mask-3",
+    cover: "/tibetan_cham_mask_3/1.jpg",
+    galleryCover: "/tibetan_cham_mask_3/1.jpg",
+    medium: "Oil paint on street sign",
+    dimensions: "24x24in. (not including headpiece)",
+    year: 2023,
+    images: [,
+      "/tibetan_cham_mask_3/2.jpg",
+      "/tibetan_cham_mask_3/3.jpg",
+      "/tibetan_cham_mask_3/4.jpg",
+    ],
+  };
+  export const FragmentsOfSussex: Work = {
     name: "Fragments of Sussex County, NJ",
     slug: "fragments-of-sussex",
     cover: "/fragments_of_sussex_county_nj/IMG-7639.jpg",
