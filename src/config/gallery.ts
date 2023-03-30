@@ -8,7 +8,7 @@ export interface Collection {
 export const gallery: Collection[] = [
   {
     name: "Collection 4",
-    works: [Works.TibetanChamMask1, Works.TibetanChamMask2],
+    works: [Works.TibetanChamMask1, Works.TibetanChamMask2, Works.TibetanChamMask3],
   },
   {
     name: "Collection 3",

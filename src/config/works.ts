@@ -408,7 +408,7 @@ export namespace Works {
     medium: "Oil paint on street sign",
     dimensions: "24x24in. (not including headpiece)",
     year: 2023,
-    images: [,
+    images: [
       "/tibetan_cham_mask_3/2.jpg",
       "/tibetan_cham_mask_3/3.jpg",
       "/tibetan_cham_mask_3/4.jpg",
