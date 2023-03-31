@@ -7,7 +7,7 @@ import { exhibitions } from "@/config/exhibitions";
   <section class="about">
     <h2>ABOUT ME</h2>
     After studying at The College of New Jersey with a double major in Fine Arts
-    and Chinese, I moved to Montréal (Tiohti:áke) to further pursue education at
+    and Chinese, I moved to Montréal (Tiohtiá:ke) to further pursue education at
     Concordia University with a specialization in Drawing & Painting. Now, as I
     finish my degree, I’ve found myself more inspired than before, with hopes to
     evoke emotions in viewers and reach a larger audience.
