@@ -7,11 +7,15 @@ export interface Collection {
 
 export const gallery: Collection[] = [
   {
-    name: "Collection 4",
-    works: [Works.TibetanChamMask1, Works.TibetanChamMask2, Works.TibetanChamMask3],
+    name: "Collection 3",
+    works: [
+      Works.TibetanChamMask1,
+      Works.TibetanChamMask2,
+      Works.TibetanChamMask3,
+    ],
   },
   {
-    name: "Collection 3",
+    name: "Collection 2",
     works: [
       Works.FragmentsOfSussex,
       Works.FindingSelf,
@@ -27,7 +31,7 @@ export const gallery: Collection[] = [
     ],
   },
   {
-    name: "Collection 2",
+    name: "Collection 1",
     works: [
       Works.PedestrianSitting,
       Works.LitterAheadLilith,
@@ -35,16 +39,6 @@ export const gallery: Collection[] = [
       Works.DuoWenTianWang,
       Works.FallenAngel,
       Works.TwilightZone,
-    ],
-  },
-  {
-    name: "Collection 1",
-    works: [
-      Works.MediaSexuality,
-      Works.BavarianLionShield,
-      Works.SoloTravel,
-      Works.MaleStudy,
-      Works.FeminineStudies,
     ],
   },
 ];

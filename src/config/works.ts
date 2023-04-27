@@ -104,27 +104,6 @@ export namespace Works {
     year: 2021,
     images: ["/stop_no_hare/83.webp", "/stop_no_hare/84.webp"],
   };
-  export const SoloTravel: Work = {
-    name: "Solo Travel",
-    year: 2021,
-    medium: "Oil paint & mixed media",
-    dimensions: "Approx. 24x30in.",
-    slug: "solo-travel",
-    cover: "/solo_travel/cover.webp",
-    galleryCover: "/solo_travel/low/cover.webp",
-    images: [
-      "/solo_travel/76.webp",
-      "/solo_travel/77.webp",
-      "/solo_travel/78.webp",
-      "/solo_travel/79.webp",
-    ],
-    statements: [
-      "Discussing this piece as a general representation:",
-      "Raw, hanging meat represents the experience of how a woman is seen while traveling. The cheesecloth, acting as the canvas, depicts the delicateness and fragility of the situation while the airport photograph and skyline show the strong-willed nature of the traveler. The woman in the picture is faceless not only for anonymity, but also for empathy knowing it can happen to anyone.",
-      "Personal story:",
-      "Based on when I traveled solo for the first time a few years back. I was stalked and hit by a Vespa that resulted in me staying longer in Rome. I found out the man preyed on women at the hostel and assaulted the ones he could get alone. After trying to isolate me by showing people indecent pictures of “me”, I had him kicked out of the hostel's bar. After waiting outside full of rage, he showed the picture to me once more, stating “it isn’t you obviously, she was passed out and a bitch anyway”. I recognized the girl as another solo traveler when he showed me the picture of her face- eyes shut and naked on his bed. I screamed and broke his lip.",
-    ],
-  };
   export const SiTianWang: Work = {
     name: "四天王 (Sì Tiān Wáng)",
     year: 2020,
@@ -234,19 +213,6 @@ export namespace Works {
       "After the passing of my father in 2020 and riddled with grief that I wasn’t there at his time of death, I made this piece as a representation of the show he watched as a child and introduced me to years prior. In the episode Nothing in the Dark of The Twilight Zone, an elderly woman lets no one in her home out of fear that they may be the grim reaper. After a wounded man ends up at her doorstep, she reluctantly brings him inside to nurse him to health. However, while he did turn out to be the reaper, he held her hand and showed her she passed peacefully, painlessly, and with someone at her side. I’d like to imagine that is how my father passed.",
     ],
   };
-  export const MediaSexuality: Work = {
-    name: "Media Sexuality",
-    slug: "media-sexuality",
-    cover: "/media_and_sexuality/cover.webp",
-    galleryCover: "/media_and_sexuality/low/cover.webp",
-    year: 2021,
-    images: [
-      "/media_and_sexuality/71.webp",
-      "/media_and_sexuality/72.webp",
-      "/media_and_sexuality/73.webp",
-      "/media_and_sexuality/74.webp",
-    ],
-  };
   export const FindingSelf: Work = {
     name: "Finding Self; Closed-Off",
     year: 2021,
@@ -270,51 +236,6 @@ export namespace Works {
     ],
     statements: [
       "The classic medium of oil paint paired with modern street signs show the duality and dynamism of one's own being. The inner struggles of gender identity and acceptance are shown in this triptych, Finding Self, by creating a dialogue from self to viewer via my own thoughts. Through questioning myself, a form of care and love had been created; one never spoken, yet quickly understood.",
-    ],
-  };
-  export const BavarianLionShield: Work = {
-    name: "Bavarian Lion Shield",
-    slug: "bavarian-lion-shield",
-    cover: "/bavarian_lion_shield/cover.webp",
-    galleryCover: "/bavarian_lion_shield/low/cover.webp",
-    year: 2021,
-    images: [
-      "/bavarian_lion_shield/53.webp",
-      "/bavarian_lion_shield/54.webp",
-      "/bavarian_lion_shield/55.webp",
-    ],
-    sold: true,
-  };
-  export const MaleStudy: Work = {
-    name: "Male Study",
-    slug: "male-study",
-    cover: "/male_study/cover.webp",
-    galleryCover: "/male_study/low/cover.webp",
-    year: 2021,
-    images: ["/male_study/57.webp"],
-  };
-  export const FeminineStudies: Work = {
-    name: "Feminine Studies",
-    slug: "feminine-studies",
-    cover: "/feminine_studies/cover.webp",
-    galleryCover: "/feminine_studies/low/cover.webp",
-    year: 2021,
-    images: [
-      "/feminine_studies/48.webp",
-      "/feminine_studies/49.webp",
-      "/feminine_studies/50.webp",
-      "/feminine_studies/51.webp",
-      "/feminine_studies/59.webp",
-      "/feminine_studies/60.webp",
-      "/feminine_studies/61.webp",
-      "/feminine_studies/62.webp",
-      "/feminine_studies/63.webp",
-      "/feminine_studies/64.webp",
-      "/feminine_studies/65.webp",
-      "/feminine_studies/66.webp",
-      "/feminine_studies/67.webp",
-      "/feminine_studies/68.webp",
-      "/feminine_studies/69.webp",
     ],
   };
   export const WarOnWomen: Work = {

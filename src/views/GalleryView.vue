@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
 $mincol-width: 300px;
 .collection-elements {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($mincol-width, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax($mincol-width, 1fr));
   grid-auto-rows: auto;
 }
 
