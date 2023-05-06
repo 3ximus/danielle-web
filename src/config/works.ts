@@ -27,7 +27,7 @@ export namespace Works {
     dimensions: "24x24in.",
     slug: "pomegranates-botticelli",
     cover: "pomegranates_botticelli/cover.webp",
-    galleryCover: "pomegranates_botticelli/low/cover.webp",
+    galleryCover: "pomegranates_botticelli/cover.webp",
     images: [
       "pomegranates_botticelli/85.webp",
       "pomegranates_botticelli/86.webp",

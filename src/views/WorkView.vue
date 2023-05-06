@@ -1,24 +1,17 @@
 <script setup lang="ts">
 import BackButtonComponent from "@/components/buttons/BackButton.vue";
-import ScrollButtonComponent from "@/components/buttons/ScrollButton.vue";
-import ImageRowComponent from "@/components/ImageRowComponent.vue";
+import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
 import SoldIconComponent from "@/components/SoldIconComponent.vue";
 import router from "@/router";
 import type { Work } from "@/config/works";
 import { gallery } from "@/config/gallery";
 import { useRoute } from "vue-router";
-import { onBeforeMount, onBeforeUnmount, ref } from "vue";
-import ButtonComponent from "../components/buttons/ButtonComponent.vue";
+import { onBeforeMount, onBeforeUnmount } from "vue";
 
 const selectedWork: Work = gallery
   .map((s) => s.works)
   .flat()
   .find((w) => w.slug === useRoute().params.slug)!;
-
-const images = ref<InstanceType<typeof ImageRowComponent>>();
-function scrollToImages() {
-  images.value?.$el.scrollIntoView({ behavior: "smooth" });
-}
 
 const dismiss = () => router.back();
 
@@ -56,13 +49,10 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
         </div>
       </div>
 
-      <ImageRowComponent ref="images" :images="selectedWork.images" />
-
       <RouterLink to="/gallery">
         <ButtonComponent>Go to Gallery</ButtonComponent>
       </RouterLink>
     </div>
-    <ScrollButtonComponent @click="scrollToImages" />
   </div>
 </template>
 
@@ -122,7 +112,7 @@ $title: clamp(10px, 10vw, 40px);
         }
       }
     }
-    // force button to center
+    /* force button to center */
     .dr-button {
       position: relative;
       left: 50%;
