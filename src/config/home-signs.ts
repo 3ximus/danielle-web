@@ -4,13 +4,13 @@ export const grid = [
   [
     // 1st row
     Pop.PomegranatesBotticelli,
-    Pop.FallenAngel,
+    Pop.StopHorny,
     Pop.Selene,
   ],
   [
     // 2nd row
     Pop.SiTianWang,
-    Pop.StopHorny,
+    Pop.Yamantaka,
     Pop.PicnicHere,
     Pop.TwilightZone,
   ],

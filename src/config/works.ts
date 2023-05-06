@@ -375,6 +375,12 @@ export namespace Pop {
     work: Works.PomegranatesBotticelli,
   };
 
+  export const Yamantaka: PopSign = {
+    cutout: "/tibetan_cham_mask_2/low/cut.webp",
+    flash_cutout: "/tibetan_cham_mask_2/low/flash.webp",
+    work: Works.TibetanChamMask2,
+  };
+
   export const FallenAngel: PopSign = {
     cutout: "/fallen_angel/low/cover.webp",
     flash_cutout: "/fallen_angel/low/flash.webp",
