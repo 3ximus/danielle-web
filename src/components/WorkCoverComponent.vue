@@ -1,20 +1,19 @@
 <script setup lang="ts">
+import SoldIconComponent from "@/components/SoldIconComponent.vue";
 import { ref } from "vue";
 
 const props = defineProps({
   coverImage: String,
+  sold: Boolean,
 });
 
 const zoomed = ref<HTMLInputElement | null>(null);
 const zoom = (event: MouseEvent) => {
   const original = event.target as HTMLElement;
-  const x = event.pageX - original.offsetLeft; // this is wrong
-  const y = event.pageY - original.offsetTop; // this is wrong
   const imgWidth = original.offsetWidth;
   const imgHeight = original.offsetHeight;
-  let percentageX = (x / imgWidth) * 100;
-  let percentageY = (y / imgHeight) * 100;
-
+  let percentageX = (event.offsetX / imgWidth) * 100;
+  let percentageY = (event.offsetY / imgHeight) * 100;
   if (zoomed.value) {
     zoomed.value.style.backgroundPositionX = `${percentageX}%`;
     zoomed.value.style.backgroundPositionY = `${percentageY}%`;
@@ -25,7 +24,7 @@ const zoom = (event: MouseEvent) => {
 </script>
 
 <template>
-  <div>
+  <div class="cover-image">
     <img
       :src="props.coverImage"
       @mousemove="zoom"
@@ -38,35 +37,46 @@ const zoom = (event: MouseEvent) => {
         background: `url('${props.coverImage}') no-repeat`,
       }"
     ></div>
+  <SoldIconComponent v-if="props.sold" />
   </div>
 </template>
 
 <style scoped lang="scss">
 $popup_size: 400px;
 
-img {
-  width: 100%;
-  max-height: 100%;
-  transform: scale(1.5);
-  transition: 0.5s;
-  object-fit: contain;
-  cursor: zoom-in;
-  &:hover ~ .zoomed {
-    opacity: 1;
+.cover-image {
+  width: fit-content;
+  max-width: 50%;
+  text-align: center;
+  img {
+    /* width: 100%; */
+    max-height: 100%;
+    transform: scale(1.5);
+    transition: 0.5s;
+    object-fit: contain;
+    cursor: zoom-in;
+    &:hover ~ .zoomed {
+      opacity: 1;
+    }
+  }
+
+  .zoomed {
+    width: $popup_size;
+    height: $popup_size;
+    pointer-events: none;
+    border-radius: 40%;
+    border: 4px solid #222;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.4s;
   }
 }
-
-.zoomed {
-  width: $popup_size;
-  height: $popup_size;
-  pointer-events: none;
-  border-radius: 40%;
-  border: 4px solid #222;
-  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.4s;
+@media (max-width: 800px) {
+  .cover-image {
+    max-width: 100%;
+  }
 }
 </style>

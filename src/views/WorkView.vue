@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import BackButtonComponent from "@/components/buttons/BackButton.vue";
 import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
-import SoldIconComponent from "@/components/SoldIconComponent.vue";
 import WorkCoverComponent from "@/components/WorkCoverComponent.vue";
 import router from "@/router";
 import type { Work } from "@/config/works";
@@ -32,10 +31,10 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
     <div class="modal-content">
       <h1 class="title">{{ selectedWork.name }}</h1>
       <div class="container">
-        <div class="cover-image">
-          <WorkCoverComponent :cover-image="selectedWork.cover" />
-          <SoldIconComponent v-if="selectedWork.sold" />
-        </div>
+        <WorkCoverComponent
+          :cover-image="selectedWork.cover"
+          :sold="selectedWork.sold"
+        />
         <hr />
         <div class="description">
           <p class="details">{{ selectedWork.year }}</p>
@@ -68,7 +67,7 @@ $title: clamp(10px, 10vw, 40px);
   z-index: 200;
 
   .modal-content {
-    min-height: 100%;
+    /* min-height: 100%; */
     padding: 5%;
     background-color: var(--background-color);
     .title {
@@ -82,11 +81,6 @@ $title: clamp(10px, 10vw, 40px);
       flex-direction: row;
       gap: 3%;
       height: 65vh;
-      .cover-image {
-        width: fit-content;
-        max-width: 50%;
-        text-align: center;
-      }
       .description {
         width: 50%;
         .details {
@@ -123,9 +117,6 @@ $title: clamp(10px, 10vw, 40px);
       .container {
         flex-direction: column;
         height: fit-content;
-        .cover-image {
-          max-width: 100%;
-        }
         hr {
           display: none;
         }
