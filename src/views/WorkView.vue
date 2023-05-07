@@ -2,6 +2,7 @@
 import BackButtonComponent from "@/components/buttons/BackButton.vue";
 import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
 import SoldIconComponent from "@/components/SoldIconComponent.vue";
+import WorkCoverComponent from "@/components/WorkCoverComponent.vue";
 import router from "@/router";
 import type { Work } from "@/config/works";
 import { gallery } from "@/config/gallery";
@@ -32,10 +33,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
       <h1 class="title">{{ selectedWork.name }}</h1>
       <div class="container">
         <div class="cover-image">
-          <img
-            :src="selectedWork.cover"
-            onload="this.style.transform='scale(1)'"
-          />
+          <WorkCoverComponent :cover-image="selectedWork.cover" />
           <SoldIconComponent v-if="selectedWork.sold" />
         </div>
         <hr />
@@ -88,13 +86,6 @@ $title: clamp(10px, 10vw, 40px);
         width: fit-content;
         max-width: 50%;
         text-align: center;
-        img {
-          width: 100%;
-          max-height: 100%;
-          transform: scale(1.5);
-          transition: 0.5s;
-          object-fit: contain;
-        }
       }
       .description {
         width: 50%;
@@ -105,9 +96,7 @@ $title: clamp(10px, 10vw, 40px);
           margin-left: 0;
         }
         .statement {
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-            sans-serif;
+          line-height: 1.5;
           font-size: 16px;
         }
       }

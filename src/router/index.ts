@@ -54,6 +54,16 @@ const router = createRouter({
       },
     },
   ],
+  // If we want to add an hash in the gallery to scroll to
+  // scrollBehavior(to, _from, _savedPosition) {
+  //   if (to.hash) {
+  //     return new Promise((resolve, _reject) => {
+  //       setTimeout(() => {
+  //         resolve({ el: to.hash, behavior: "smooth" });
+  //       }, 1000);
+  //     });
+  //   }
+  // },
 });
 
 export default router;
