@@ -54,6 +54,61 @@ export namespace Works {
     ],
     sold: true,
   };
+  export const Butcher: Work = {
+    name: "Butcher",
+    year: 2023,
+    medium: "Oil paint on canvas",
+    dimensions: "36x36in", // TODO check this
+    slug: "butcher",
+    cover: "/butcher/cover.webp",
+    galleryCover: "/butcher/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const Petrichor: Work = {
+    name: "Petrichor",
+    year: 2023,
+    medium: "Oil paint on canvas",
+    dimensions: "36x36in", // TODO check this
+    slug: "petrichor",
+    cover: "/petrichor/cover.webp",
+    galleryCover: "/petrichor/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const SelfPortrait: Work = {
+    name: "Self Portrait",
+    year: 2023,
+    medium: "Oil paint on road sign",
+    dimensions: "24x24in.", // TODO check this
+    slug: "self-portrait",
+    cover: "/self_portrait/cover.webp",
+    galleryCover: "/self_portrait/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const Death: Work = {
+    name: "Death",
+    year: 2023,
+    medium: "Oil paint on road sign",
+    dimensions: "24x24in.", // TODO check this
+    slug: "self-portrait",
+    cover: "/death/cover.webp",
+    galleryCover: "/death/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const Romeyn: Work = {
+    name: "Romeyn",
+    year: 2023,
+    medium: "Oil paint on canvas",
+    dimensions: "36x36in", // TODO check this
+    slug: "romeyn",
+    cover: "/romeyn/romeyn.webp",
+    galleryCover: "/romeyn/low/romeyn.webp",
+    images: [],
+    statements: [],
+  };
   export const HeliosSelene: Work = {
     name: "Helios & Selene",
     year: 2022,

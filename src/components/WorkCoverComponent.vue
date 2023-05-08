@@ -42,14 +42,13 @@ const zoom = (event: MouseEvent) => {
 </template>
 
 <style scoped lang="scss">
-$popup_size: 400px;
+$popup_size: 25vw;
 
 .cover-image {
   width: fit-content;
   max-width: 50%;
   text-align: center;
   img {
-    /* width: 100%; */
     max-height: 100%;
     transform: scale(1.5);
     transition: 0.5s;
@@ -64,7 +63,7 @@ $popup_size: 400px;
     width: $popup_size;
     height: $popup_size;
     pointer-events: none;
-    border-radius: 40%;
+    border-radius: 5%;
     border: 4px solid #222;
     box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
     position: fixed;
