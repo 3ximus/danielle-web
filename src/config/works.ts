@@ -80,7 +80,7 @@ export namespace Works {
     name: "Self Portrait",
     year: 2023,
     medium: "Oil paint on road sign",
-    dimensions: "24x24in.", // TODO check this
+    dimensions: "24x24in.",
     slug: "self-portrait",
     cover: "/self_portrait/cover.webp",
     galleryCover: "/self_portrait/low/cover.webp",
@@ -92,7 +92,7 @@ export namespace Works {
     year: 2023,
     medium: "Oil paint on road sign",
     dimensions: "24x24in.", // TODO check this
-    slug: "self-portrait",
+    slug: "death",
     cover: "/death/cover.webp",
     galleryCover: "/death/low/cover.webp",
     images: [],
