@@ -69,7 +69,7 @@ export namespace Works {
     name: "Petrichor",
     year: 2023,
     medium: "Oil paint on canvas",
-    dimensions: "36x36in", // TODO check this
+    dimensions: "24x30in",
     slug: "petrichor",
     cover: "/petrichor/cover.webp",
     galleryCover: "/petrichor/low/cover.webp",
@@ -91,7 +91,7 @@ export namespace Works {
     name: "Death",
     year: 2023,
     medium: "Oil paint on road sign",
-    dimensions: "24x24in.", // TODO check this
+    dimensions: "18x24in.",
     slug: "death",
     cover: "/death/cover.webp",
     galleryCover: "/death/low/cover.webp",
@@ -102,7 +102,7 @@ export namespace Works {
     name: "Romeyn",
     year: 2023,
     medium: "Oil paint on canvas",
-    dimensions: "36x36in", // TODO check this
+    dimensions: "20x24in",
     slug: "romeyn",
     cover: "/romeyn/romeyn.webp",
     galleryCover: "/romeyn/low/romeyn.webp",
@@ -149,6 +149,8 @@ export namespace Works {
     cover: "/squid/cover.webp",
     galleryCover: "/squid/low/cover.webp",
     year: 2021,
+    medium: "Marker on road sign",
+    dimensions: "12x18in.",
     images: ["/squid/90.webp", "/squid/91.webp"],
   };
   export const StopNoHare: Work = {
@@ -157,6 +159,8 @@ export namespace Works {
     cover: "/stop_no_hare/cover.webp",
     galleryCover: "/stop_no_hare/low/cover.webp",
     year: 2021,
+    medium: "Marker on road sign",
+    dimensions: "12x18in.",
     images: ["/stop_no_hare/83.webp", "/stop_no_hare/84.webp"],
   };
   export const SiTianWang: Work = {
