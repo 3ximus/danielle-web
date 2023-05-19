@@ -64,12 +64,13 @@ $title: clamp(10px, 10vw, 40px);
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: var(--background-color);
   z-index: 200;
 
   .modal-content {
     /* min-height: 100%; */
     padding: 5%;
-    background-color: var(--background-color);
+    height: 100%;
     .title {
       font-family: LemonMilk;
       font-size: $title;

@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import SoldIconComponent from "@/components/SoldIconComponent.vue";
-import { ref } from "vue";
+import { computed, ref } from "vue";
+
+const isMobile = computed(() => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+});
 
 const props = defineProps({
   coverImage: String,
@@ -15,6 +21,7 @@ const zoom = (event: MouseEvent) => {
   let percentageX = (event.offsetX / imgWidth) * 100;
   let percentageY = (event.offsetY / imgHeight) * 100;
   if (zoomed.value) {
+    zoomed.value.classList.add('visible')
     zoomed.value.style.backgroundPositionX = `${percentageX}%`;
     zoomed.value.style.backgroundPositionY = `${percentageY}%`;
     zoomed.value.style.left = `${event.clientX + 50}px`;
@@ -32,12 +39,13 @@ const zoom = (event: MouseEvent) => {
     />
     <div
       ref="zoomed"
+      v-if="!isMobile"
       class="zoomed"
       :style="{
         background: `url('${props.coverImage}') no-repeat`,
       }"
     ></div>
-  <SoldIconComponent v-if="props.sold" />
+    <SoldIconComponent v-if="props.sold" />
   </div>
 </template>
 
@@ -59,7 +67,7 @@ $popup_size: 25vw;
     }
   }
 
-  .zoomed {
+  .zoomed.visible {
     width: $popup_size;
     height: $popup_size;
     pointer-events: none;
@@ -75,7 +83,10 @@ $popup_size: 25vw;
 }
 @media (max-width: 800px) {
   .cover-image {
-    max-width: 100%;
+    max-width: 100vw;
+    img {
+      max-width: 100%;
+    }
   }
 }
 </style>
