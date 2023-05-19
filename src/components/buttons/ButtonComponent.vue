@@ -64,6 +64,9 @@ defineProps<{
       content: " 🗸";
     }
   }
+  &[data-status="error"] {
+    background: var(--orange-sign-color);
+  }
 }
 @keyframes spin {
   100% {

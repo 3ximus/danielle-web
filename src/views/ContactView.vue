@@ -34,6 +34,7 @@ function sendEmail(): void {
       },
       (error: any) => {
         console.log("Email failed...", error.text);
+        formStatus.value = "error";
       }
     );
 }
@@ -80,7 +81,11 @@ function sendEmail(): void {
       />
       <br />
       <ButtonComponent type="submit" :status="formStatus">{{
-        formStatus === "success" ? "Sent" : "Send"
+        formStatus === "success"
+          ? "Sent"
+          : formStatus === "error"
+          ? "Failed to send email"
+          : "Send"
       }}</ButtonComponent>
     </form>
   </section>
