@@ -36,6 +36,7 @@ const zoom = (event: MouseEvent) => {
       :src="props.coverImage"
       @mousemove="zoom"
       onload="this.style.transform='scale(1)'"
+      :alt="props.coverImage"
     />
     <div
       ref="zoomed"
