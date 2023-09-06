@@ -30,6 +30,7 @@ export namespace Works {
     galleryCover: "sleeping-in-blueberries/low/cover.webp",
     images: [],
     statements: [],
+    sold: true,
   };
   export const PomegranatesBotticelli: Work = {
     name: "Pomegranates and Botticelli; Caution, Bump",
@@ -73,6 +74,39 @@ export namespace Works {
     slug: "butcher",
     cover: "/butcher/cover.webp",
     galleryCover: "/butcher/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const Harpocrates: Work = {
+    name: "Harpocrates & the Runes",
+    year: 2023,
+    medium: "Oil paint on road sign",
+    dimensions: "36x36in", 
+    slug: "harpocrates",
+    cover: "/harpocrates_runes/Harpocrates & Runes.png",
+    galleryCover: "/harpocrates_runes/Harpocrates & Runes.png",
+    images: [],
+    statements: [],
+  };  
+  export const Piebald: Work = {
+    name: "Piebald Fawn & the Gourd",
+    year: 2023,
+    medium: "Oil paint on road sign",
+    dimensions: "36x36in", 
+    slug: "piebaldfawn",
+    cover: "/piebald_fawn/Piebald & Gourd.png",
+    galleryCover: "/piebald_fawn/Piebald & Gourd.png",
+    images: [],
+    statements: [],
+  };
+  export const Ra: Work = {
+    name: "Ra & the Celtic Sun",
+    year: 2023,
+    medium: "Oil paint on road sign",
+    dimensions: "36x36in", 
+    slug: "racelticsun",
+    cover: "/ra_sun/Ra & Sun.png",
+    galleryCover: "/ra_sun/Ra & Sun.png",
     images: [],
     statements: [],
   };
