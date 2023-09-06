@@ -9,6 +9,7 @@ export const gallery: Collection[] = [
   {
     name: "Collection 3",
     works: [
+      Works.SleepingInBlueberries,
       Works.Death,
       Works.TibetanChamMask3,
       Works.TibetanChamMask2,

@@ -20,6 +20,17 @@ export interface Work {
 }
 
 export namespace Works {
+  export const SleepingInBlueberries: Work = {
+    name: "Sleeping In Blueberries",
+    year: 2023,
+    medium: "Oil paint on road sign",
+    dimensions: "18x18in.",
+    slug: "sleeping-in-blueberries",
+    cover: "sleeping-in-blueberries/cover.webp",
+    galleryCover: "sleeping-in-blueberries/low/cover.webp",
+    images: [],
+    statements: [],
+  };
   export const PomegranatesBotticelli: Work = {
     name: "Pomegranates and Botticelli; Caution, Bump",
     year: 2021,
@@ -97,6 +108,7 @@ export namespace Works {
     galleryCover: "/death/low/cover.webp",
     images: [],
     statements: [],
+    sold: true,
   };
   export const Romeyn: Work = {
     name: "Romeyn",
@@ -149,6 +161,8 @@ export namespace Works {
     cover: "/squid/cover.webp",
     galleryCover: "/squid/low/cover.webp",
     year: 2021,
+    medium: "Marker on road sign",
+    dimensions: "12x18in.",
     images: ["/squid/90.webp", "/squid/91.webp"],
   };
   export const StopNoHare: Work = {
@@ -157,7 +171,10 @@ export namespace Works {
     cover: "/stop_no_hare/cover.webp",
     galleryCover: "/stop_no_hare/low/cover.webp",
     year: 2021,
+    medium: "Marker on road sign",
+    dimensions: "12x18in.",
     images: ["/stop_no_hare/83.webp", "/stop_no_hare/84.webp"],
+    sold: true,
   };
   export const SiTianWang: Work = {
     name: "四天王 (Sì Tiān Wáng)",
