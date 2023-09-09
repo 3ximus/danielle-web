@@ -247,7 +247,7 @@ export namespace Works {
     dimensions: "24x30in.",
     slug: "duo-wen-tian-wang",
     cover: "/duo_wen_tian_wang/cover.webp",
-    galleryCover: "/duo_wen_tian_wang/low/cover.webp",
+    galleryCover: "/duo_wen_tian_wang/cover.webp",
     images: [
       "/duo_wen_tian_wang/36.webp",
       "/duo_wen_tian_wang/37.webp",
