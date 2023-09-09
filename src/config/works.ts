@@ -499,7 +499,7 @@ export namespace Pop {
   };
 
   export const FallenAngel: PopSign = {
-    cutout: "/fallen_angel/low/cover.webp",
+    cutout: "/fallen_angel/cover.webp",
     flash_cutout: "/fallen_angel/low/flash.webp",
     work: Works.FallenAngel,
   };
