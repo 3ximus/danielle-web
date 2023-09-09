@@ -155,6 +155,17 @@ export namespace Works {
     images: [],
     statements: [],
   };
+  export const Maiden: Work = {
+    name: "Maiden (Name)",
+    year: 2023,
+    medium: "Oil paint on canvas",
+    dimensions: "20x24in",
+    slug: "maidenname",
+    cover: "/maiden_name/maiden_name.jpg",
+    galleryCover: "/maiden_name/maiden_name.jpg",
+    images: [],
+    statements: [],
+  };
   export const HeliosSelene: Work = {
     name: "Helios & Selene",
     year: 2022,
