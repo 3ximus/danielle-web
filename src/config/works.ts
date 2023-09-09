@@ -58,7 +58,7 @@ export namespace Works {
     medium: "Oil paint on road sign",
     dimensions: "24x24in.",
     cover: "/fallen_angel/cover.webp",
-    galleryCover: "/fallen_angel/low/cover.webp",
+    galleryCover: "/fallen_angel/cover.webp",
     images: [
       "/fallen_angel/80.webp",
       "/fallen_angel/81.webp",
