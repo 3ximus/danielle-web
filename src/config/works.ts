@@ -58,7 +58,7 @@ export namespace Works {
     medium: "Oil paint on road sign",
     dimensions: "24x24in.",
     cover: "/fallen_angel/cover.webp",
-    galleryCover: "/fallen_angel/cover.webp",
+    galleryCover: "/fallen_angel/low/cover.webp",
     images: [
       "/fallen_angel/80.webp",
       "/fallen_angel/81.webp",
@@ -247,7 +247,7 @@ export namespace Works {
     dimensions: "24x30in.",
     slug: "duo-wen-tian-wang",
     cover: "/duo_wen_tian_wang/cover.webp",
-    galleryCover: "/duo_wen_tian_wang/cover.webp",
+    galleryCover: "/duo_wen_tian_wang/low/cover.webp",
     images: [
       "/duo_wen_tian_wang/36.webp",
       "/duo_wen_tian_wang/37.webp",
@@ -499,7 +499,7 @@ export namespace Pop {
   };
 
   export const FallenAngel: PopSign = {
-    cutout: "/fallen_angel/cover.webp",
+    cutout: "/fallen_angel/low/cover.webp",
     flash_cutout: "/fallen_angel/low/flash.webp",
     work: Works.FallenAngel,
   };
