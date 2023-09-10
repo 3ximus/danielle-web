@@ -161,8 +161,8 @@ export namespace Works {
     medium: "Oil paint on canvas",
     dimensions: "20x24in",
     slug: "maidenname",
-    cover: "/maiden_name/maiden_name.jpg",
-    galleryCover: "/maiden_name/maiden_name.jpg",
+    cover: "/maiden_name/cover.webp",
+    galleryCover: "/maiden_name/low/cover.webp",
     images: [],
     statements: [],
   };
