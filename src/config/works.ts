@@ -70,7 +70,7 @@ export namespace Works {
     name: "Butcher",
     year: 2023,
     medium: "Oil paint on canvas",
-    dimensions: "36x36in", // TODO check this
+    dimensions: "30x36in",
     slug: "butcher",
     cover: "/butcher/cover.webp",
     galleryCover: "/butcher/low/cover.webp",
@@ -107,6 +107,28 @@ export namespace Works {
     slug: "racelticsun",
     cover: "/ra_sun/cover.webp",
     galleryCover: "/ra_sun/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const LaceAndLingerie: Work = {
+    name: "Lace & Lingerie",
+    year: 2023,
+    medium: "Oil paint on street sign",
+    dimensions: "12x18in",
+    slug: "lace-lingerie",
+    cover: "/lace_and_lingerie/cover.webp",
+    galleryCover: "/lace_and_lingerie/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const FishBones: Work = {
+    name: "Fish Bones",
+    year: 2023,
+    medium: "Oil paint on street sign",
+    dimensions: "12x18in",
+    slug: "fish-bones",
+    cover: "/fish_bones/cover.webp",
+    galleryCover: "/fish_bones/low/cover.webp",
     images: [],
     statements: [],
   };
