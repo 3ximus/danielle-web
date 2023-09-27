@@ -7,6 +7,14 @@ export interface Exhibition {
 
 export const exhibitions: Exhibition[] = [
   {
+    name: "Cafe Orr (Upcoming 29th September 2023)",
+    slug: "cafe-orr",
+    description: "My exhibition",
+    images: [
+      "/cafe_orr/poster.webp",
+    ],
+  },
+  {
     name: "Cafe Faro (October 2022-February 2023)",
     slug: "cafe-faro",
     description: "My exhibition",

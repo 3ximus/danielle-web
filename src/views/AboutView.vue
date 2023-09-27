@@ -27,7 +27,7 @@ import { exhibitions } from "@/config/exhibitions";
     its concept.
     <br />
 
-    <h2>PAST EXHIBITIONS</h2>
+    <h2>EXHIBITIONS</h2>
 
     <RouterLink
       v-for="exhibition in exhibitions"

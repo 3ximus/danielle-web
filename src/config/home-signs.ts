@@ -23,9 +23,9 @@ export const grid = [
   shuffle([
     // 2nd row
     Pop.SiTianWang,
-    Pop.Yamantaka,
-    Pop.PicnicHere,
+    Pop.FishBones,
     Pop.TwilightZone,
+    Pop.Yamantaka,
   ]),
   shuffle([
     // 3rd row
@@ -42,7 +42,7 @@ export const grid = [
   ]),
   shuffle([
     // 5th row
-    Pop.PomegranatesBotticelli,
+    Pop.LaceLingerie,
     Pop.SiTianWang,
   ]),
 ];

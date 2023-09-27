@@ -566,4 +566,14 @@ export namespace Pop {
     flash_cutout: "/picnic_here/low/flash.webp",
     work: Works.PicnicHere,
   };
+  export const LaceLingerie: PopSign = {
+    cutout: "/lace_and_lingerie/low/cut.webp",
+    flash_cutout: "/lace_and_lingerie/low/flash.webp",
+    work: Works.LaceAndLingerie,
+  };
+  export const FishBones: PopSign = {
+    cutout: "/fish_bones/low/cut.webp",
+    flash_cutout: "/fish_bones/low/flash.webp",
+    work: Works.FishBones,
+  };
 }
