@@ -22,9 +22,9 @@ export const grid = [
   ]),
   shuffle([
     // 2nd row
-    Pop.SiTianWang,
+    Pop.Death,
     Pop.FishBones,
-    Pop.TwilightZone,
+    Pop.SleepingInBlueberries,
     Pop.Yamantaka,
   ]),
   shuffle([

@@ -576,4 +576,14 @@ export namespace Pop {
     flash_cutout: "/fish_bones/low/flash.webp",
     work: Works.FishBones,
   };
+  export const SleepingInBlueberries: PopSign = {
+    cutout: "/sleeping-in-blueberries/low/cut.webp",
+    flash_cutout: "/sleeping-in-blueberries/low/flash.webp",
+    work: Works.SleepingInBlueberries,
+  }
+  export const Death: PopSign = {
+    cutout: "/death/low/cut.webp",
+    flash_cutout: "/death/low/flash.webp",
+    work: Works.Death,
+  }
 }
