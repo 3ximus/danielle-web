@@ -7,11 +7,19 @@ export interface Exhibition {
 
 export const exhibitions: Exhibition[] = [
   {
-    name: "Cafe Orr (Upcoming 29th September 2023)",
+    name: "Cafe Orr (Ongoing-October 29, 2023)",
     slug: "cafe-orr",
     description: "My exhibition",
     images: [
       "/cafe_orr/poster.webp",
+      "/cafe_orr/IMG-9882.jpg",
+      "/cafe_orr/IMG-9883.jpg",
+      "/cafe_orr/IMG-9884.jpg",
+      "/cafe_orr/IMG-9888.jpg",
+      "/cafe_orr/IMG-9889.jpg",
+      "/cafe_orr/IMG-9891.jpg",
+      "/cafe_orr/IMG-9893.jpg",
+      "/cafe_orr/IMG-9895.jpg",
     ],
   },
   {
