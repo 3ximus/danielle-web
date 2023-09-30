@@ -77,6 +77,17 @@ export namespace Works {
     images: [],
     statements: [],
   };
+  export const NoCoffee: Work = {
+    name: "No Coffee Left",
+    year: 2023,
+    medium: "Oil paint on canvas",
+    dimensions: "18x24in",
+    slug: "coffee",
+    cover: "/no_coffee_left/no_coffee_left.jpeg",
+    galleryCover: "/no_coffee_left/no_coffee_left.jpeg",
+    images: [],
+    statements: [],
+  };
   export const Harpocrates: Work = {
     name: "Harpocrates & the Runes",
     year: 2023,
