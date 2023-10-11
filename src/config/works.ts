@@ -83,8 +83,8 @@ export namespace Works {
     medium: "Oil paint on canvas",
     dimensions: "18x24in",
     slug: "coffee",
-    cover: "/no_coffee_left/no_coffee_left.jpeg",
-    galleryCover: "/no_coffee_left/no_coffee_left.jpeg",
+    cover: "/no_coffee_left/cover.webp",
+    galleryCover: "/no_coffee_left/low/cover.webp",
     images: [],
     statements: [],
   };
