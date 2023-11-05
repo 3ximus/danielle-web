@@ -7,7 +7,7 @@ export interface Exhibition {
 
 export const exhibitions: Exhibition[] = [
   {
-    name: "Cafe Orr (Ongoing-October 29, 2023)",
+    name: "Cafe Orr (September 2023-October 2023)",
     slug: "cafe-orr",
     description: "My exhibition",
     images: [
