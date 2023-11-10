@@ -501,6 +501,16 @@ export namespace Works {
       "/fragments_of_sussex_county_nj/IMG-7639.webp",
     ],
   };
+  export const Greed: Work = {
+    name: "Greed",
+    slug: "greed",
+    cover: "/greed/cover.webp",
+    galleryCover: "/greed/low/cover.webp",
+    medium: "Oil on road sign",
+    dimensions: "24x30in.",
+    year: 2023,
+    images: [],
+  };
 }
 
 //      ______              _____  _
@@ -591,10 +601,10 @@ export namespace Pop {
     cutout: "/sleeping-in-blueberries/low/cut.webp",
     flash_cutout: "/sleeping-in-blueberries/low/flash.webp",
     work: Works.SleepingInBlueberries,
-  }
+  };
   export const Death: PopSign = {
     cutout: "/death/low/cut.webp",
     flash_cutout: "/death/low/flash.webp",
     work: Works.Death,
-  }
+  };
 }
