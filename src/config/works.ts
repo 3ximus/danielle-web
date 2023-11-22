@@ -511,7 +511,7 @@ export namespace Works {
     year: 2023,
     images: [],
   };
-  export const Greed: Work = {
+  export const Marzanna: Work = {
     name: "Marzanna",
     slug: "marzanna",
     cover: "/marzanna/cover.webp",
