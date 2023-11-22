@@ -511,6 +511,16 @@ export namespace Works {
     year: 2023,
     images: [],
   };
+  export const Greed: Work = {
+    name: "Marzanna",
+    slug: "marzanna",
+    cover: "/marzanna/cover.webp",
+    galleryCover: "/marzanna/low/cover.webp",
+    medium: "Oil on road sign",
+    dimensions: "36x36in",
+    year: 2023,
+    images: [],
+  };
 }
 
 //      ______              _____  _
