@@ -36,7 +36,7 @@ export const grid = [
   ]),
   shuffle([
     // 4th row
-    Pop.TwilightZone,
+    Pop.Marzanna,
     Pop.FallenAngel,
     Pop.PicnicHere,
   ]),

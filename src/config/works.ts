@@ -420,6 +420,7 @@ export namespace Works {
       "/picnic_here/IMG_5548.webp",
       "/picnic_here/IMG_5549.webp",
     ],
+    sold: true,
   };
   export const Carousel: Work = {
     name: "Carousel",
@@ -512,7 +513,7 @@ export namespace Works {
     images: [],
   };
   export const Marzanna: Work = {
-    name: "Marzanna",
+    name: "The Burning of Marzanna",
     slug: "marzanna",
     cover: "/marzanna/cover.webp",
     galleryCover: "/marzanna/low/cover.webp",
@@ -544,49 +545,41 @@ export namespace Pop {
     flash_cutout: "/pomegranates_botticelli/low/flash.webp",
     work: Works.PomegranatesBotticelli,
   };
-
   export const Yamantaka: PopSign = {
     cutout: "/tibetan_cham_mask_2/low/cut.webp",
     flash_cutout: "/tibetan_cham_mask_2/low/flash.webp",
     work: Works.TibetanChamMask2,
   };
-
   export const FallenAngel: PopSign = {
     cutout: "/fallen_angel/low/cover.webp",
     flash_cutout: "/fallen_angel/low/flash.webp",
     work: Works.FallenAngel,
   };
-
   export const Helios: PopSign = {
     cutout: "/helios_selene/low/helios.webp",
     flash_cutout: "/helios_selene/low/hflash.webp",
     work: Works.HeliosSelene,
   };
-
   export const Selene: PopSign = {
     cutout: "/helios_selene/low/selene.webp",
     flash_cutout: "/helios_selene/low/sflash.webp",
     work: Works.HeliosSelene,
   };
-
   export const SiTianWang: PopSign = {
     cutout: "/si_tian_wang/low/cover.webp",
     flash_cutout: "/si_tian_wang/low/flash.webp",
     work: Works.SiTianWang,
   };
-
   export const LitterAheadLilith: PopSign = {
     cutout: "/litter_ahead_lilith/low/cover.webp",
     flash_cutout: "/litter_ahead_lilith/low/flash.webp",
     work: Works.LitterAheadLilith,
   };
-
   export const StopHorny: PopSign = {
     cutout: "/stop_horny/low/cover.webp",
     flash_cutout: "/stop_horny/low/flash.webp",
     work: Works.StopHorny,
   };
-
   export const TwilightZone: PopSign = {
     cutout: "/twilight_zone/low/cover.webp",
     flash_cutout: "/twilight_zone/low/cover.webp",
@@ -616,5 +609,10 @@ export namespace Pop {
     cutout: "/death/low/cut.webp",
     flash_cutout: "/death/low/flash.webp",
     work: Works.Death,
+  };
+  export const Marzanna: PopSign = {
+    cutout: "/marzanna/low/cut.webp",
+    flash_cutout: "/marzanna/low/flash.webp",
+    work: Works.Marzanna,
   };
 }
