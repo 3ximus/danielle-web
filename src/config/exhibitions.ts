@@ -10,10 +10,9 @@ export const exhibitions: Exhibition[] = [
     name: "Billboard Art Project, Lisbon, PT (November 2023-December 2023)",
     slug: "billboard_arts",
     description: "My exhibition",
-    images: [
-     ,
-    ],
-  },{
+    images: [],
+  },
+  {
     name: "Cafe Orr, Montreal, CA (September 2023-October 2023)",
     slug: "cafe-orr",
     description: "My exhibition",
