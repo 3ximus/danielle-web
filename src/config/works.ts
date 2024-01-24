@@ -109,6 +109,7 @@ export namespace Works {
     galleryCover: "/piebald_fawn/low/cover.webp",
     images: [],
     statements: [],
+    sold: true,
   };
   export const Ra: Work = {
     name: "Ra & the Celtic Sun",

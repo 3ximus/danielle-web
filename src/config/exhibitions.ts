@@ -7,7 +7,14 @@ export interface Exhibition {
 
 export const exhibitions: Exhibition[] = [
   {
-    name: "Cafe Orr (September 2023-October 2023)",
+    name: "Billboard Art Project, Lisbon, PT (November 2023-December 2023)",
+    slug: "billboard_arts",
+    description: "My exhibition",
+    images: [
+     ,
+    ],
+  },{
+    name: "Cafe Orr, Montreal, CA (September 2023-October 2023)",
     slug: "cafe-orr",
     description: "My exhibition",
     images: [
@@ -34,7 +41,7 @@ export const exhibitions: Exhibition[] = [
     ],
   },
   {
-    name: "Milk Moon (May 2022)",
+    name: "Milk Moon, Montreal, CA (May 2022)",
     slug: "milk-moon",
     description: "My other exhibition",
     images: [
@@ -52,7 +59,7 @@ export const exhibitions: Exhibition[] = [
     ],
   },
   {
-    name: "Queer Love (February 2022)",
+    name: "Queer Love, Montreal, CA (February 2022)",
     slug: "queer-love",
     description: "My other exhibition",
     images: ["queer_love/1.webp"],
