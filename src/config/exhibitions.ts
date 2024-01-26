@@ -10,7 +10,13 @@ export const exhibitions: Exhibition[] = [
     name: "Billboard Art Project, Lisbon, PT (November 2023-December 2023)",
     slug: "billboard_arts",
     description: "My exhibition",
-    images: [],
+    images: [
+      "billboard_art/billboard_art_1.PNG",
+      "billboard_art/billboard_art_2.JPG",
+      "billboard_art/billboard_art_3.JPG",
+      "billboard_art/billboard_art_4.jpg",
+      "billboard_art/billboard_art_5.jpg",
+  ],
   },
   {
     name: "Cafe Orr, Montreal, CA (September 2023-October 2023)",
