@@ -523,6 +523,17 @@ export namespace Works {
     year: 2023,
     images: [],
   };
+  export const Maids: Work = {
+    name: "Untitled",
+    year: 2024,
+    medium: "Oil paint on street sign",
+    dimensions: "12x18in.",
+    slug: "untitled",
+    cover: "/maids/cover.webp",
+    galleryCover: "/maids/low/cover.webp",
+    images: [],
+    statements: [],
+  };
 }
 
 //      ______              _____  _
