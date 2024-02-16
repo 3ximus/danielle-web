@@ -18,6 +18,7 @@ export const gallery: Collection[] = [
   {
     name: "Collection 3",
     works: [
+      Works.RedVelvet,
       Works.Maids,
       Works.Greed,
       Works.NoCoffee,

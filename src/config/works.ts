@@ -423,6 +423,16 @@ export namespace Works {
     ],
     sold: true,
   };
+  export const RedVelvet: Work = {
+    name: "Red Velvet",
+    slug: "red-velvet",
+    medium: "Oil paint on street sign",
+    dimensions: "18x12in.",
+    year: 2024,
+    cover: "/red_velvet/cover.webp",
+    galleryCover: "/red_velvet/low/cover.webp",
+    images: [],
+  };
   export const Carousel: Work = {
     name: "Carousel",
     slug: "carousel",
