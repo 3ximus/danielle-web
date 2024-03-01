@@ -16,6 +16,7 @@ export const exhibitions: Exhibition[] = [
       "billboard_art/billboard_art_3.JPG",
       "billboard_art/billboard_art_4.jpg",
       "billboard_art/billboard_art_5.jpg",
+      "billboard_art/lisbon1.jpg",
   ],
   },
   {
@@ -50,6 +51,13 @@ export const exhibitions: Exhibition[] = [
     slug: "milk-moon",
     description: "My other exhibition",
     images: [
+      "milk_moon/IMG_3362.jpg",
+      "milk_moon/DSC_4451.JPEG",
+      "milk_moon/IMG_3304.jpg",
+      "milk_moon/IMG_3302.jpg",
+      "milk_moon/IMG_3305.jpg",
+      "milk_moon/IMG_3253.jpg",
+      "milk_moon/12.JPG",
       "milk_moon/1.webp",
       "milk_moon/2.webp",
       "milk_moon/3.webp",
