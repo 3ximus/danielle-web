@@ -79,28 +79,5 @@
 		</div>
 	</div>
 </nav>
-<slot></slot>
 
-<style>
-	a {
-		position: relative;
-		transition: all 0.4s;
-	}
-	a::before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		bottom: -2px;
-		left: 0;
-		background-color: var(--text-color);
-		-webkit-transform: scaleX(0);
-		transform: scaleX(0);
-		transition: all 0.2s;
-	}
-	a.active::before {
-		visibility: visible;
-		-webkit-transform: scaleX(1);
-		transform: scaleX(1);
-	}
-</style>
+<slot></slot>
