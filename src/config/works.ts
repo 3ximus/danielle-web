@@ -143,6 +143,7 @@ export namespace Works {
     galleryCover: "/fish_bones/low/cover.webp",
     images: [],
     statements: [],
+    sold: true,
   };
   export const Petrichor: Work = {
     name: "Petrichor",
@@ -218,6 +219,7 @@ export namespace Works {
       "Helios, God of the Sun, and Selene, Goddess of the moon, are painted in oil as busts on No Parking signs.",
       "Ironically, the one that is reflective in the dark is Helios rather than Selene.",
     ],
+    sold: true,
   };
   export const AphroditeAres: Work = {
     name: "Aphrodite & Ares",
@@ -423,16 +425,6 @@ export namespace Works {
     ],
     sold: true,
   };
-  export const RedVelvet: Work = {
-    name: "Red Velvet",
-    slug: "red-velvet",
-    medium: "Oil paint on street sign",
-    dimensions: "18x12in.",
-    year: 2024,
-    cover: "/red_velvet/cover.webp",
-    galleryCover: "/red_velvet/low/cover.webp",
-    images: [],
-  };
   export const Carousel: Work = {
     name: "Carousel",
     slug: "carousel",
@@ -541,6 +533,50 @@ export namespace Works {
     slug: "untitled",
     cover: "/maids/cover.webp",
     galleryCover: "/maids/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const CrushedVelvet: Work = {
+    name: "Crushed Velvet",
+    year: 2024,
+    medium: "Oil paint on street sign",
+    dimensions: "12x18in.",
+    slug: "crushed-velvet",
+    cover: "/crushed_velvet/cover.webp",
+    galleryCover: "/crushed_velvet/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const SilverHorse: Work = {
+    name: "Silver Horse",
+    year: 2024,
+    medium: "Oil paint on street sign",
+    dimensions: "12x18in.",
+    slug: "silver-horse",
+    cover: "/silver_horse/cover.webp",
+    galleryCover: "/silver_horse/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const UrbanCherries: Work = {
+    name: "Urban Cherries",
+    year: 2024,
+    medium: "Oil paint on street sign",
+    dimensions: "12x18in.",
+    slug: "urban-cherries",
+    cover: "/urban_cherries/cover.webp",
+    galleryCover: "/urban_cherries/low/cover.webp",
+    images: [],
+    statements: [],
+  };
+  export const WomanInSilver: Work = {
+    name: "Woman In Silver",
+    year: 2024,
+    medium: "Oil paint on street sign",
+    dimensions: "12x18in.",
+    slug: "woman-in-silver",
+    cover: "/woman_in_silver/cover.JPG",
+    galleryCover: "/woman_in_silver/low/cover.JPG",
     images: [],
     statements: [],
   };

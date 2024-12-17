@@ -7,19 +7,22 @@ export interface Collection {
 
 export const gallery: Collection[] = [
   {
-    name: "Signs of life",
+    name: "Collection 4",
     works: [
-      Works.Harpocrates,
-      Works.Ra,
-      Works.Piebald,
-      Works.Marzanna,
+      Works.SilverHorse,
+      Works.UrbanCherries,
+      Works.WomanInSilver,
+      Works.CrushedVelvet,
+      Works.Maids,
     ],
+  },
+  {
+    name: "Signs of life",
+    works: [Works.Harpocrates, Works.Ra, Works.Piebald, Works.Marzanna],
   },
   {
     name: "Collection 3",
     works: [
-      Works.RedVelvet,
-      Works.Maids,
       Works.Greed,
       Works.NoCoffee,
       Works.LaceAndLingerie,
