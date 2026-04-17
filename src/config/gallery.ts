@@ -7,6 +7,7 @@ export interface Collection {
 
 export const gallery: Collection[] = [
   {
+    name: '',
     works: [
       Works.SilverHorse,
       Works.UrbanCherries,

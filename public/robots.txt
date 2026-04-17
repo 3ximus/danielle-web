@@ -1,2 +1,5 @@
-user-agent: *
-disallow: /assets/
+User-agent: *
+Allow: /
+
+# Sitemaps
+# Sitemap: https://danielle-romaine.web.app/sitemap.xml

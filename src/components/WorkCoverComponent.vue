@@ -11,6 +11,7 @@ const isMobile = computed(() => {
 const props = defineProps({
   coverImage: String,
   sold: Boolean,
+  alt: String,
 });
 
 const zoomed = ref<HTMLDivElement | null>(null);
@@ -53,7 +54,7 @@ const hideZoom = () => zoomed.value?.classList.remove("visible");
         @mousemove="zoom"
         @mouseleave="hideZoom"
         onload="this.style.transform='scale(1)'"
-        :alt="props.coverImage"
+        :alt="props.alt + ' - Art by Danielle Romaine'"
       />
     </a>
     <div

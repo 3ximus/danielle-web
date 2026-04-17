@@ -36,6 +36,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", keydown_dismiss));
         <WorkCoverComponent
           :cover-image="selectedWork.cover"
           :sold="selectedWork.sold"
+          :alt="selectedWork.name"
         />
         <hr />
         <div class="description">

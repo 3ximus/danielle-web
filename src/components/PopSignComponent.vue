@@ -27,7 +27,7 @@ const routeLink = computed(() =>
       <div class="pop-container">
         <img
           :src="flash ? sign.flash_cutout : sign.cutout"
-          :alt="sign.work.name"
+          :alt="sign.work.name + ' - Art on road sign by Danielle Romaine'"
         />
       </div>
     </RouterLink>
