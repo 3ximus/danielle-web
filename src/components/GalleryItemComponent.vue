@@ -29,11 +29,14 @@ $transitionTime: 0.2s;
   cursor: pointer;
   margin: 10px;
   position: relative;
-  max-width: 350px;
+  display: inline-block;
+  width: calc(100% - 20px);
+  break-inside: avoid;
+
   img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
     opacity: 0;
     transition: 0.4s 0.4s;
   }

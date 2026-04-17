@@ -7,22 +7,12 @@ export interface Collection {
 
 export const gallery: Collection[] = [
   {
-    name: "Collection 4",
     works: [
       Works.SilverHorse,
       Works.UrbanCherries,
       Works.WomanInSilver,
       Works.CrushedVelvet,
-      Works.Maids,
-    ],
-  },
-  {
-    name: "Signs of life",
-    works: [Works.Harpocrates, Works.Ra, Works.Piebald, Works.Marzanna],
-  },
-  {
-    name: "Collection 3",
-    works: [
+      Works.Maids,Works.Harpocrates, Works.Ra, Works.Piebald, Works.Marzanna,
       Works.Greed,
       Works.NoCoffee,
       Works.LaceAndLingerie,
@@ -35,11 +25,6 @@ export const gallery: Collection[] = [
       Works.Romeyn,
       Works.Maiden,
       Works.SelfPortrait,
-    ],
-  },
-  {
-    name: "Collection 2",
-    works: [
       Works.FragmentsOfSussex,
       Works.Carousel,
       Works.Butcher,
@@ -53,11 +38,6 @@ export const gallery: Collection[] = [
       Works.StopNoHare,
       Works.Squid,
       Works.WarOnWomen,
-    ],
-  },
-  {
-    name: "Collection 1",
-    works: [
       Works.FallenAngel,
       Works.TwilightZone,
       Works.DuoWenTianWang,
