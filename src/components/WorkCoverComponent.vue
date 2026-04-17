@@ -13,37 +13,55 @@ const props = defineProps({
   sold: Boolean,
 });
 
-const zoomed = ref<HTMLInputElement | null>(null);
+const zoomed = ref<HTMLDivElement | null>(null);
 const zoom = (event: MouseEvent) => {
-  const original = event.target as HTMLElement;
-  const imgWidth = original.offsetWidth;
-  const imgHeight = original.offsetHeight;
-  let percentageX = (event.offsetX / imgWidth) * 100;
-  let percentageY = (event.offsetY / imgHeight) * 100;
+  const img = event.currentTarget as HTMLImageElement;
+  const rect = img.getBoundingClientRect();
+
+  const x = ((event.clientX - rect.left) / rect.width) * 100;
+  const y = ((event.clientY - rect.top) / rect.height) * 100;
+
   if (zoomed.value) {
-    zoomed.value.classList.add('visible')
-    zoomed.value.style.backgroundPositionX = `${percentageX}%`;
-    zoomed.value.style.backgroundPositionY = `${percentageY}%`;
-    zoomed.value.style.left = `${event.clientX + 50}px`;
-    zoomed.value.style.top = `${event.clientY - 200}px`;
+    const zoomFactor = 2.5;
+    zoomed.value.classList.add("visible");
+    zoomed.value.style.backgroundSize = `${rect.width * zoomFactor}px ${
+      rect.height * zoomFactor
+    }px`;
+    zoomed.value.style.backgroundPosition = `${x}% ${y}%`;
+
+    const popupSize = window.innerWidth * 0.25; // $popup_size: 25vw
+    const offset = 20;
+    let left = event.clientX + offset;
+    let top = event.clientY + offset;
+    // clamp to viewport
+    left = Math.max(0, Math.min(left, window.innerWidth - popupSize));
+    top = Math.max(0, Math.min(top, window.innerHeight - popupSize));
+
+    zoomed.value.style.left = `${left}px`;
+    zoomed.value.style.top = `${top}px`;
   }
 };
+
+const hideZoom = () => zoomed.value?.classList.remove("visible");
 </script>
 
 <template>
   <div class="cover-image">
-    <img
-      :src="props.coverImage"
-      @mousemove="zoom"
-      onload="this.style.transform='scale(1)'"
-      :alt="props.coverImage"
-    />
+    <a :href="props.coverImage" target="_blank">
+      <img
+        :src="props.coverImage"
+        @mousemove="zoom"
+        @mouseleave="hideZoom"
+        onload="this.style.transform='scale(1)'"
+        :alt="props.coverImage"
+      />
+    </a>
     <div
       ref="zoomed"
       v-if="!isMobile"
       class="zoomed"
       :style="{
-        background: `url('${props.coverImage}') no-repeat`,
+        backgroundImage: `url('${props.coverImage}')`,
       }"
     ></div>
     <SoldIconComponent v-if="props.sold" />
@@ -57,15 +75,18 @@ $popup_size: 25vw;
   width: fit-content;
   max-width: 50%;
   text-align: center;
+  a {
+    display: contents;
+    &:hover ~ .zoomed {
+      opacity: 1;
+    }
+  }
   img {
     max-height: 100%;
     transform: scale(1.5);
     transition: 0.5s;
     object-fit: contain;
     cursor: zoom-in;
-    &:hover ~ .zoomed {
-      opacity: 1;
-    }
   }
 
   .zoomed.visible {
