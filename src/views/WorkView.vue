@@ -8,10 +8,12 @@ import { gallery } from "@/config/gallery";
 import { useRoute } from "vue-router";
 import { onBeforeMount, onBeforeUnmount } from "vue";
 
+const route = useRoute();
+
 const selectedWork: Work = gallery
   .map((s) => s.works)
   .flat()
-  .find((w) => w.slug === useRoute().params.slug)!;
+  .find((w) => w.slug === route.params.slug)!;
 
 const dismiss = () => router.back();
 

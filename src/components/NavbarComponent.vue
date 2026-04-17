@@ -2,7 +2,9 @@
 import { store } from "@/store";
 import { computed, onBeforeMount, onBeforeUnmount, ref } from "vue";
 import { useRoute } from "vue-router";
-const atHome = computed(() => useRoute().name?.toString().endsWith("home"));
+
+const route = useRoute();
+const atHome = computed(() => route.name?.toString().endsWith("home"));
 let scrolled = ref(false);
 
 const setScrolled = () => (scrolled.value = window.scrollY > 100);
@@ -29,7 +31,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", setScrolled));
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink>
       </nav>
-      <h3 v-if="useRoute().name === 'gallery'">
+      <h3 v-if="route.name === 'gallery'">
         {{ store.galleryCollectionName }}
       </h3>
     </div>

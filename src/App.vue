@@ -19,7 +19,7 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
 </template>
 
 <style lang="scss">
-@import "@/assets/css/base.scss";
+@use "@/assets/css/base.scss";
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

@@ -5,10 +5,12 @@ import router from "@/router";
 import { onBeforeMount, onBeforeUnmount } from "vue";
 import { useRoute } from "vue-router";
 import { exhibitions, type Exhibition } from "@/config/exhibitions";
+
+const route = useRoute();
 const dismiss = () => router.back();
 
 const exhibition: Exhibition = exhibitions.find(
-  (e) => e.slug === useRoute().params.slug
+  (e) => e.slug === route.params.slug
 )!;
 
 function keydown_dismiss(event: KeyboardEvent) {

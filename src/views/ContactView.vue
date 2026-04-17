@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ButtonComponent from "@/components/buttons/ButtonComponent.vue";
 import { ref } from "vue";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const name = ref("");
 const email = ref("");
