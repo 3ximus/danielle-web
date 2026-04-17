@@ -87,6 +87,7 @@ export namespace Works {
     galleryCover: "/no_coffee_left/low/cover.webp",
     images: [],
     statements: [],
+    sold: true,
   };
   export const Harpocrates: Work = {
     name: "Harpocrates & the Runes",
@@ -235,6 +236,7 @@ export namespace Works {
       "/aphrodite_ares/aphrodite.webp",
       "/aphrodite_ares/aphrodite_flash.webp",
     ],
+    sold: true,
   };
   export const Squid: Work = {
     name: "Squid",
@@ -245,6 +247,7 @@ export namespace Works {
     medium: "Marker on road sign",
     dimensions: "12x18in.",
     images: ["/squid/90.webp", "/squid/91.webp"],
+    sold: true,
   };
   export const StopNoHare: Work = {
     name: "Stop No Hare",
@@ -352,6 +355,7 @@ export namespace Works {
       "Depicting the painting Mars and Venus by Botticelli on the left, this piece discusses the implications of getting in a lustful relationship in the modern era. Venus, Goddess of fertility and love, is shown conquering Mars, the God of war. Tired and utterly defeated, he met his match, ultimately stating that love really does conquer war.",
       "To the bottom right, a fortune from a cookie reads “take the next opportunity presented to you” in French. Finding companionship nowadays requires different aspects than it used to, seeing as there is a large disconnect in how people interact due to technology. Many are seemingly defeated as well, not very interested in putting in the efforts needed to deepen relationships or meet new people. Overall, this sign is reminding the viewer to stay open minded, while cautioning of the large quantity of surface level relationships.",
     ],
+    sold: true,
   };
   export const TwilightZone: Work = {
     name: "Twilight Zone; Nothing in the Dark",
@@ -365,6 +369,7 @@ export namespace Works {
     statements: [
       "After the passing of my father in 2020 and riddled with grief that I wasn’t there at his time of death, I made this piece as a representation of the show he watched as a child and introduced me to years prior. In the episode Nothing in the Dark of The Twilight Zone, an elderly woman lets no one in her home out of fear that they may be the grim reaper. After a wounded man ends up at her doorstep, she reluctantly brings him inside to nurse him to health. However, while he did turn out to be the reaper, he held her hand and showed her she passed peacefully, painlessly, and with someone at her side. I’d like to imagine that is how my father passed.",
     ],
+    sold: true,
   };
   export const FindingSelf: Work = {
     name: "Finding Self; Closed-Off",
@@ -474,6 +479,7 @@ export namespace Works {
       "/tibetan_cham_mask_2/6.webp",
       "/tibetan_cham_mask_2/7.webp",
     ],
+    sold: true,
   };
   export const TibetanChamMask3: Work = {
     name: "Citipati",
@@ -514,6 +520,7 @@ export namespace Works {
     dimensions: "24x30in.",
     year: 2023,
     images: [],
+    sold: true,
   };
   export const Marzanna: Work = {
     name: "The Burning of Marzanna",
@@ -526,7 +533,7 @@ export namespace Works {
     images: [],
   };
   export const Maids: Work = {
-    name: "Untitled",
+    name: "Maids",
     year: 2024,
     medium: "Oil paint on street sign",
     dimensions: "12x18in.",
@@ -535,6 +542,7 @@ export namespace Works {
     galleryCover: "/maids/low/cover.webp",
     images: [],
     statements: [],
+    sold: true,
   };
   export const CrushedVelvet: Work = {
     name: "Crushed Velvet",
@@ -546,6 +554,7 @@ export namespace Works {
     galleryCover: "/crushed_velvet/low/cover.webp",
     images: [],
     statements: [],
+    sold: true,
   };
   export const SilverHorse: Work = {
     name: "Silver Horse",
@@ -579,6 +588,7 @@ export namespace Works {
     galleryCover: "/woman_in_silver/low/cover.JPG",
     images: [],
     statements: [],
+    sold: true,
   };
 }
 
